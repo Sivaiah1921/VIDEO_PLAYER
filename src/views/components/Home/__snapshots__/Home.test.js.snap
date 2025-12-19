@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  className="Home"
+>
+  <div
+    className="Loader"
+  >
+    <div
+      className="Loader__content"
+    >
+      <div
+        className="Image"
+      >
+        <picture>
+          <img
+            alt=""
+            className="Image--loading"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+          />
+        </picture>
+      </div>
+    </div>
+  </div>
+  <div
+    className="Home__topSection"
+  />
+  <div
+    className="Home__scrollContainer"
+    id="scrollContainer"
+  >
+    <div
+      className="infinite-scroll-component__outerdiv"
+      style={Object {}}
+    >
+      <div
+        className="infinite-scroll-component "
+        style={
+          Object {
+            "WebkitOverflowScrolling": "touch",
+            "height": "auto",
+            "overflow": "auto",
+          }
+        }
+      >
+        <div
+          className="Home__rails Home--container"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;

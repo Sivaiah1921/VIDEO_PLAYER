@@ -1,0 +1,80 @@
+/**
+ * {{ properCase name }} Redux Duck Module
+ *
+ * A duck is a redux module that contains all of its related constants, actions/action creators, and it’s reducer. 
+ * If any of our other modules need access to any of these elements (which will likely be the case in the case of a messaging module), 
+ * we’ll export/import what is needed.
+ *
+ * To learn more about the Ducks file structure for redux visit: https://medium.com/@scbarrus/the-ducks-file-structure-for-redux-d63c41b7035c#.no4qhkpne
+ */
+
+ import { createSelector } from 'reselect';
+
+
+export const DEFAULT_ACTION = 'DEFAULT_ACTION';
+
+/**
+ * Action creators
+ *
+ * Actions are payloads of information that send data from your application to your store. 
+ * They are the only source of information for the store. You send them to the store using store.dispatch().
+ *
+ * Actions describe the fact that something happened, but don't specify how the application's state changes in response
+ */
+export function defaultAction() {
+  return {
+    type: DEFAULT_ACTION,
+  };
+}
+
+/**
+ * default state for the {{ properCase name }} duck module.
+ */
+const initialState = {
+  thing: ''
+};
+
+
+/**
+ * Reducer 
+ *
+ * The reducer is a pure function that takes the previous state and an action, and returns the next state.
+ * It should never Mutate its arguments, Perform side effects like API calls and routing transitions;
+ * or call non-pure functions, e.g. Date.now() or Math.random().
+ */
+export default function reducer( state = initialState, action ){
+
+  switch(action.type){
+    case DEFAULT_ACTION: 
+      return Object.assign(
+        {}.
+        state,
+        {
+          thing: action.value
+        }
+      )
+
+    default:
+      return state;
+
+  }
+
+};
+
+
+ /**
+  * Direct selector to the {{ camelCase name }} state domain
+  */
+ const get{{ properCase name }}Domain = () => {
+   return (state) => 
+    {
+      state.get('{{ properCase name }}');
+    }
+ }
+
+
+
+ export const get{{ properCase name }} = () => createSelector(
+  get{{ properCase name }}Domain(),
+  (substate) => substate.toJS()
+);;

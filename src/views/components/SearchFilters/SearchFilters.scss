@@ -1,0 +1,78 @@
+@import '../../../styles/src/variables';
+
+.SearchFilters {
+  width: 42rem;
+
+  .Button {
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+
+    &--focused {
+      background-color: map-get( $pink, '100' ) !important;
+    }
+  }
+
+  &__button {
+    &--lang,
+    &--genre {
+      .Text {
+        margin-bottom: 1.25rem;
+      }
+
+      .Button {
+        border: 0.1875rem solid #fff;
+      }
+
+      .Button--focused {
+        background-color: map-get( $pink, '100' );
+        border: 0.1875rem solid #fff !important;
+        color: #fff;
+      }
+
+      .Button--secondary::after {
+        border: none;
+      }
+
+      .Button--active {
+        background-color: map-get( $pink, '100' );
+        border: 0.1875rem solid map-get( $pink, '100' );
+        color: #fff;
+      }
+    }
+
+    &--lang {
+      color: white;
+    }
+
+    &--langgen {
+      display: flex;
+      overflow-x: scroll;
+      width: 42rem;
+
+      .Button {
+        font-size: 1.16rem;
+        height: 2.687rem;
+        margin-right: 0.625rem;
+        padding: 0 0.9rem;
+        white-space: nowrap;
+
+        &.ButtonLastLanguage {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &__filterButtons {
+    margin-right: 0;
+
+    .Button:last-child {
+      margin-right: 5rem;
+    }
+  }
+
+  &__showAndHideButton {
+    margin-bottom: 1.5rem;
+    width: 30rem;
+  }
+}

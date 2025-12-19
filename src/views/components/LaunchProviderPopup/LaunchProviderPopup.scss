@@ -1,0 +1,227 @@
+@import '../../../styles/src/variables';
+@import '../../../styles/src/colors.module';
+@import '../../../styles/src/mixins';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.launchProviderModal {
+  align-items: center;
+  gap: 0.625rem;
+  justify-content: center;
+  overflow-y: hidden;
+  padding: 0 2rem;
+}
+
+.launchProvider {
+  margin-bottom: 2.5rem;
+  width: 36rem;
+
+  &__primeProvider {
+    width: 41.667rem;
+  }
+
+  &__back {
+    margin-top: 5%;
+
+    .Button {
+      background-color: transparent;
+      color: $white;
+      font-size: 1.0625rem;
+      font-weight: map-get( $fontweights, '500' );
+      height: 2.5rem;
+      line-height: 1.0625rem;
+      padding: 0;
+      width: 7.188rem;
+
+      svg {
+        height: 1rem;
+        margin: 0 0.5rem 0 0;
+        padding: 0;
+        position: relative;
+        top: 2px;
+        width: 1.25rem;
+      }
+
+      span {
+        color: #d7c6f4;
+        font-size: 1.0625rem;
+        font-weight: 500;
+        line-height: 1.0625rem;
+      }
+
+      &::after {
+        border: none;
+      }
+    }
+  }
+
+  &__image,
+  &__modal-text,
+  &__btn-dwn {
+    align-items: center;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__content {
+    height: auto;
+    margin: auto;
+    padding: 0 1.25rem;
+    width: 85%;
+
+    &--prime {
+      padding: 0;
+      text-align-last: center;
+      width: 100%;
+    }
+
+    &--apple {
+      text-align-last: center;
+      width: 100%;
+    }
+  }
+
+  &__prime,
+  &__flex {
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  &__flex {
+    display: flex;
+    margin: 0.8rem 0;
+  }
+
+  &__prime {
+    margin-top: 0.6rem;
+
+    &--title {
+      display: flex;
+      justify-content: center;
+    }
+
+    &--subTitle {
+      margin: 1.25rem 4.5rem;
+    }
+  }
+
+  &__content__3 {
+    color: $white;
+    // font-family: 'Volte Play';
+    font-size: 1.46rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    margin-top: 1.25rem;
+    text-align: center;
+  }
+
+  &__content__4 {
+    color: map-get( $purple, '25' );
+    // font-family: 'Volte Play';
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+    text-align: center;
+  }
+
+  &__flex &__content__1 {
+    flex: 0.8;
+  }
+
+  &__flex &__content__2 {
+    flex: 5;
+  }
+
+  &__downloadButton {
+    display: flex;
+    justify-content: center;
+
+    .Button {
+      background-color: transparent;
+      border: 0.1875rem solid $white;
+      justify-content: center;
+      line-height: 0;
+      overflow: none !important;
+      padding: 0;
+      position: relative;
+      width: 25rem;
+    }
+
+    &--apple {
+      display: flex;
+      justify-content: center;
+
+      .Button {
+        left: 0;
+        width: 13.291rem;
+      }
+    }
+
+    .Button--focused {
+      background-color: map-get( $pink, '100' );
+    }
+
+    .Button--focused::after {
+      border: none;
+    }
+  }
+
+  &__button {
+    align-self: center;
+
+    .Button {
+      background-color: transparent;
+      border: 0.1875rem solid $white;
+      justify-content: center;
+      line-height: 0;
+      overflow: none !important;
+      padding: 0;
+      position: relative;
+      width: 25rem;
+    }
+
+    .Button--focused {
+      background-color: map-get( $pink, '100' );
+    }
+
+    .Button--focused::after {
+      border: none;
+    }
+  }
+
+  &__downloadButton,
+  &__button {
+    .Button:focus-visible {
+      outline: none !important;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+
+    :nth-child(1) {
+      margin-bottom: 0.2rem;
+    }
+  }
+
+  &__apple {
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-top: 0.6rem;
+
+    &--subTitle {
+      margin: 1.25rem 0;
+    }
+  }
+
+  &__forgotButton {
+    margin-top: 1rem;
+  }
+}

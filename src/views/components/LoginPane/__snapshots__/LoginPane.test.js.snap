@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoginPane />tests snapshot tests renders correctly LoginPane 1`] = `
+<div
+  className="LoginPane"
+>
+  <div
+    className="LoginPane__title"
+  />
+  <div
+    className="LoginPane__mobileNumber"
+  >
+    <div
+      className="InputField"
+    >
+      <div
+        className="InputField__label"
+      >
+        <label
+          className="InputField__label--text"
+        />
+      </div>
+      <div
+        className="InputField__content InputField__content--active"
+      >
+        <div
+          className="InputField__formControls"
+        >
+          <input
+            autoComplete="on"
+            autoCorrect="on"
+            className="InputField__input InputField__input--active"
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onPaste={[Function]}
+            spellCheck={true}
+            type="number"
+          />
+        </div>
+        <div />
+      </div>
+    </div>
+  </div>
+  <div
+    className="LoginPane__invalidnum"
+  />
+  <div
+    className="LoginPane__proceed"
+  >
+    <div
+      className="LoginPane__checkBoxPanel"
+    >
+      <div
+        className="Checkbox"
+      >
+        <span
+          className="Checkbox__input Checkbox__input--checkbox"
+        >
+          <input
+            className="Checkbox__checkbox"
+            id="CheckBox"
+            onChange={[Function]}
+            tabIndex={0}
+            type="checkbox"
+          />
+          <label
+            className="Checkbox__normalCheckBox"
+            htmlFor="CheckBox"
+          />
+        </span>
+      </div>
+      <button
+        className="Button LoginPane__checkBoxPanel--btnTandC Button--icon Button--small"
+        onClick={[Function]}
+        style={null}
+      />
+    </div>
+    <button
+      className="Button Button--small"
+      onClick={[Function]}
+      style={null}
+    />
+  </div>
+</div>
+`;

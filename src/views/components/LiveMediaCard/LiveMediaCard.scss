@@ -1,0 +1,54 @@
+@import '../../../styles/src/variables';
+
+.LiveMediaCard {
+  border: 0.1875rem solid transparent;
+  border-radius: 0.7rem;
+  margin-left: 0.4rem;
+  overflow: hidden;
+  // transition: transform .2s ease-out;
+  transition: transform ease-out;
+
+  &--withFocus {
+    border: 0.167rem solid $white !important;
+    border-radius: 10% !important;
+    //transform: scale( 1.1 );
+    padding: 0.25rem;
+  }
+
+  &__channelRail {
+    .Image {
+      height: 8.333rem !important;
+      width: 8.333rem !important;
+    }
+
+    &--withFocus {
+      img {
+        border: 2px solid map-get( $bingeBlue, '125' );
+        border-radius: 0.667rem;
+      }
+    }
+  }
+
+  .Image {
+    height: 7.083rem;
+    width: 7.083rem;
+
+    img {
+      background-size: cover;
+      border-radius: 7% !important;
+      // filter: opacity( 1 ) drop-shadow( 0 0 0 white );
+      height: 100%;
+    }
+  }
+
+  &__channelRailStandalone {
+    margin-left: 0;
+  }
+
+  &--newRailType {
+    .Image {
+      height: 8.333rem !important;
+      width: 8.333rem !important;
+    }
+  }
+}

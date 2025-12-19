@@ -1,0 +1,52 @@
+@import '../../../styles/src/variables';
+
+.PlayerNextTile {
+  position: absolute;
+}
+
+.NextEpisodeTile {
+  border: solid 3px #fff;
+  border-radius: 8.31601px;
+  bottom: 7rem;
+  position: absolute;
+  right: 5.813rem;
+  visibility: visible;
+
+  &--withFocus {
+    border: 0.1875rem solid $white;
+  }
+}
+
+.nextEpisodeText {
+  color: #fff;
+  font-size: 1.625rem;
+  font-style: normal;
+  font-weight: 500;
+
+  /* width: 16.438rem; */
+  height: 1.938rem;
+  left: 2.875rem;
+  line-height: 1.938rem;
+  position: absolute;
+  top: 0.624rem;
+}
+
+.circleBlock {
+  height: 5rem;
+  margin-left: 8.5rem;
+  position: inherit;
+  top: 4.125rem;
+  width: 5rem;
+}
+
+.playIconCirle {
+  background-color: transparent;
+  left: 1.965rem;
+  position: absolute;
+  top: 1.85rem;
+}
+
+.NextEpisodeTile img {
+  height: 12.2916rem;
+  width: 22.083rem;
+}

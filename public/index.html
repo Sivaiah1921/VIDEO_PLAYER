@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <script src="%PUBLIC_URL%/assets/path.js"></script>
+    <script src="%PUBLIC_URL%/webOS.js" charset="utf-8"></script>
+    <script src="%PUBLIC_URL%/webOSTV-dev.js" charset="utf-8"></script>
+    <!-- <script type="text/javascript" src="$WEBAPIS/webapis/webapis.js"></script> -->
+    <script src="%PUBLIC_URL%/pal.js"></script>
+    <!-- <link rel="stylesheet" href="http://ottapps.revlet.net/apps/LG/SUNNXT_LG_SDK/test/SUNNXT_LG_SDK.min.css"> -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+    -->
+  </head>
+  <body>
+   <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #root {
+        height: 100%;
+      }
+
+      #preloader {
+        background: url('%PUBLIC_URL%/splash.png') no-repeat center center;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+    <script>
+      // Remove preloader after React loads
+      window.addEventListener("DOMContentLoaded", () => {
+        const interval = setInterval(() => {
+          if (document.querySelector("#root").children.length > 0) {
+            document.getElementById("preloader")?.remove();
+            clearInterval(interval);
+          }
+        }, 50);
+      });
+    </script>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <div id="preloader"></div> 
+    </div>
+  </body>
+</html>

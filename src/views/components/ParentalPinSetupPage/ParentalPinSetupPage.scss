@@ -1,0 +1,58 @@
+@import '../../../styles/src/variables';
+
+.ParentalPinSetupPage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  &__header {
+    align-items: center;
+    display: flex;
+    margin-bottom: 3.3rem;
+    padding-top: 2.334rem;
+    position: relative;
+
+    .Button {
+      align-items: center;
+      color: map-get( $pink, '40' );
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      margin-left: 2.75rem;
+      width: unset;
+      &::after { content: unset; }
+
+      &--focused {
+        color: $white;
+      }
+
+      &__icon {
+        margin-right: 0.75rem;
+      }
+    }
+
+    svg {
+      display: block;
+      margin-left: auto;
+      margin-right: 5.625rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: center;
+  }
+
+  .ParentalPinSetup {
+    margin-left: 10rem;
+    position: relative;
+    top: 1.313rem;
+    width: 30.313rem;
+  }
+
+  .NumberKeyboard {
+    &__row {
+      top: 0;
+    }
+  }
+}

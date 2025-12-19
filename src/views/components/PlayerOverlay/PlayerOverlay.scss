@@ -1,0 +1,109 @@
+@import '../../../styles/src/variables';
+
+.plaeyrControlsContainer {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  height: inherit;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  &--hidden {
+    visibility: hidden;
+  }
+
+  .playerControls {
+    align-items: center;
+    background-color: transparent;
+    color: #fff;
+    display: flex;
+    height: 34rem;
+    justify-content: center;
+    padding: 0 2.5rem;
+    position: unset;
+    width: inherit;
+
+    &--liveContainer {
+      color: $white;
+      // left: 5.33rem;
+      display: flex;
+      height: 4rem;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      position: fixed;
+      top: 38rem;
+      width: 100%;
+
+      p {
+        align-self: center;
+      }
+
+      &__title {
+        color: aliceblue;
+        padding: 0.8rem;
+
+        .Text {
+          font-size: map-get( $fontsizes, 'p48' );
+          line-height: 1.7rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      &__VODtitle {
+        color: aliceblue;
+        font-size: 2rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: fit-content;
+        width: 90%;
+      }
+
+      &__live {
+        .Text {
+          color: $red;
+          font-weight: map-get( $fontweights, '600' );
+        }
+      }
+
+      &__goLiveBtn {
+        outline: none;
+
+        .Button--small {
+          background-color: transparent;
+          min-width: 6.5rem;
+          padding: 0.5rem;
+
+          ::before {
+            border: 0.1875rem solid $white;
+            border-radius: 1.375rem;
+            bottom: 0;
+            content: '';
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+          }
+        }
+
+        .Button--focused {
+          background-color: #e10092;
+          border: none;
+        }
+      }
+    }
+
+    &--VODContainer {
+      top: 35rem;
+    }
+  }
+
+  .centerIcon {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate( -50%, -50% );
+  }
+}

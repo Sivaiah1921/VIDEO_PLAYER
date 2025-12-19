@@ -1,0 +1,234 @@
+@mixin button-reset() {
+  border: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  transition: transform map-get($motions, 'anim-time-base');
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+}
+
+@mixin button-base() {
+  @include button-reset();
+  @include button();
+
+  color: $white;
+  border-radius: 1.375rem;
+  position: relative;
+}
+
+@mixin buttonMixin() {
+  @include button-base();
+  border: none;
+  padding: 0 3.25rem;
+  height: 2.687rem;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: thin auto Highlight;
+    outline: thin auto -webkit-focus-ring-color;
+  }
+
+  &--secondary {
+    @include button-secondary();
+    background-color: unset;
+    // border: 0.187rem solid map-get($pink, '25');
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 99999;
+      border: 0.187rem solid map-get($pink, '25');
+      transform-origin: 50% 50%;
+      border-radius: 1.375rem;
+    }
+  }
+
+  &--focused{
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 99999;
+      border: 0.1875rem solid $white;
+      transform-origin: 50% 50%;
+      border-radius: 1.375rem;
+    }
+    color: $white;
+  }
+
+  &--withHover {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: center;
+    min-width: 6rem;
+    margin: 0 0 1rem 0;
+    transform-origin: 50% 50%;
+    letter-spacing: 0.1em;
+    border: none;
+    z-index: 0;
+    outline: none;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      border: 0.063rem solid $black;
+      transform-origin: 50% 50%;
+      transform: scale(1);
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transition: transform 200ms linear;
+    }
+
+    &:hover:after,
+    &:focus:after {
+      transform: scale(1.1);
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+    }
+
+    &:focus:after {
+      outline: thin auto Highlight;
+      outline: thin auto -webkit-focus-ring-color;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+
+    &:active:after {
+      transform: scale(0.95);
+      -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+    }
+  }
+
+  // Button sizing
+  &--clear {
+    background-color: transparent;
+    transition: background-color map-get($motions, 'anim-time-base');
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $white;
+    }
+  }
+
+  //filter chips
+  &--small {
+    height: 2.5rem;
+    min-width: 9.5rem;
+    padding: 1.5rem;
+
+    &.Button--icon {
+      height: 2rem;
+      min-width: 0;
+      width: 2rem;
+    }
+
+    &.Button--outline {
+      font-size: map-get($fontsizes, 'p20');
+    }
+  }
+
+  &--tiny {
+    height: 2rem;
+    min-width: 4.875rem;
+    padding: 0.5rem;
+
+    &.Button--icon {
+      height: 2rem;
+      min-width: 0;
+      width: 2rem;
+    }
+
+    &.Button--outline {
+      font-size: map-get($fontsizes, 'p12');
+    }
+  }
+
+  &--disabled {
+    background-color: map-get($neutral, '400');
+    cursor: not-allowed;
+
+    &.Button--clear {
+      background-color: transparent;
+    }
+
+    &.Button--secondary {
+      background-color: unset;
+      color: map-get($neutral, '400');
+    }
+
+    &.Button--outline {
+      background-color: unset;
+      border: 0.063rem solid map-get($neutral, '400');
+      color: map-get($neutral, '400');
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      transform: none;
+    }
+  }
+
+  &--icon {
+    @include button-reset();
+    height: 2.5rem;
+    padding: 0 1.25rem;
+    background: map-get($bingeBlue, '125');
+    border: 0.125rem map-get($bingeBlue, '75');
+
+    &--withHiddenLabel {
+      background-color: $black;
+      border-radius: 1.25rem;
+      color: $white;
+      font-size: map-get($fontsizes, 'p12');
+      height: 2.5rem;
+      width: 2.5rem;
+
+      &:not(.Button--compact):hover {
+        display: table-cell;
+        vertical-align: middle;
+        padding: 0 1rem;
+        width: auto;
+      }
+    }
+
+    .Button__span--hidden-icon-label {
+      display: none;
+    }
+  }
+
+  &--link {
+    background: none;
+    font-size: map-get($fontsizes, 'p14');
+    padding: 0;
+    text-transform: none;
+  }
+
+  @at-root button.Button--link {
+    background-position: 0% 68%;
+  }
+}

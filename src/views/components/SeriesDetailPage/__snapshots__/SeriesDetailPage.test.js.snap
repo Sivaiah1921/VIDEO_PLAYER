@@ -1,0 +1,121 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  className="SeriesDetailPage"
+>
+  <div
+    className="SeriesDetailPage__scrollContainer"
+    id="scrollContainer"
+  >
+    <div
+      className="infinite-scroll-component__outerdiv"
+      style={Object {}}
+    >
+      <div
+        className="infinite-scroll-component "
+        style={
+          Object {
+            "WebkitOverflowScrolling": "touch",
+            "height": "auto",
+            "overflow": "auto",
+          }
+        }
+      >
+        <div
+          className="Loader"
+        >
+          <div
+            className="Loader__content"
+          >
+            <div
+              className="Image"
+            >
+              <picture>
+                <img
+                  alt=""
+                  className="Image--loading"
+                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                />
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div
+          className="SeriesDetailPage__inputContainer"
+        >
+          <div
+            className="InputField"
+          >
+            <div
+              className="InputField__label"
+            >
+              <label
+                className="InputField__label--text"
+              />
+            </div>
+            <div
+              className="InputField__content InputField__content--active"
+            >
+              <div
+                className="InputField__formControls"
+              >
+                <input
+                  autoComplete="on"
+                  autoCorrect="on"
+                  className="InputField__input InputField__input--active"
+                  onBlur={[Function]}
+                  onChange={[Function]}
+                  onFocus={[Function]}
+                  onPaste={[Function]}
+                  placeholder="Enter Text Here"
+                  spellCheck={true}
+                  type="text"
+                  value=""
+                />
+                <svg
+                  fill="none"
+                  style={
+                    Object {
+                      "height": "1.5rem",
+                      "width": "1.5rem",
+                    }
+                  }
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clipRule="evenodd"
+                    d="M16.296 14.578h-.908l-.315-.313a7.397 7.397 0 0 0 1.793-4.833A7.432 7.432 0 0 0 9.433 2a7.432 7.432 0 1 0 0 14.865 7.4 7.4 0 0 0 4.831-1.79l.316.313v.905L20.295 22 22 20.295l-5.704-5.717ZM9.5 15a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11Z"
+                    fill="#8E81A1"
+                    fillRule="evenodd"
+                  />
+                </svg>
+              </div>
+              <div />
+            </div>
+          </div>
+        </div>
+        <div
+          className="SeriesDetailPage__container"
+        >
+          <div
+            className="SeriesDetailPage__containerRight"
+          >
+            <div
+              className="SeriesDetailPage__tabs"
+            >
+              <div
+                className="SeasonTab"
+              />
+            </div>
+            <div
+              className="SeriesDetailPage__mediaCard calculateWidth"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

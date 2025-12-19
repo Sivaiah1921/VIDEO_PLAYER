@@ -1,0 +1,85 @@
+@import '../../../styles/src/variables';
+
+.AppleKnowledgeVideoPopup {
+  &__layout {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1.5rem;
+    overflow: hidden;
+  }
+
+  &__back {
+    .Button {
+      background-color: transparent;
+      color: $white;
+      font-size: 1.0625rem;
+      font-weight: map-get( $fontweights, '500' );
+      height: 2.5rem;
+      line-height: 1.0625rem;
+      padding: 0;
+      width: 7.188rem;
+
+      svg {
+        height: 1rem;
+        margin: 0 0.5rem 0 0;
+        padding: 0;
+        position: relative;
+        top: 2px;
+        width: 1.25rem;
+      }
+
+      span {
+        color: #d7c6f4;
+        font-size: 1.0625rem;
+        font-weight: 500;
+        line-height: 1.0625rem;
+      }
+
+      &::after {
+        border: none;
+      }
+    }
+  }
+
+  &__header {
+    margin: 1.25rem 0;
+  }
+
+  &__videoWrapper {
+    position: relative;
+  }
+
+  &__imageThumbnail {
+    height: 20.625rem;
+    width: 36.666rem;
+  }
+
+  &__AppleReplay {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 20.625rem;
+    justify-content: center;
+    position: absolute;
+    width: 36.666rem;
+  }
+
+  &__video {
+    .page_player {
+      height: 20.625rem;
+      position: relative;
+      width: 36.667rem;
+
+      .Loader .Image img {
+        // left: 2rem;
+        position: relative;
+        // top: 2rem;
+      }
+    }
+  }
+}
+
+.AppleKnowledgeVideoPopupModal {
+  padding: 1rem;
+}

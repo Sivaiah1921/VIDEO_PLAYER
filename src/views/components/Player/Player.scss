@@ -1,0 +1,43 @@
+@import '../../../styles/src/variables';
+
+.player {
+  align-items: center;
+  display: flex;
+  height: inherit;
+  justify-content: center;
+  position: absolute;
+  width: inherit;
+}
+
+.Loader .Image img {
+  height: 10rem;
+  width: 10rem;
+}
+
+.hidePlayPauseIcon {
+  transition: visibility 0.1s, opacity 0.1s;
+  visibility: hidden;
+}
+
+.Player_error {
+  background-color: map-get( $bingeBlue, '125' );
+  height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.page_player {
+  height: 45rem;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 80rem;
+
+  &__pageError {
+    padding: 20em 0 20em 0;
+  }
+
+  .Loader {
+    background: transparent;
+  }
+}

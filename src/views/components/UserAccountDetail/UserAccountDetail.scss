@@ -1,0 +1,16 @@
+@import '../../../styles/src/variables';
+
+.UserAccountDetail {
+  width: 22.8125rem;
+
+  &__row {
+    display: flex;
+    margin-bottom: 0.375rem;
+
+    p:nth-child(2) {
+      font-weight: map-get( $fontweights, '500' );
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+}

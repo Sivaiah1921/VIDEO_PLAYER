@@ -1,0 +1,357 @@
+@import '../../../styles/src/variables';
+
+.DeviceManagementPage {
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+
+  &__topHeader {
+    align-items: center;
+    display: flex;
+    margin-bottom: 3.75rem;
+    margin-left: 4rem;
+    padding-top: 2.334rem;
+    position: relative;
+
+    .Button {
+      align-items: center;
+      background: unset;
+      color: map-get( $pink, '40' );
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      padding: 0;
+      width: unset;
+
+      &::after { content: unset; }
+
+      &--focused {
+        color: $white;
+      }
+
+      &__icon {
+        margin-right: 0.75rem;
+      }
+    }
+
+    svg {
+      display: block;
+      margin-left: auto;
+      margin-right: 5.625rem;
+    }
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    padding-left: 4rem;
+    position: relative;
+
+    svg {
+      margin-right: 1.687rem;
+    }
+
+    .Button {
+      align-items: center;
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      margin-left: 5.625rem;
+      width: unset;
+      &::after { content: unset; }
+
+      &__icon {
+        margin-right: unset;
+      }
+    }
+
+    p {
+      line-height: 1.2;
+    }
+  }
+
+  &__detail {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .Button--secondary::after {
+      border-radius: 0.417rem;
+    }
+
+    &--subSectionLogin {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      width: 35.5rem;
+    }
+
+    &--subSection {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      height: 31.5rem;
+      margin-bottom: 4.416rem;
+      margin-right: 2rem;
+      padding: 0;
+      width: 35.125rem;
+
+      .Text--autoPlay-subtitle {
+        color: map-get( $purple, '25' );
+      }
+
+      &__loggedDevices {
+        margin-bottom: 1.5rem;
+        margin-top: 1.333rem;
+
+        .Text--autoPlay-subtitle {
+          color: map-get( $purple, '25' );
+        }
+
+        p:nth-of-type(1) {
+          font-weight: 400;
+          margin-bottom: 0.667rem;
+        }
+      }
+    }
+
+    &--deviceSectionLoggedInUser {
+      width: 40rem;
+    }
+
+    &--deviceSectionNotLoggedInUser {
+      margin-left: 5.125rem;
+    }
+
+    &--deviceSection {
+      align-items: center;
+      display: flex;
+
+      .Text--header-5 {
+        color: $railTitle;
+        line-height: 1.875rem;
+        margin-bottom: 0.5rem;
+      }
+    }
+
+    &--deviceCard {
+      align-items: center;
+      display: flex;
+      margin-bottom: 0.5625rem;
+    }
+
+    &--otherdeviceInfoText {
+      margin-bottom: 0.9375rem;
+      width: 24.875rem;
+    }
+
+    &--deviceCountInfoLoggedIn {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 0.9375rem;
+      width: 34.125rem;
+
+      .Text {
+        font-size: map-get( $fontsizes, 'p13' );
+      }
+    }
+
+    &--deviceCountInfo {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 0.9375rem;
+      width: 24.875rem;
+
+      .Text {
+        font-size: map-get( $fontsizes, 'p13' );
+      }
+    }
+
+    &--deviceList {
+      height: 20rem;
+      overflow: hidden;
+
+      .Button {
+        border: 3px;
+        border-radius: 0.417rem;
+        float: right;
+        height: 2.5rem;
+        margin-right: 0;
+        margin-top: 1.5rem;
+        padding: 0;
+        width: 7.92rem;
+      }
+
+      .Button--secondary::after {
+        border: 0.16rem solid map-get( $pink, '40' );
+      }
+
+      .Button--focused::after {
+        border: 0.16rem solid $white;
+      }
+    }
+
+    &--deviceListScroll {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 20rem;
+      margin-left: 2.5rem;
+
+      .Divider {
+        width: 0.28rem;
+      }
+
+      .Divider__vertical {
+        background: linear-gradient( 180deg, rgba( 255, 255, 255, 5e-05 ) 0%, rgba( 255, 255, 255, 0.5 ) 46.5%, rgba( 255, 255, 255, 5e-05 ) 100% );
+        display: inline-block;
+        height: 95%;
+        mix-blend-mode: normal;
+        opacity: 0.65;
+        transform: matrix( -1.2, 1, 0, 1.3, 1, 21 );
+        width: 0.25rem;
+      }
+    }
+
+    &--removeDevice {
+      margin-left: 1rem;
+
+      .Button {
+        border: 4px;
+        border-radius: 0.417rem;
+        height: 2.5rem;
+        padding: 0;
+        width: 25rem;
+      }
+
+      .Button--focused {
+        border-radius: 0.417rem;
+      }
+
+      .Button--focused::after {
+        border-radius: 0.417rem;
+      }
+    }
+
+    &--removeDeviceLoggedIn {
+      margin-left: 4.562rem;
+    }
+
+    &--card {
+      display: flex;
+    }
+
+    &--deleteBtn {
+      button {
+        background: transparent;
+      }
+
+      align-items: center;
+      height: 2.5rem;
+
+      .Button--small {
+        height: inherit;
+        position: relative;
+
+        > svg {
+          height: 1.125rem;
+          left: 50%;
+          position: absolute;
+          top: 50%;
+          transform: translate( -50%, -50% );
+          width: 0.875rem;
+        }
+      }
+
+      .Button__icon--withIconLeft {
+        right: 0.375rem;
+        top: 0;
+        vertical-align: middle;
+      }
+    }
+
+    &--renameBtn {
+      align-items: center;
+      border-radius: 1.375rem;
+      box-sizing: border-box;
+      display: table-cell;
+      flex-direction: row;
+      height: 2.5rem;
+      justify-content: center;
+      margin-right: 1.125rem;
+      padding: 0.563rem 2.188rem;
+      vertical-align: middle;
+    }
+
+    .SelectDeviceCard {
+      display: flex;
+      flex-direction: column;
+      float: left;
+      height: 5.416rem;
+      margin-bottom: 0.93rem;
+      margin-right: 1.333rem;
+      width: 24.875rem;
+
+      &::after {
+        border: 0.125rem solid map-get( $bingeBlue, '75' );
+        bottom: 0;
+        content: '';
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform-origin: 50% 50%;
+        z-index: 99999;
+      }
+
+      &--withFocus {
+        border: none !important;
+        transform: scale( 1 ) !important;
+
+        &::after {
+          border: 0.1875rem solid white;
+          bottom: 0;
+          content: '';
+          left: 0;
+          position: absolute;
+          right: 0;
+          top: 0;
+          transform-origin: 50% 50%;
+          z-index: 99999;
+        }
+      }
+
+      &:hover::after {
+        border: 0.1875rem solid white;
+      }
+
+      &__Icon {
+        left: unset;
+        margin-right: 1rem;
+      }
+
+      &__topSection {
+        margin-bottom: 0.667rem;
+        width: 21.875rem;
+      }
+    }
+  }
+
+  &__listScroll {
+    height: 20rem;
+    overflow-y: scroll;
+    position: relative;
+  }
+
+  &__notification {
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+
+    .Notifications svg {
+      padding-right: 1.5rem;
+      width: 3.875rem;
+    }
+  }
+}

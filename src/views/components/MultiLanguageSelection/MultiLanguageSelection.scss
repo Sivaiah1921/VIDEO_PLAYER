@@ -1,0 +1,67 @@
+@import '../../../styles/src/variables';
+
+.MultiLanguageSelection {
+  align-items: center;
+  background: #220046;
+  border: 3px solid  #564372;
+  border-radius: 0.25rem;
+  display: flex;
+  gap: 0.375rem;
+  height: 3.583rem;
+  justify-content: space-between;
+  padding-left: 0.5rem;
+  width: 13.75rem;
+
+  &--withFocus {
+    border: 3px solid white;
+    border-radius: 0.25rem;
+  }
+
+  &__leftSection {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    // justify-content: space-evenly;
+
+    &--title {
+      height: 2rem;
+      left: 0.667rem;
+      position: relative;
+      top: 0;
+      width: 3.3rem;
+    }
+
+    img {
+      height: 1rem;
+      width: auto;
+    }
+  }
+
+  &__rightSection {
+    display: flex;
+    height: 3.483rem;
+
+    img {
+      height: 3.47rem;
+      width: auto;
+    }
+  }
+
+  .Checkbox {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+
+    &__input {
+      margin: auto;
+    }
+  }
+}
+
+.imageLoaded {
+  opacity: 1;
+}
+
+.imageLoading {
+  opacity: 0;
+}

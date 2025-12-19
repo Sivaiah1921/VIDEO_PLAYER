@@ -1,0 +1,139 @@
+@import '../../../styles/src/variables';
+
+.HeroBannerDetailView {
+
+  $Image: '.Image';
+
+  &__Banner {
+    position: absolute;
+
+    .BannerComponent__LinearGradient1 {
+      left: 27rem;
+    }
+
+    .BannerComponent__backgroundImg {
+      position: unset;
+
+      .Image {
+        margin-left: 27rem;
+      }
+    }
+  }
+
+  .piTitleCard {
+    position: relative;
+    top: 3.33rem;
+  }
+
+  .MediaCarousel {
+    left: 3.95rem;
+    position: relative;
+    top: 2.54rem;
+
+    &__Rail {
+      > div {
+        margin-left: 0.2rem;
+        margin-right: 1.8rem;
+        padding-right: 0 !important;
+      }
+
+      display: flex;
+      overflow: hidden;
+    }
+
+    &__HB_SEE_ALL {
+      margin: 0.625rem;
+
+      &--PORTRAIT {
+        &--SMALL {
+          #{$Image} {
+            img {
+              height: 16.27rem;
+              width: auto;
+            }
+          }
+        }
+
+        &--MEDIUM,
+        &--LARGE {
+          #{$Image} {
+            img {
+              height: 19.125rem;
+              width: auto;
+            }
+          }
+        }
+
+        &--DEFAULT {
+          #{$Image} {
+            img {
+              height: 16.27rem;
+              width: auto;
+            }
+          }
+        }
+        #{$Image} {
+          img {
+            height: 16.27rem;
+            width: auto;
+          }
+        }
+      }
+
+      &--LANDSCAPE {
+        &--SMALL {
+          .Image {
+            img {
+              /* commented due to HeroBanner revamp changes */
+              // height: 8.125rem;
+              // width: 14.188rem;
+              height: 11.25rem;
+              width: 20rem;
+            }
+          }
+        }
+
+        &--LARGE {
+          .Image {
+            img {
+              height: 15.75rem;
+              width: 28rem;
+            }
+          }
+        }
+
+        &--DEFAULT {
+          .Image {
+            img {
+              height: 11.25rem;
+              width: 20rem;
+            }
+          }
+        }
+
+        .Image {
+          img {
+            height: 11.25rem;
+            width: 20rem;
+          }
+        }
+      }
+    }
+  }
+
+  &__description {
+    margin-bottom: 7.54rem;
+    position: relative;
+    top: 4rem;
+  }
+
+  &__topView {
+    height: 16.125rem;
+    left: 3.95rem;
+    position: relative;
+  }
+
+  &__rail {
+    margin-right: 5rem;
+  }
+}

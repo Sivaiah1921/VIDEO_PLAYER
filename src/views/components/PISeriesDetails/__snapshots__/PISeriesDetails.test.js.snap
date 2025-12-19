@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PISeriesDetails />tests snapshot tests renders correctly PISeriesDetails 1`] = `
+<div
+  className="PISeriesDetails"
+>
+  <div
+    className="PISeriesDetails__content"
+  >
+    <div
+      className="PISeriesDetails__duration"
+    >
+      <p
+        className="Text Text--seriesDetail-title Text--left"
+      >
+        24 Mar  |  53m 49s
+      </p>
+    </div>
+    <div
+      className="PISeriesDetails__title"
+    >
+      <p
+        className="Text Text--seriesDetail-title Text--left Text--white"
+      >
+        Episode Name
+      </p>
+    </div>
+    <div
+      className="PISeriesDetails__description"
+    >
+      <p
+        className="Text Text--seriesDetail-subtitle Text--left Text--white"
+      >
+        In a post-apocalyptic wasteland, Max, a drifter and survivor, unwillingly joins Imperator Furiosa, a rebel warrior, in a quest to overthrow a tyrant who controls the land’s water supply unwillingly joins Imperator Furiosa, a rebel warrior, in a quest to overthrow a tyrant who controls the land’s water supply.
+      </p>
+    </div>
+  </div>
+</div>
+`;

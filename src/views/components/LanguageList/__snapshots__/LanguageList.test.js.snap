@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  className="LanguageList"
+>
+  <div
+    className="LanguageList__item"
+  >
+    <svg
+      fill="none"
+      height="25"
+      viewBox="0 0 24 25"
+      width="24"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M3 3.5H21V21.5H3z"
+        stroke="#D6C6F4"
+        strokeWidth="2"
+      />
+      <path
+        d="M6 9.5H7V15.5H6z"
+        fill="#D6C6F4"
+      />
+      <path
+        d="M8 9.5l4-2v10l-4-2v-6z"
+        fill="#D6C6F4"
+      />
+      <mask
+        height="11"
+        id="mask0_2057_8090"
+        maskUnits="userSpaceOnUse"
+        style={
+          Object {
+            "maskType": "alpha",
+          }
+        }
+        width="10"
+        x="8"
+        y="7"
+      >
+        <path
+          clipRule="evenodd"
+          d="M17 12.5a4 4 0 11-8 0 4 4 0 018 0zm1 0a5 5 0 11-10 0 5 5 0 0110 0zm-3.25 0a1.75 1.75 0 11-3.5 0 1.75 1.75 0 013.5 0zm1 0a2.75 2.75 0 11-5.5 0 2.75 2.75 0 015.5 0z"
+          fill="#000"
+          fillRule="evenodd"
+        />
+      </mask>
+      <g
+        mask="url(#mask0_2057_8090)"
+      >
+        <path
+          d="M14.71 17.198a5 5 0 00-.332-9.504L13 12.5l1.71 4.698z"
+          fill="#D6C6F4"
+        />
+      </g>
+    </svg>
+  </div>
+  <div
+    className="LanguageList__item"
+  >
+    <p
+      className="Text Text--languageTitle Text--left"
+    >
+      English
+    </p>
+  </div>
+  <div
+    className="LanguageList__item"
+  >
+    <p
+      className="Text Text--languageTitle Text--left"
+    >
+      Hindi
+    </p>
+  </div>
+  <div
+    className="LanguageList__item"
+  >
+    <p
+      className="Text Text--languageTitle Text--left"
+    >
+      Tamil
+    </p>
+  </div>
+  <div
+    className="LanguageList__item"
+  >
+    <p
+      className="Text Text--languageTitle Text--left"
+    >
+      Bengali
+    </p>
+  </div>
+</div>
+`;

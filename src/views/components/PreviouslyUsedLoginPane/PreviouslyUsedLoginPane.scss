@@ -1,0 +1,161 @@
+@import '../../../styles/src/variables';
+
+.PreviouslyUsedLoginPane {
+  align-items: center;
+  color: $white;
+  height: 100vh;
+  margin-top: 6.5rem;
+  z-index: 1;
+
+  &__container {
+    display: flex;
+    margin-top: 1.46875rem;
+
+    &__title {
+      margin-bottom: 0.625rem;
+    }
+  }
+
+  &__headingInfo {
+    @include focus-previously-rmn;
+  }
+
+  &__info {
+    color: map-get( $bingeBlue, '25' );
+    margin-bottom: 0.83rem;
+    width: 25rem;
+
+    p {
+      line-height: 1.375rem;
+      margin-top: 1.66rem;
+    }
+
+    &--text {
+      font-size: map-get( $lineheights, 'em1_37' );
+    }
+  }
+
+  &__right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.6875rem;
+
+    .Divider {
+      height: 30.9375rem;
+      width: 0.125rem;
+    }
+  }
+
+  &__arrow {
+    path {
+      fill: map-get( $bingeBlue, '50' );
+    }
+  }
+
+  &__arrowDownRotate180 {
+    -ms-transform: rotate( 180deg ); /* IE 9 */
+    transform: rotate( 180deg );
+
+    path {
+      fill: map-get( $bingeBlue, '50' );
+    }
+  }
+
+  .Button {
+    margin-top: 0.91rem;
+    width: 29.08rem !important;
+
+    @include not-focus-previously-rmn;
+  }
+
+  &__multiRMN {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    overflow: unset !important;
+  }
+
+  &__contentButton {
+    position: absolute;
+    transform: translateY( -16rem );
+  }
+
+  &__parentRMNList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+}
+
+.PreviouslyUsedLoginPane--QRLogin {
+  align-items: center;
+  color: $white;
+  height: 100vh;
+  margin-top: 3.5rem;
+  z-index: 1;
+
+  &__container {
+    display: flex;
+    margin-top: 1.46875rem;
+  }
+
+  &__right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.6875rem;
+
+    .Divider {
+      height: 30.9375rem;
+      width: 0.125rem;
+    }
+  }
+
+  &__arrow {
+    path {
+      fill: map-get( $bingeBlue, '50' );
+    }
+  }
+
+  &__arrowDownRotate180 {
+    -ms-transform: rotate( 180deg ); /* IE 9 */
+    transform: rotate( 180deg );
+
+    path {
+      fill: map-get( $bingeBlue, '50' );
+    }
+  }
+
+  .Button {
+    margin-top: 0.91rem;
+
+    @include not-focus-previously-rmn;
+  }
+
+  &__multiRMN {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    overflow: unset !important;
+  }
+
+  &__contentButton {
+    position: absolute;
+    transform: translateY( -16rem );
+  }
+
+  &__parentRMNList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;
+  }
+}

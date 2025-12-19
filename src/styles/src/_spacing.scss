@@ -1,0 +1,11 @@
+$spacer-base-unit: 8px;
+$size-base: 1rem;
+
+/**
+ * Returns the product of $spacer-base-unit by n
+ *
+ * @param {number} $n - Times we need to multiple $spacer-base-unit
+ */
+@function spacer_base_by($n) {
+  @return $spacer-base-unit * $n;
+}

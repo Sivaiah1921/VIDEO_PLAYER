@@ -1,0 +1,40 @@
+@import '../../../styles/src/variables';
+
+.LanguageList {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 1.813rem;
+  overflow-x: hidden;
+  padding: 0 0 0 1px;
+  // width: 25.25rem;
+  width: 75rem;
+
+  &__item {
+    align-items: center;
+    color: map-get( $purple, '25' );
+    display: flex;
+
+    > p {
+      line-height: 1.25rem;
+    }
+
+    > svg {
+      margin-right: 0.75rem;
+    }
+
+    &::after {
+      content: "•";
+      font-size: 1.5rem;
+      margin-left: 0.75rem;
+      margin-right: 0.75rem;
+    }
+
+    &:last-child,
+    &:first-child {
+      &::after {
+        content: none;
+      }
+    }
+  }
+}

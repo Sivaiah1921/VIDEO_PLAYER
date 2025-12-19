@@ -1,0 +1,159 @@
+@import '../../../styles/src/variables';
+
+.FaQs {
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  position: relative;
+  z-index: 2;
+
+  &__scrollContainer {
+    height: fit-content;
+    overflow-y: auto;
+  }
+
+  &__title {
+    display: flex;
+    left: 0;
+    margin-left: 6.6rem;
+    position: absolute;
+    top: 0;
+
+    .Text {
+      font-weight: map-get( $fontweights, '500' );
+    }
+  }
+
+  &__list {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.5rem;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+
+    &--bGcontentBottom {
+      background:
+        linear-gradient( 170.03deg,
+        rgba( 28, 1, 58, 0 ) 7.48%,
+        #1c013a 50.02% );
+      bottom: 1rem;
+      height: 5.0625rem;
+      position: absolute;
+      width: 101%;
+      z-index: 999999999999999;
+    }
+
+    &--bGcontentTop {
+      background:
+        linear-gradient( 170.03deg,
+        rgba( 28, 1, 58, 0 ) 7.48%,
+        #0c0118 50.02% );
+      height: 5.0625rem;
+      position: absolute;
+      top: -0.0625rem;
+      transform: matrix( 1, 0, 0, -1, 0, 0 );
+      width: 101%;
+      z-index: 999999999999999;
+    }
+
+    &Content {
+      position: relative;
+      width: 34.375rem;
+    }
+
+    &Scoll {
+      height: 37.5rem;
+      margin-top: 2rem;
+      overflow-y: scroll;
+      position: relative;
+
+      .Accordion {
+        margin-bottom: 0.625rem;
+
+        &:last-of-type {
+          margin-bottom: 10rem;
+        }
+      }
+    }
+
+    &--scroll {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      height: 37.5rem;
+      margin-left: 1.6875rem;
+
+      .Divider {
+        height: 30.9375rem;
+        width: 0.125rem;
+      }
+    }
+
+    &--scrollArrow {
+      path {
+        fill: map-get( $bingeBlue, '50' );
+        opacity: 0.5;
+      }
+    }
+
+    &--arrowDownRotate180 {
+      -ms-transform: rotate( 180deg ); /* IE 9 */
+      transform: rotate( 180deg );
+    }
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    margin-bottom: 3.3rem;
+    margin-top: 2.334rem;
+    position: relative;
+
+    .Button {
+      align-items: center;
+      background: unset;
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      margin-left: 2.75rem;
+      width: unset;
+
+      &--focused {
+        color: $white;
+
+        path {
+          fill: $white;
+        }
+      }
+
+      &::after {
+        content: unset;
+      }
+
+      &__icon {
+        margin-right: 0.75rem;
+      }
+    }
+
+    svg {
+      display: block;
+      margin-left: auto;
+      margin-right: 5.625rem;
+    }
+  }
+
+  &__background {
+    background: linear-gradient( 146.32deg, #020005 0%, #220046 100% );
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+}

@@ -1,0 +1,111 @@
+@import './mixins';
+
+$volte-play: 'Volte Play';
+
+$fontfamilies: (
+  'VoltePlay': $volte-play
+);
+
+// font size pixel equivalent values assume the typical browser default `16px`
+$fontsizes: (
+  'p96': 4rem,     // 96px
+  'p50': 2.08rem,  // 50px
+  'p48': 2rem,     // 48px
+  'p41': 1.67rem,  // 40px
+  'p40': 2.5rem,   // 40px
+  'p36': 2.25rem,  // 36px
+  'p30': 1.875rem, // 30px
+  'p26': 1.625rem, // 26px
+  'p25': 1.5625rem, // 25px
+  'p24': 1.5rem,   // 24px
+  'p22': 1.375rem, // 22px
+  'p20': 1.25rem,  // 20px
+  'p21': 1.0625rem, //21px
+  'p23': 1.4375rem, //23px
+  'base': 1rem,     // 16px
+  'p12': 0.75rem,  // 13px
+  'p13': 0.813rem,  // 13px
+  'p14': 0.875rem,  //14px
+  'p18': 1.125rem,   //18px
+  'p26base24': 1.083rem,  //26px
+  'p34': 1.417rem,  // 34px
+  'p23base24': 0.9625rem,  //23.1px
+  'p12base24': 0.5rem, // 12px
+  'p32base24': 1.333rem, // 32px
+  'p62base24': 2.5833rem,   // 62px
+  'px20': 0.8336rem //20px
+);
+
+$fontweights: (
+  "normal": normal, // 400
+  "bold": bold,     // 700
+  "300": 300,       // Light
+  "500": 500,       // Medium
+  "600": 600        // Semi Bold
+);
+
+$font-italic: italic;
+
+//text decoration variables for new text and title specs.
+$text-decoration-underline:   underline;
+$text-decoration-line-through: line-through;
+
+$letterspacing: (
+  'p1_3': 0.08125rem,   // 1.3px,
+  'p1_11': 0.069375rem, // 1.11px,
+  'p1': 0.0625rem,      // 1px,
+  'p_3': 0.01875rem,    // 0.3px,
+  'p_25': 0.015625rem,  // 0.25px,
+  'p_18': 0.01176rem,   // 0.188173
+  'p_15': 0.009375rem,  // 0.15px,
+  'p_48': 0.03rem,  // 0.48px
+  'base': 1rem,         // 1
+  'm_3': -0.01875rem,   // -0.3px,
+  'm_5': -0.03125rem,    // -0.5px,
+  'm1': -0.0625rem,     // -1px,
+  'm1_25': -0.078125rem // -1.25px,
+);
+
+$lineheights: (
+  'em4_8': 4.8rem,        // 115.2px
+  'em3': 3rem,         // 48px
+  'em2_5': 2.5rem,     // 40px
+  'em2_25': 2.25rem,     // 36px
+  'em2_0625':2.0625rem,  //33px
+  'em2': 2rem,         // 32px
+  'em1_875': 1.875rem, // 30px
+  'em1_8': 1.8rem,
+  'em1_75': 1.75rem,   // 28px
+  'em1_7875': 1.7875rem, // 28.6px
+  'em1_80': 1.8rem,    // 28.8px
+  'em1_90': 1.208rem,    // 29px
+  'em1_68': 1.68rem,   // 27px
+  'em1_62': 1.62rem,   // 26px
+  'em1_56': 1.56rem,   // 25px
+  'em1_5': 1.5rem,     // 24px
+  'em1_375':1.375rem,  //22px
+  'em1_3125':1.3125rem,  //21px
+  'em1_437': 1.437rem,
+  'em1_42': 1.42rem,
+  'em1_4': 1.4rem,
+  'em1_37': 1.37rem,
+  'em1_33': 1.333rem,
+  'em1_3': 1.3rem,
+  'em1_25': 1.25rem,   // 20px
+  'em1_2': 1.2rem,
+  'em1_1': 1.1rem,
+  'em1_16': 1.16rem,
+  'em1_125': 1.125rem, // 18px
+  'base': 1rem,        // 16px
+  'em0_9375': 0.9375rem, //15px
+  'em0_75': 0.75rem,    // 12px
+  'em2_26': 2.267rem,     // 54px
+  'em1_base25': 1.058rem,  //25.41px
+  'em0_6': 0.6rem, // 14.4px
+  'em1_6base24': 1.6rem, // 38.4px
+  'em3_1base24': 3.1rem // 38.4px
+);
+
+:export {
+  @include mapObject('fontfamilies', $fontfamilies);
+}

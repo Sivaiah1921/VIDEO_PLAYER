@@ -1,0 +1,155 @@
+{
+  "name": "tv-tata-play",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@noriginmedia/norigin-spatial-navigation": "^2.2.2",
+    "@sentry/react": "^7.32.1",
+    "appsflyer-html5-ctv-sdk": "^0.0.2",
+    "axios": "^0.27.2",
+    "centrifuge": "^5.5.2",
+    "classnames": "^2.3.1",
+    "compare-versions": "^6.1.0",
+    "crypto-js": "^4.2.0",
+    "dialog-polyfill": "^0.5.6",
+    "env-cmd": "^10.1.0",
+    "html-react-parser": "^3.0.1",
+    "iso-639-2": "^3.0.2",
+    "jsdoc-to-markdown": "^9.1.1",
+    "lodash": "^4.17.21",
+    "lottie-web": "^5.12.2",
+    "md5": "^2.3.0",
+    "mixpanel-browser": "^2.45.0",
+    "promise.allsettled": "^1.0.6",
+    "pubnub": "^7.2.0",
+    "react": "18.0.0",
+    "react-app-polyfill": "^3.0.0",
+    "react-circular-progressbar": "^2.1.0",
+    "react-confetti": "^6.1.0",
+    "react-dom": "18.0.0",
+    "react-highlight-words": "^0.18.0",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-intersection-observer": "^9.13.1",
+    "react-qr-code": "^2.0.7",
+    "react-router-dom": "5.2.0",
+    "sass": "^1.83.4",
+    "shaka-player": "4.10.9",
+    "shaka-player-2.4": "npm:shaka-player@2.4.4",
+    "swiper": "^10.1.0",
+    "video.js": "7.17.0",
+    "video10.js": "npm:video.js@7.10.0",
+    "videojs-contrib-eme": "3.6.0",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "7.9.4",
+    "@storybook/addon-essentials": "^6.5.9",
+    "@storybook/addon-interactions": "^6.5.9",
+    "@storybook/addon-links": "^6.5.9",
+    "@storybook/builder-webpack5": "^6.5.9",
+    "@storybook/node-logger": "^6.5.9",
+    "@storybook/preset-create-react-app": "^4.1.2",
+    "@storybook/react": "^6.5.9",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.3.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "chalk": "^4.1.2",
+    "husky": "^3.0.7",
+    "jsdoc": "^3.6.10",
+    "plop": "^3.0.5",
+    "react-scripts": "5.0.0",
+    "react-test-renderer": "18.0.0",
+    "serve": "^13.0.2",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0"
+  },
+  "homepage": "./",
+  "scripts": {
+    "build": "npm run build:react && npm run jsdoc:build",
+    "build:dev": "GENERATE_SOURCEMAP=false env-cmd -f .env.development react-scripts build",
+    "build:stage": "GENERATE_SOURCEMAP=false env-cmd -f .env.stage react-scripts build",
+    "build:prod": "GENERATE_SOURCEMAP=false env-cmd -f .env.production react-scripts build",
+    "clean:install": "rm -rf node_modules/ package-lock.json && npm i",
+    "generate": "plop --plopfile config/functional/index.js --componentPath 'src'",
+    "generate:redux": "plop --plopfile config/generators/index.js",
+    "jsdoc:build": "JSDOC_CONFIG='.jsdoc.json' JSDOC_TEMPLATE='./node_modules/ink-docstrap/template' npm run jsdoc:build:external",
+    "jsdoc:build:external": "jsdoc -c $JSDOC_CONFIG -t $JSDOC_TEMPLATE  -r -R README.md  --verbose",
+    "lint": "eslint --ext .jsx --ext .js ./src --debug --cache --fix && npm run lint-styles",
+    "lint-styles": "stylelint ./src/views/components/**/*.scss --fix",
+    "start:dev": "env-cmd -f .env.development react-scripts start",
+    "start:stage": "env-cmd -f .env.stage react-scripts start",
+    "start:docs": "npx serve docs -l 8080",
+    "test": "react-scripts test --detectOpenHandles",
+    "test:coverage": "react-scripts test --collectCoverage --watchAll=false --detectOpenHandles --no-cache --coverageDirectory='docs/tests/'  --forceExit",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public",
+    "package:lg": "ares-package -o build/.package build",
+    "build:dev:win": "set \"GENERATE_SOURCEMAP=false\" && env-cmd -f .env.development react-scripts build",
+    "build:stage:win": "set \"GENERATE_SOURCEMAP=false\" && env-cmd -f .env.stage react-scripts build",
+    "build:prod:win": "set \"GENERATE_SOURCEMAP=false\" && env-cmd -f .env.production react-scripts build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      "chrome >= 53",
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "chrome >= 53",
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint",
+      "pre-push": "npm run test:coverage && npm run jsdoc:build"
+    }
+  },
+  "jest": {
+    "resetMocks": false,
+    "restoreMocks": true,
+    "collectCoverageFrom": [
+      "src/views/components/**/*.{js,jsx}",
+      "!src/utils/**/*.js",
+      "!<rootDir>/node_modules/",
+      "!src/**/*.stories.js",
+      "!src/**/SVG/*.js",
+      "!src/**/Icons/*.js",
+      "!src/**/Tokens/**/*.js",
+      "!src/**/Colors/*.js",
+      "!src/**/Grid/*.js",
+      "!src/**/__test_data/*.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 15,
+        "functions": 15,
+        "lines": 15,
+        "statements": 15
+      }
+    }
+  },
+  "sideEffects": false
+}

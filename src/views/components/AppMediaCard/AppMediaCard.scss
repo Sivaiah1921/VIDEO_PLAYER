@@ -1,0 +1,27 @@
+@import '../../../styles/src/variables';
+
+.AppMediaCard {
+  margin: 0.25rem 1.5rem 1.5rem -0.5rem;
+
+  &__content {
+    border: 0.1875rem solid transparent;
+    height: 100%;
+    // transition: transform .2s ease-out;
+    transition: transform ease-out;
+    width: 100%;
+
+    .Image {
+      img {
+        // border-radius: 100%; // comment for old BBA reference
+        margin: -0.125rem;
+        width: unset;
+      }
+    }
+  }
+
+  &--withFocus {
+    // border: 0.1875rem solid $white; // comment for old BBA reference
+    // border-radius: 50%; // comment for old BBA reference
+    transform: scale( 1.1 );
+  }
+}

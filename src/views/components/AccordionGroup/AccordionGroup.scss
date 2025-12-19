@@ -1,0 +1,7 @@
+@import '../../../styles/src/variables';
+@import '../../../styles/src/grid';
+
+.AccordionGroup {
+  @include centerContent;
+  @include bottomSpacer();
+}

@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  className="Search"
+>
+  <div
+    className="Search__main"
+  >
+    <div
+      className="Search__logoImage"
+    >
+      <svg
+        classNames="Home__logo"
+        fill="none"
+        style={
+          Object {
+            "height": "1.25rem",
+            "width": "5rem",
+          }
+        }
+        viewBox="0 0 80 19"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M27.666 17.919h5.398v-8.77l6.194 8.77h4.992V.619h-5.416v8.22L32.958.62h-5.292v17.3zM45.44 9.439c0 5.235 3.593 9.096 9.292 9.079 5.38-.017 9.185-3.604 9.185-9.182 0-.327-.017-.687-.053-1.03h-8.601v4h3.15c-.548.995-1.911 1.424-3.486 1.424-2.478 0-4.018-1.87-4.018-4.48 0-2.745 1.895-4.41 4.035-4.41 1.753 0 2.868.773 3.345 1.923h5.398C62.928 2.214 58.822 0 54.856 0c-5.433 0-9.416 3.964-9.416 9.439zM65.109 17.919h13.787v-4.566h-8.213v-1.836h7.523V7.02h-7.523V5.184h8.213V.619H65.109v17.3zM19.863.619v17.3h5.628V.619h-5.628zM0 18.09l15.204-5.68.017-6.317L.001.447h11.185c3.876 0 6.708 1.098 6.708 4.547 0 1.7-.849 3.244-2.672 4.12 1.858.53 3.08 2.024 3.08 4.015 0 3.587-2.938 4.96-6.46 4.96H0v.001z"
+          fill="#fff"
+        />
+        <path
+          d="M15.221 6.093L.001.447v5.8l8.938 2.97L0 12.203v5.887l15.204-5.68.017-6.317z"
+          fill="#E10092"
+        />
+      </svg>
+    </div>
+    <div
+      className="Search__mainContainer"
+    >
+      <div
+        className="Search__inputContainer"
+      >
+        <div
+          className="InputField"
+        >
+          <div
+            className="InputField__label"
+          >
+            <label
+              className="InputField__label--text"
+            />
+          </div>
+          <div
+            className="InputField__content InputField__content--active"
+          >
+            <div
+              className="InputField__formControls"
+            >
+              <input
+                autoComplete="on"
+                autoCorrect="on"
+                className="InputField__input InputField__input--active"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                onPaste={[Function]}
+                placeholder="Enter Text Here"
+                spellCheck={true}
+                type="text"
+                value=""
+              />
+              <svg
+                fill="none"
+                style={
+                  Object {
+                    "height": "1.5rem",
+                    "width": "1.5rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  clipRule="evenodd"
+                  d="M16.296 14.578h-.908l-.315-.313a7.397 7.397 0 0 0 1.793-4.833A7.432 7.432 0 0 0 9.433 2a7.432 7.432 0 1 0 0 14.865 7.4 7.4 0 0 0 4.831-1.79l.316.313v.905L20.295 22 22 20.295l-5.704-5.717ZM9.5 15a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11Z"
+                  fill="#8E81A1"
+                  fillRule="evenodd"
+                />
+              </svg>
+            </div>
+            <div />
+          </div>
+        </div>
+      </div>
+      <div
+        className="Search__container"
+      >
+        <div
+          className="SearchRightContainer"
+        >
+          <div
+            className="Search__scrollContainer"
+            id="scrollContainer"
+          >
+            <div
+              className="Search__containerRight"
+            >
+              <div
+                className="Search__languageRail"
+              />
+              <div
+                className="Search__genreRail"
+              />
+              <div
+                className="Search__railTitle"
+              >
+                <div
+                  className="Text Text--title-3 Text--left Text--white"
+                >
+                  Trending
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

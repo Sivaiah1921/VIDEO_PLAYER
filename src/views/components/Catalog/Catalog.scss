@@ -1,0 +1,512 @@
+@import '../../../styles/src/variables';
+@import '../../../styles/src/grid';
+
+.Catalog {
+  $img: img;
+
+  background: linear-gradient( 0deg, #020005 22%, #220046 72% );
+  height: 100vh;
+  width: 100%;
+
+  .BannerComponent {
+    background-color: #220046;
+    position: unset;
+
+    &__bbg .Image img {
+      height: 17rem;
+      z-index: 9;
+    }
+
+    &__bbl {
+      .Image img {
+        bottom: 12.125rem;
+        height: 11.25rem;
+        margin-right: 1rem;
+        position: absolute;
+        right: 0.9375rem;
+        width: auto;
+        z-index: 9;
+      }
+    }
+
+    &__footerImage {
+      position: absolute;
+      top: 8rem;
+      width: 100%;
+      z-index: 999999999;
+
+      .Image img {
+        bottom: 20rem;
+        height: 2.625rem;
+        margin-left: auto;
+        margin-right: 0;
+        position: absolute;
+        right: 4.5rem;
+        width: 2.5rem;
+        z-index: 9;
+      }
+    }
+
+    &__LinearGradient1 {
+      background: linear-gradient( 180deg, rgba( 2, 0, 5, 0.0001 ) 50%, #020005 100% );
+      height: auto;
+      left: 0;
+      right: 0;
+      width: 100%;
+      z-index: 2;
+    }
+
+    &__LinearGradient2 {
+      background: #220046;
+      // height: 34.3125rem;
+      left: 20.125rem;
+      left: 0;
+      position: absolute;
+      top: 0;
+      z-index: 1;
+    }
+  }
+
+  &__scrollContainer {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &__LanguageBanner {
+    left: 80rem;
+    position: absolute;
+    top: -20rem;
+    z-index: -1;
+  }
+
+  &__genreBanner {
+    position: relative;
+  }
+
+  &__header {
+    display: flex;
+    position: absolute;
+    right: 5.625rem;
+    top: 2.5rem;
+    z-index: 999;
+
+    .Button {
+      align-items: center;
+      background: transparent;
+      display: flex;
+      flex-wrap: nowrap;
+      font-weight: 400;
+      height: unset !important;
+      position: relative;
+      right: 57rem;
+      width: unset !important;
+
+      &__insideContentLabel {
+        color: map-get( $bingeBlue, '40' );
+        font-weight: 500;
+      }
+    }
+
+    .Button__icon--withIconLeft {
+      top: -3px;
+    }
+  }
+
+  &__LanguageHeader {
+    display: flex;
+    left: 64rem;
+    position: relative;
+    top: 2.25rem;
+
+    .Button {
+      align-items: center;
+      background: transparent;
+      display: flex;
+      flex-wrap: nowrap;
+      font-weight: 400;
+      height: unset !important;
+      margin-left: -1.8rem;
+      position: relative;
+      right: 59rem;
+      width: unset !important;
+
+      &__insideContentLabel {
+        color: map-get( $bingeBlue, '40' );
+        font-weight: 500;
+      }
+    }
+
+    .Button__icon--withIconLeft {
+      top: -3px;
+    }
+  }
+
+  &__LiveHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2.5rem;
+    position: relative;
+    top: 3.75rem;
+
+    .Text {
+      margin-left: 3.95rem;
+    }
+
+    svg {
+      margin-right: 3.6rem;
+    }
+  }
+
+  &__catalogHeaderInit {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    position: absolute;
+    top: -13.415rem;
+    transform: translateX( -50% );
+    z-index: 999;
+  }
+
+  &__catalogHeader {
+    align-items: center;
+    animation: hideMe 0.3s forwards;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 34rem;
+    top: -15.5rem;
+    z-index: 999;
+
+    @media only screen and (width: 1280px) {
+      top: -16.5rem !important;
+    }
+  }
+
+  @keyframes hideMe {
+    from {
+      margin-top: 55px;
+    }
+
+    to {
+      margin-top: 50px;
+    }
+  }
+
+  &__headerInVisible {
+    display: none !important;
+  }
+
+  &__catalogHeaderImage {
+    // width: 10rem;
+
+    .Image {
+      // position: absolute;
+      // top: -0.4rem;
+      #{$img} {
+        // width: 8rem;
+        height: 5.5rem;
+        margin: auto;
+        width: auto;
+      }
+    }
+  }
+
+  &__catalogHeaderText {
+    // position: relative;
+    // top: 4.5rem;
+    width: 10rem;
+
+    p.Text {
+      font-size: 1.6rem !important;
+      font-weight: 500 !important;
+      line-height: 2.125rem !important;
+      // margin-top: -1rem !important;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    padding-left: 5.625rem;
+    position: relative;
+    transform: translateY( 18.125rem );
+    z-index: 9;
+
+    &--header {
+      margin-left: 0.5rem;
+    }
+
+    &--footerImage {
+      transform: translateY( 18.125rem );
+    }
+
+    &--liveChannelContent {
+      padding-left: 3.95rem;
+      padding-right: 3rem;
+      transform: translateY( 4.125rem ) !important;
+    }
+
+    &--ChannelContent {
+      padding-left: 4rem !important;
+      transform: translateY( 3.7rem ) !important;
+
+      p.Text {
+        font-size: 2.083rem !important;
+        font-weight: 500 !important;
+        line-height: 2.5rem !important;
+      }
+    }
+
+    p.Text {
+      font-size: 3.75rem;
+      font-weight: 400;
+      line-height: 4.125rem;
+      margin-bottom: 1.625rem;
+      // position: relative;
+      // top: -0.5rem;
+    }
+
+    .Catalog {
+      &__wrapper {
+        width: 72rem;
+      }
+
+      &__buttons {
+        display: flex;
+        margin-bottom: 1.25rem;
+        -ms-overflow-style: none; /* for Internet Explorer, Edge */
+        overflow-y: scroll;
+        padding-right: 2rem;
+        scrollbar-width: none; /* for Firefox */
+        // position: relative;
+
+        &--active {
+          background-color: map-get( $pink, '100' );
+          border: 0.1875rem solid map-get( $pink, '100' ) !important;
+        }
+
+        &--genreActive {
+          padding-right: 2rem !important;
+
+          .Button__insideContentLabel::after {
+            content: 'X';
+            font-weight: '600';
+            position: absolute;
+            right: 0.9rem;
+            top: 0.55rem;
+          }
+        }
+
+        &::-webkit-scrollbar {
+          display: none; /* for Chrome, Safari, and Opera */
+        }
+
+        .Button {
+          border: 0.1875rem solid #f3cbe3;
+          font-size: 1.25rem;
+          font-weight: 500;
+          line-height: 1.25rem;
+          margin-right: 0.5rem;
+          padding: 0 1.5rem;
+          text-transform: capitalize;
+          white-space: nowrap;
+
+          &--focused {
+            background-color: map-get( $pink, '100' );
+            border: 0.1875rem solid $white !important;
+            color: $white;
+            font-weight: 500;
+          }
+
+          &--secondary::after {
+            border: none;
+          }
+        }
+      }
+
+      &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        //margin-left: 0.5rem;
+        margin-top: 0.5rem;
+
+        &--notLiveContainer {
+          padding-bottom: 20rem;
+          padding-left: 0.4rem;
+          padding-top: 2px;
+        }
+
+        &--LiveContainer {
+          margin-left: 0;
+        }
+
+        &--LANDSCAPE {
+          .Image {
+            /* Earlier values before UI/UX Portrait/Landscape Change */
+            height: 8.75rem;
+            width: 15.25rem;
+            // height: 11.25rem;
+            // width: 20rem;
+          }
+        }
+
+        &--PORTRAIT {
+          .Image {
+            /* Earlier values before UI/UX Portrait/Landscape Change */
+            height: 16.5rem;
+            width: 10rem;
+            // height: 16.27rem;
+            // width: 10.83rem;
+          }
+        }
+
+        @include media-breakpoint-down(md) {
+          grid-template-columns: auto auto;
+        }
+
+        &--loader {
+          pointer-events: none;
+
+          .Image {
+            border: none;
+            height: 10rem;
+            left: 47%;
+            outline: none;
+            position: absolute;
+            width: 10rem;
+            z-index: 100000;
+          }
+        }
+      }
+
+      &__ChannelContainer {
+        &--LANDSCAPE {
+          .Image {
+            height: 9.75rem;
+            width: 17.333rem;
+          }
+        }
+
+        &--PORTRAIT {
+          .Image {
+            height: 16.25rem;
+            width: 10.833rem;
+          }
+        }
+      }
+
+      &__card {
+        margin-bottom: 1.458rem;
+        margin-right: 2.5rem;
+
+        > div.MediaCardWrapper {
+          .MediaCard--withFocus {
+            margin-bottom: unset;
+          }
+        }
+
+        &--liveCard {
+          margin-bottom: 0.8rem;
+          margin-right: 0.8rem;
+
+          &:nth-child(9) {
+            // margin-right: 0;
+          }
+
+          &--LANDSCAPE {
+            .Image {
+              height: 8.75rem;
+              width: 15.25rem;
+            }
+          }
+
+          &--PORTRAIT {
+            .Image {
+              height: 16.5rem;
+              width: 10rem;
+            }
+          }
+        }
+
+        &--notLiveCard {
+          @media only screen and (min-width: 1920px) {
+            margin-right: 1.666666666666667rem;
+          }
+        }
+
+        .MediaCard--provider {
+          .Image {
+            height: auto;
+          }
+        }
+
+        .MediaCard__liveContent {
+          display: none;
+        }
+      }
+    }
+
+    &--subheader {
+      p.Text {
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 4.125rem;
+        margin-left: 13rem;
+      }
+    }
+  }
+
+  &__mediaCard {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    overflow: auto;
+    padding: 5px 0 21rem 0;
+
+    &--liveMediaCard {
+      padding: 0;
+      padding-bottom: 15rem;
+    }
+  }
+
+  .infinite-scroll-component {
+    // height: 130vh !important;
+  }
+
+  &__Error {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+  }
+
+  .Loader {
+    align-items: top;
+    top: 0;
+
+    .Loader__content {
+      position: absolute;
+      top: 50%;
+    }
+  }
+
+  .Catalog__ChannelContainer {
+    &--LANDSCAPE {
+      .Catalog__card {
+        margin-bottom: 1.25rem !important;
+        margin-right: 0.85rem !important;
+
+        .MediaCardWrapper .MediaCard {
+          margin-bottom: 0 !important;
+        }
+      }
+    }
+
+    &--PORTRAIT {
+      .Catalog__card {
+        margin-bottom: 1.25rem !important;
+        margin-right: 1.4rem !important;
+      }
+    }
+  }
+}

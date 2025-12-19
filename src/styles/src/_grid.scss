@@ -1,0 +1,57 @@
+@import './_mixins';
+
+// Grid settings
+$xl-max-width: 90rem;
+$columns-number-desktop: 12;
+$columns-number-mobile: 6;
+$side-margin-desktop: 2.5rem;
+$side-margin-mobile: 1.5rem;
+$remove-side-margin-desktop: -2.5rem;
+$remove-side-margin-mobile: -1.5rem;
+
+// Center grid content in a container with the max-width
+@mixin centerContent {
+  margin: 0 auto;
+  max-width: $xl-max-width;
+}
+
+// Note: left and right margin is added below at the grid level.
+// If your grid container requires top or bottom margins, those should be set explicitly as
+// margin-top and margin-bottom properties, to not break the grid's layout.
+@mixin infiniteGrid() {
+  display: grid;
+  column-gap: 1rem;
+  grid-template-columns: repeat($columns-number-desktop, minmax(6.4%, 1fr));
+  margin-left: $side-margin-desktop;
+  margin-right: $side-margin-desktop;
+  @include media-breakpoint-down(md) {
+    grid-template-columns: repeat($columns-number-mobile, minmax(12.5%, 1fr));
+    margin-left: $side-margin-mobile;
+    margin-right: $side-margin-mobile;
+  }
+}
+
+// In order to accommodate elements and incorporate the grid, negative margins must be used.
+// Note: 'margin' must be used to override the padding, negative padding is invalid.
+// This will still display the grid as designed and eliminate potential bugs raised by Creative or QA.
+@mixin fullWidth {
+  margin-left: $remove-side-margin-desktop;
+  margin-right: $remove-side-margin-desktop;
+  @include media-breakpoint-down(md) {
+    margin-left: $remove-side-margin-mobile;
+    margin-right: $remove-side-margin-mobile;
+  }
+}
+
+
+@mixin debug($color: blue, $important: false) {
+  @if $important {
+    * {
+      background: rgba($color, .05) !important;
+    }
+  } @else {
+    * {
+      background: rgba($color, .05);
+    }
+  }
+}

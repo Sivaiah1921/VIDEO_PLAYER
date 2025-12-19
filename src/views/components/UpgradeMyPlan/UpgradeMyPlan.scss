@@ -1,0 +1,249 @@
+@import '../../../styles/src/variables';
+
+.UpgradeMyPlan {
+  &__content {
+    align-items: flex-start;
+    display: flex;
+  }
+
+  &__title {
+    .Text {
+      font-size: map-get( $fontsizes, 'p50' );
+      font-weight: map-get( $fontweights, '500' );
+      line-height: map-get( $fontsizes, 'p48' );
+    }
+  }
+
+  &__footerAny {
+    p {
+      line-height: 1.35rem;
+      text-align: left;
+    }
+  }
+
+  &__cancelFooter {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    white-space: nowrap;
+    width: 40rem;
+
+    p {
+      line-height: 1.5rem;
+      text-wrap: wrap;
+      white-space: normal;
+    }
+  }
+
+  &__left {
+    &--rowOne {
+      align-items: flex-end;
+      display: flex;
+      position: relative;
+
+      svg {
+        position: absolute;
+        top: 0;
+      }
+
+      .Text {
+        margin-right: 0.35rem;
+      }
+    }
+
+    &--rowOneText {
+      align-items: start;
+      display: flex;
+      flex-direction: column;
+      margin-left: 3.5rem;
+      padding-top: 0.65rem;
+
+      >p {
+        font-size: map-get( $fontsizes, 'base' );
+      }
+
+      div {
+        align-items: center;
+        display: flex;
+
+        .Text {
+          line-height: map-get( $lineheights, 'em1_875' );
+        }
+
+        >p:first-child {
+          font-weight: map-get( $fontweights, '500' );
+        }
+      }
+    }
+
+    &--packTextYellow {
+      background: linear-gradient( 270deg, #ffa800 0%, #fff389 45.31%, #ffa800 100% );
+      -webkit-background-clip: text;
+      background-clip: text;
+      // margin-left: 0.5rem;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &--apps {
+      display: flex;
+      flex-wrap: wrap;
+      // gap: 1.5rem;
+      margin-bottom: 0.6rem;
+      margin-top: 1.25rem;
+
+      .PackageCard__content {
+        height: fit-content;
+        padding: 1.25rem 1rem !important;
+        // padding-bottom: 0;
+        pointer-events: none;
+        width: 37.834rem !important;
+
+        .Image img {
+          height: 3.75rem;
+          width: 3.75rem;
+        }
+      }
+
+      .PackageCard__multiapps {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        grid-column-gap: unset;
+        height: unset;
+        margin-bottom: 0;
+      }
+
+      .PackageCard {
+        &__header--details {
+          left: 2.8rem;
+          margin-bottom: -0.5rem;
+          position: relative;
+          top: -1.8rem;
+        }
+
+        &__header--titleRight {
+          svg {
+            height: 2.5rem !important;
+            width: 2.5rem !important;
+          }
+
+          &--title {
+            align-self: start;
+          }
+        }
+      }
+
+      .AppMediaCard {
+        height: 3.75rem;
+        margin: unset;
+        margin-bottom: 0.72rem;
+        margin-right: 0.7rem !important;
+        width: 3.75rem;
+
+        @media only screen and (width: 1280px) {
+          margin-right: 0.69rem !important;
+        }
+      }
+
+      .AppMediaCard:nth-child(8n) {
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  &--morePlanLogos {
+    width: 38.75rem;
+
+    .UpgradeMyPlan {
+      &__title {
+        text-align: center;
+
+        > svg {
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      &__left {
+        width: 38.75rem;
+
+        &--rowOneText {
+          flex-direction: row;
+          justify-content: space-between;
+          margin-left: unset;
+          padding-top: unset;
+          width: 100%;
+
+          > div.morePlanLogos2 {
+            p:first-child,
+            p:last-child {
+              background: linear-gradient( 270deg, #ffa800 0%, #fff389 45.31%, #ffa800 100% );
+              -webkit-background-clip: text;
+              background-clip: text;
+              font-size: map-get( $fontsizes, 'p24' );
+              font-weight: map-get( $fontweights, '600' );
+              line-height: map-get( $lineheights, 'em1_5' );
+              -webkit-text-fill-color: transparent;
+            }
+          }
+
+          > div.morePlanLogos1 {
+            p:first-child {
+              background: linear-gradient( 270deg, #ffa800 0%, #fff389 45.31%, #ffa800 100% );
+              -webkit-background-clip: text;
+              background-clip: text;
+              font-size: map-get( $fontsizes, 'p24' );
+              font-weight: map-get( $fontweights, '600' );
+              line-height: map-get( $lineheights, 'em1_5' );
+              -webkit-text-fill-color: transparent;
+            }
+
+            p:last-child {
+              font-size: map-get( $fontsizes, 'p24' );
+              font-weight: map-get( $fontweights, '500' );
+              line-height: map-get( $lineheights, 'em1_5' );
+              margin-right: unset;
+            }
+          }
+        }
+
+        &--apps {
+          margin-bottom: 0.5rem;
+          margin-top: 1.25rem;
+
+          .AppMediaCard {
+            margin-right: 1.2rem;
+
+            &__content .Image img {
+              height: 3.75rem;
+              width: 3.75rem;
+            }
+          }
+        }
+
+        &--rowOne .Text {
+          align-items: center;
+          display: flex;
+          font-size: map-get( $fontsizes, 'p20' );
+          // height: 2rem;
+          line-height: map-get( $lineheights, 'em1_25' );
+        }
+      }
+
+      &__button {
+        text-align: center;
+
+        .Button {
+          width: 25rem;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    white-space: nowrap;
+    width: 40rem;
+  }
+}

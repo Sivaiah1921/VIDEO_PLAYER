@@ -1,0 +1,188 @@
+
+.ChipCardSection {
+  $parent: &;
+  $Image: '.Image';
+
+  &__channelAppContent {
+    > div {
+      padding-right: 0.8rem;
+    }
+
+    bottom: 1rem;
+    display: flex;
+    overflow: hidden;
+    padding-bottom: 0.2rem;
+    padding-left: 0.4rem;
+    padding-top: 0.8rem;
+
+    &--bingTop10Contents {
+      padding-left: 0.7rem;
+    }
+  }
+
+  &__channelAppWithNoContent {
+    align-items: center;
+    display: flex;
+    height: 12.11rem;
+    overflow: hidden;
+    padding-top: 0.3rem;
+
+    .Button {
+      background-color: transparent;
+      width: 100%;
+    }
+
+    .Button--focused::after {
+      border: none;
+    }
+
+    &--bingTop10Contents {
+      height: 20rem;
+    }
+
+    &--LANSCAPE_LARGE {
+      height: 16.6rem;
+
+      img {
+        height: 15.75rem !important;
+        width: 28rem !important;
+      }
+    }
+
+    &--PORTRAIT_LARGE {
+      height: 20rem;
+
+      img {
+        height: 19.125rem !important;
+        width: 12.75rem !important;
+      }
+    }
+  }
+
+  &__BINGE_CHIP_RAIL {
+    &--PORTRAIT {
+      &--SMALL,
+      &--DEFAULT {
+        #{$Image} {
+          img {
+            height: 16.27rem;
+            width: 10.83rem;
+          }
+        }
+      }
+
+      &--MEDIUM,
+      &--LARGE {
+        #{$Image} {
+          img {
+            border-radius: 0.35rem;
+            height: 19.125rem;
+            width: 12.75rem;
+          }
+        }
+      }
+
+      #{$Image} {
+        img {
+          height: 16.27rem;
+          width: 10.83rem;
+        }
+      }
+    }
+
+    &--LANDSCAPE {
+      &--SMALL,
+      &--DEFAULT {
+        .Image {
+          img {
+            border-radius: 0.35rem;
+
+            /* commented due to HeroBanner revamp changes */
+            // height: 8.125rem;
+            // width: 14.188rem;
+            height: 11.25rem;
+            width: 20rem;
+          }
+        }
+      }
+
+      &--MEDIUM,
+      &--LARGE {
+        .Image {
+          img {
+            height: 15.75rem;
+            width: 28rem;
+          }
+        }
+      }
+
+      .Image {
+        img {
+          height: 11.25rem;
+          width: 20rem;
+        }
+      }
+    }
+  }
+
+  &__BROWSE_BY_CHANNLES {
+    .LiveMediaCard {
+      border: 0.1875rem solid transparent;
+      // margin-right: 0.5rem;
+    }
+
+    // .LiveMediaCard--withFocus {
+    //   // transform: scale( 1.02 );
+    // }
+
+    .LiveMediaCard .Image {
+      height: 8.333rem;
+      width: 8.333rem;
+    }
+  }
+
+  &__BINGE_CHIP_RAIL--TOP_PORTRAIT--SMALL,
+  &__BINGE_CHIP_RAIL--TOP_PORTRAIT--MEDIUM,
+  &__BINGE_CHIP_RAIL--TOP_PORTRAIT--LARGE {
+    .TopMediaCard__rightMedia--media {
+      .Image {
+        img {
+          height: 16.542rem !important;
+          width: 10.83rem !important;
+        }
+      }
+    }
+
+    .TopMediaCard__indexIcon .Image img {
+      height: 7.1rem;
+      min-width: 5.6rem !important;
+      position: relative;
+      right: -0.9rem;
+      top: 9.75rem;
+    }
+
+    &:nth-child(10) {
+      .Image {
+        img {
+          right: -0.7rem;
+        }
+      }
+
+      .TopMediaCard {
+        &__indexIcon {
+          .Image {
+            img {
+              min-width: 9.5rem !important;
+              right: -0.7rem !important;
+            }
+          }
+        }
+      }
+    }
+
+    .TopMediaCard__rightMedia--posTen {
+      position: relative;
+      // right: 2.95rem;
+    }
+  }
+}

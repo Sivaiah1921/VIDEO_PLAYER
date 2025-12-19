@@ -1,0 +1,160 @@
+@import '../../../styles/src/variables';
+
+.MultiLanguageList {
+  height: 100vh;
+  margin-left: 8.875rem;
+  position: relative;
+  z-index: 3;
+
+  &__header {
+    align-items: center;
+    display: flex;
+    margin-bottom: 3.3rem;
+    margin-left: -6rem;
+    padding-top: 2.334rem;
+    position: relative;
+
+    .Button {
+      align-items: center;
+      background: transparent;
+      color: map-get( $pink, '40' );
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      width: unset;
+
+      &::after { content: unset; }
+
+      &--focused {
+        color: $white;
+      }
+
+      &__icon {
+        margin-right: 0.75rem;
+      }
+    }
+
+    svg {
+      display: block;
+      margin-left: auto;
+      margin-right: 5.625rem;
+    }
+  }
+
+  &__loader {
+    left: 30rem;
+    position: absolute;
+    top: 24.5rem;
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+
+    p.Text {
+      font-weight: 400;
+    }
+  }
+
+  &__subTitle {
+    color: $white;
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 120%; /* 36px */
+    margin-bottom: 1.25rem;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    height: 21rem;      /* or desired bound */
+    margin-bottom: 7rem;
+    overflow-y: auto;      /* enable vertical scroll */
+    overscroll-behavior: contain;
+
+    .MultiLanguageSelection {
+      display: flex;
+      gap: 1.33rem;
+      // background-color: #220046;
+      // box-shadow: 0 6px 14px rgba( 0, 0, 0, 0.8 );
+      height: 3.75rem;
+      margin-bottom: 1.4rem;
+      margin-right: 1.4rem;
+      outline: none;
+      white-space: nowrap;
+      width: 13.75rem;
+
+      .text {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  &__bottomContainer {
+    transform: translateY( -5.6rem );
+  }
+
+  &__noLanguageContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+
+  &__proceedButton {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    width: 100%;
+
+    &--text {
+      align-items: center;
+      display: flex;
+      font-weight: map-get( $fontweights, '600' );
+      justify-content: center;
+      margin-left: -8.875rem;
+      width: 25rem;
+    }
+  }
+
+  &__background {
+    background: linear-gradient( 146.32deg, #020005 0%, #220046 100% );
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+  }
+
+  &__notification {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+
+    .Notifications svg {
+      padding-right: 1.5rem;
+      width: 3.875rem;
+    }
+  }
+
+  &__notNowButton {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    .Button--focused {
+      background-color: map-get( $pink, '100' );
+    }
+
+    &--text {
+      align-items: center;
+      display: flex;
+      font-weight: map-get( $fontweights, '600' );
+      justify-content: center;
+      margin-left: -8.875rem;
+      width: 25rem;
+    }
+  }
+}

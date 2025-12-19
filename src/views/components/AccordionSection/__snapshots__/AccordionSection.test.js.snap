@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccordionSection />tests snapshot tests renders Section correctly with proper props 1`] = `
+<div
+  className="AccordionSection"
+>
+  <button
+    className="AccordionSection__title"
+    onClick={[Function]}
+  >
+    <div>
+      Accordion Title
+    </div>
+    <div
+      className="AccordionSection__icon"
+    >
+      +
+    </div>
+  </button>
+</div>
+`;

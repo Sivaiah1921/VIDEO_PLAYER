@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PreviouslyUsedLoginPane />tests snapshot tests renders correctly AccountCard 1`] = `
+<div
+  className="PreviouslyUsedLoginPane"
+>
+  <div
+    className="PreviouslyUsedLoginPane__container"
+    id="scrollContainer"
+  >
+    <div
+      className="PreviouslyUsedLoginPane__left"
+    >
+      <div
+        className="PreviouslyUsedLoginPane__title"
+      >
+        <p
+          className="Text Text--header-2 Text--left"
+        >
+          Log In
+        </p>
+      </div>
+      <div
+        className="PreviouslyUsedLoginPane__info"
+      >
+        <p
+          className="Text Text--body-3 Text--left"
+        >
+          Previously used
+        </p>
+      </div>
+      <div
+        className="PreviouslyUsedLoginPane__content"
+        onScroll={[Function]}
+      />
+    </div>
+  </div>
+  <button
+    className="Button Button--medium"
+    onClick={[Function]}
+    style={null}
+  >
+    New Log In
+  </button>
+</div>
+`;

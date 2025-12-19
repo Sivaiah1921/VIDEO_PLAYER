@@ -1,0 +1,62 @@
+
+.SelectLanguage {
+  background: linear-gradient( 90deg, #020005 0%, #220046 100% );
+  border: 0.16rem solid;
+  border-radius: 1.25rem;
+  display: flex;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  width: 67.91rem;
+
+  &__subContainer {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+
+    .Button {
+      background: var( --buttons-pink-100, #e10092 );
+      border-radius: 0.625rem;
+      height: 2.5rem;
+      margin-left: 9.33rem;
+
+      span {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+
+    .Button--focused::after {
+      border-radius: 0.625rem;
+    }
+
+    &--langMessage {
+      align-items: center;
+      color: #f0f0f0;
+      display: flex;
+      flex-direction: row-reverse;
+      font-size: 1.41rem;
+      font-weight: 600;
+      line-height: 120%;
+      margin-top: 1.7rem;
+      text-align: center;
+
+      p {
+        margin-left: -7rem;
+      }
+    }
+
+    &--withFocus {
+      .Button {
+        border: 0.16rem white solid;
+      }
+
+      .Button--focused::after {
+        border: none;
+        border-radius: 0.625rem;
+      }
+    }
+  }
+}

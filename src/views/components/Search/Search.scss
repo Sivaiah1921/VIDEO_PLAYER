@@ -1,0 +1,361 @@
+@import '../../../styles/src/variables';
+
+.Search {
+  height: 100vh;
+  margin-top: 3.25rem;
+  position: relative;
+
+  &__loader {
+    .Image {
+      border: none;
+      height: 10rem;
+      left: 31rem;
+      outline: none;
+      position: absolute;
+      top: 7rem;
+      width: 10rem;
+      z-index: 100000;
+    }
+  }
+
+  &__filter {
+    left: 32rem;
+    position: absolute;
+    top: 5rem;
+
+    & > p {
+      margin-bottom: 1.25rem;
+    }
+  }
+
+  &__mainContainer {
+    padding-left: 4.25rem;
+  }
+
+  &__logoImage {
+    svg {
+      position: absolute;
+      right: 3.25rem;
+      top: 3.4rem;
+      z-index: 9;
+    }
+
+    .Image {
+      height: 26.87rem;
+      width: 100%;
+    }
+  }
+
+  &__container {
+    display: flex;
+    // grid-template-columns: max-content max-content;
+    position: relative;
+
+    .AlphanumericKeyboard__row {
+      width: 30.2rem;
+
+      svg {
+        left: 13%;
+        position: relative;
+        top: 8%;
+      }
+    }
+
+    .Text {
+      color: white;
+      font-weight: 500;
+    }
+  }
+
+  &__inputContainer {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 4.5rem;
+    margin-bottom: 1.75rem;
+    margin-left: 0.5rem;
+    padding: 1.5rem 1.25rem;
+    position: relative;
+    width: 26.6875rem;
+
+    &--withKeyboard {
+      position: absolute;
+    }
+
+    input::placeholder {
+      color: map-get( $purple, '40' ) !important;
+      font-size: 1.5rem !important;
+    }
+
+    .InputField {
+      align-items: center;
+      border: 0.125rem solid #8e81a1;
+      border-radius: 3.125rem;
+      height: 4.5rem;
+      margin-left: -1.3rem;
+      overflow: hidden;
+      width: 26.375rem;
+
+      &--focused {
+        border: 0.125rem solid $white;
+
+        .InputField__formControls {
+          .InputField__input {
+            &--placeholderActive {
+              @include inputText();
+
+              color: white !important;
+            }
+          }
+        }
+      }
+
+      &__content {
+        background-color: unset;
+        border: unset;
+        border-radius: unset;
+        margin-bottom: 0.25rem;
+        margin-right: 13%;
+        margin-top: unset;
+        overflow: hidden;
+        padding-left: 0.625rem;
+
+        .InputField__formControls {
+          align-items: center;
+          display: flex;
+          height: 4.1rem;
+          justify-content: space-around;
+
+          svg {
+            left: auto;
+            position: absolute;
+            right: 10%;
+            top: 40%;
+          }
+
+          .InputField__input {
+            @include inputText();
+
+            font-size: 1.5rem;
+            padding: 0 0 0 1.25rem;
+            text-align: left;
+
+            &--placeholderActive {
+              @include inputText();
+
+              color: #8e81a1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__containerLeft {
+    margin-top: 6rem;
+    width: 29.5rem;
+
+    .Search__keyboard {
+      &--hide {
+        display: none;
+      }
+
+      &--icon {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__languageRail,
+  &__genreRail {
+    position: relative;
+
+    .MediaCarousel__suffle {
+      width: 100vw;
+    }
+
+    .MediaCarousel__Rail {
+      overflow-x: scroll;
+      padding: 0.5rem 0.5rem;
+      width: 74.125rem;
+
+      @media only screen and (min-width: 1920px) {
+        width: 110.813rem;
+      }
+
+      .MediaCarousel__GenreCard {
+        top: -12px !important;
+      }
+    }
+  }
+
+  &__noGenreRail {
+    margin-bottom: 1.2rem;
+    transform: translateY( -0.666rem );
+  }
+
+  &__button {
+    &--lang,
+    &--genre {
+      margin-top: 1.25rem;
+
+      .Button {
+        margin-right: .5rem;
+        text-transform: capitalize;
+        white-space: nowrap;
+      }
+
+      .Text {
+        margin-bottom: 1.25rem;
+      }
+    }
+
+    &--langgen {
+      display: flex;
+      overflow-y: scroll;
+    }
+  }
+
+  .Button {
+    &--focused {
+      color: $white;
+    }
+  }
+
+  &__autosuggest {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    padding: 0;
+
+    .AutoCompleteSuggestions {
+      margin: 0.75rem 0;
+
+      .Button {
+        align-items: center;
+        display: flex;
+        font-size: 1.375rem;
+        height: 100%;
+        padding: 0.625rem 0;
+        text-align: left;
+
+        &::after {
+          border: none;
+        }
+
+        &--focused {
+          font-size: 1.5rem;
+        }
+
+        &__icon--withIconLeft {
+          margin-right: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .LanguageListRail {
+    &__recentSearch,
+    &__recentSearch--buttons {
+      .Button--focused {
+        background-color: map-get( $pink, '100' );
+      }
+    }
+  }
+
+  &__containerLeft + .SearchRightContainer {
+    left: 42%;
+    margin-top: 5.75rem;
+    position: absolute;
+
+    .Search__containerRight {
+      padding-top: 5px;
+
+      .Button {
+        &--focused {
+          background-color: map-get( $pink, '100' );
+        }
+      }
+
+      .LanguageListRail {
+        width: 43.4375rem;
+
+        @media only screen and (min-width: 1920px) {
+          width: 43.54rem;
+        }
+      }
+
+      .LanguageListRail____recentSearch {
+        &--buttons {
+          width: 39%;
+        }
+      }
+
+      .MediaCarousel__Rail {
+        padding: 1rem 0 1rem 0.625rem;
+        width: 43.54rem;
+
+        @media only screen and (min-width: 1920px) {
+          width: 43.54rem;
+        }
+      }
+    }
+  }
+
+  &__railTitle {
+    .Text {
+      font-size: map-get( $fontsizes, 'p24' );
+      font-weight: map-get( $fontweights, '500' );
+      line-height: map-get( $lineheights, 'em2_5' );
+    }
+  }
+
+  &__railTileTrending {
+    margin-top: -2.2rem;
+
+    .Text {
+      font-size: 1.5rem;
+      font-weight: 600 !important;
+      line-height: 1.8rem;
+      margin-left: 0.5rem;
+    }
+  }
+
+  .MediaCardWrapper .MediaCard--media .Image img {
+    border-radius: 0.35rem;
+
+    /* Commented due to UI/UX Portrait & Landscape changes */
+    height: 7.938rem;
+    // height: 11.25rem;
+  }
+
+  &__mediaCard {
+    display: grid;
+    grid-template-columns: max-content max-content max-content max-content max-content;
+
+    .infinite-scroll-component {
+      // padding-top: 0 !important;
+    }
+
+    .MediaCardWrapper {
+      margin-bottom: 0.3rem;
+      margin-right: 1rem;
+    }
+
+    .MediaCard {
+      height: auto;
+      margin-bottom: 1rem;
+      width: 13.125rem;
+
+      /* Commented due to UI/UX Portrait & Landscape changes */
+      //height: 11.25rem;
+      //width: 20rem;
+    }
+
+    &--itemWrapped {
+      grid-template-columns: max-content max-content max-content;
+    }
+  }
+}

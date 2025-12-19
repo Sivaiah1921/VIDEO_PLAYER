@@ -1,0 +1,101 @@
+@import './_grid';
+
+/**
+ * Returns a set of classes and styles
+ * Styles are related to distribution for flexbox
+ *
+ * @param {string} size - Size of the viewport (s, m, l, xl)
+ */
+@mixin distribution($size) {
+  .around-#{$size} {
+    justify-content: space-around;
+  }
+
+  .between-#{$size} {
+    justify-content: space-between;
+  }
+}
+
+/**
+ * Returns a set of classes and styles
+ * Styles are related to alignment for flexbox
+ *
+ * @param {string} size - Size of the viewport (s, m, l, xl)
+ */
+@mixin justify($size) {
+  $aligns: "start", "center", "end";
+
+  @each $align in $aligns {
+    $justfify: if($align=="center", center, flex-#{$align});
+
+    .#{$align}-#{$size} {
+      justify-content: $justfify;
+      text-align: #{$align};
+    }
+  }
+}
+
+/**
+ * Returns a set of classes and styles
+ * Styles are related to alignment for flexbox
+ *
+ * @param {string} size - Size of the viewport (s, m, l, xl)
+ */
+@mixin alignment($size) {
+  $aligns: ("top": "start", "middle": "center", "bottom": "end");
+
+  @each $name,
+    $align in $aligns {
+    $justfify: if($name=="middle", center, flex-#{$align});
+
+    .#{$name}-#{$size} {
+      align-items: $justfify;
+    }
+  }
+}
+
+/**
+ * Returns a set of classes and styles based on parameters for columns
+ * Styles are related to offset of left for columns
+ *
+ * @param {string} size - Size of the viewport (s, m, l, xl)
+ * @param {number} grid-columns Columns available per row: default 12
+ */
+@mixin offset($size, $grid-columns: $columns-number) {
+  @for $i from 1 through $grid-columns {
+    .col-offset-#{$size}-#{$i} {
+      margin-left: percentage($i / $grid-columns);
+    }
+  }
+}
+
+/**
+ * Returns a set of classes and styles based on parameters for columns
+ * Styles are related to width for columns
+ *
+ * @param {string} size - Size of the viewport (s, m, l, xl)
+ * @param {number} grid-columns Columns available per row: default 12
+ */
+@mixin grid($size, $grid-columns: $columns-number) {
+  @for $i from 0 through $grid-columns {
+    @if $i==0 {
+      .col-#{$size} {
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+      }
+    }
+
+    @else {
+      .col-#{$size}-#{$i} {
+        flex-basis: percentage($i / $grid-columns);
+        max-width: percentage($i / $grid-columns);
+      }
+    }
+  }
+
+  @include justify($size);
+  @include alignment($size);
+  @include distribution($size);
+  @include offset($size, $grid-columns);
+}

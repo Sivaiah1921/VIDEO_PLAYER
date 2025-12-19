@@ -1,0 +1,78 @@
+@import './mixins';
+
+/* Digital Neutrals */
+$black: #000000;
+$white: #ffffff;
+$railTitle: #f2f2f2;
+$red: red;
+$darkGrayishBlue: #33354d;
+$railSubHeading: #C7C0CF;
+$neutral: (
+  '900': #232323,
+  '800': #363636,  /* rgba(0,0,0,0.79) */
+  '700': #505050,  /* rgba(0,0,0,0.69) */
+  '650': #444764,
+  '600': #6e6e6e,  /* rgba(0,0,0,0.57) */
+  '500': #8f8f8f,
+  '400': #c0c0c0,  /* rgba(0,0,0,0.25) */
+  '300': #d4d4d4,
+  '200': #e6e6e6,
+  '100': #f1f1f1,
+  '50': #f6f6f6,
+  '25': #fafafa
+);
+
+/* Digital Primary */
+$pink: (
+  '100':#e10092,
+  '75': #db62ab,
+  '50': #e796c7,
+  '40': #F3CBE3,
+  '25': #f3cbe3,
+  '10': #faeaf4,
+  '5': #fdf4f9,
+  '1': #EFE8FB
+);
+
+$bingeBlue: (
+  '125': #020005,
+  '100': #220046,
+  '75': #564372,
+  '50': #8e81a1,
+  '40': #D7C6F4,
+  '25': #c7c0cf,
+  '10': #e8e5ec,
+  '5': #f4f2f5
+);
+
+$purple: (
+  '100': #6b00dd,
+  '75': #8856df,
+  '50': #af8ee8,
+  '40': #8E81A1,
+  '25': #d6c6f4,
+  '10': #efe8fb,
+  '5': #f7f4fc
+);
+
+/* Digital Semantics */
+$validate: (
+  '600': #66c300
+);
+
+$error: (
+  '600': #e56c6c
+);
+
+:export {
+  black: $black;
+  white: $white;
+  railTitle: $railTitle;
+  railSubHeading: $railSubHeading;
+  @include mapObject('neutral', $neutral);
+  @include mapObject('pink', $pink);
+  @include mapObject('bingeBlue', $bingeBlue);
+  @include mapObject('purple', $purple);
+  @include mapObject('validate', $validate);
+  @include mapObject('error', $error);
+}

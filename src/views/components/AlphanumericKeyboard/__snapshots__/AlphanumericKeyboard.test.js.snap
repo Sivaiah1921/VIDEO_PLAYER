@@ -1,0 +1,387 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  className="AlphanumericKeyboard"
+>
+  <div
+    className="AlphanumericKeyboard__row"
+  >
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      a
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      b
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      c
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      d
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      e
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      f
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      g
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      h
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      i
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      j
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      k
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      l
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      m
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      n
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      o
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      p
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      q
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      r
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      s
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      t
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      u
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      v
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      w
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      x
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      y
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      z
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key AlphanumericKeyboard__btnCapsArrow Button--icon Button--medium"
+      onClick={[Function]}
+      style={null}
+    >
+      <svg
+        className="Button__icon Button__icon--withIconRight"
+        fill="none"
+        height={20}
+        viewBox="0 0 20 20"
+        width={20}
+      >
+        <path
+          d="m10 2 7 7h-4v9H7V9H3l7-7Z"
+          fill="#8E81A1"
+        />
+      </svg>
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      -
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      0
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      1
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      2
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      3
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      4
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      5
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      6
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      7
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      8
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      9
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      @
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      .
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      .com
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__key AlphanumericKeyboard__specialChar Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      !#$
+    </button>
+  </div>
+  <div
+    className="AlphanumericKeyboard__row buttonRow"
+  >
+    <button
+      className="Button AlphanumericKeyboard__delete Button--secondary Button--icon Button--medium"
+      onClick={[Function]}
+      style={null}
+    >
+      <svg
+        className="Button__icon Button__icon--withIconLeft"
+        style={
+          Object {
+            "height": "1.5rem",
+            "width": "1.5rem",
+          }
+        }
+        viewBox="0 0 24 24"
+      >
+        <g
+          clipPath="url(#a)"
+        >
+          <path
+            clipRule="evenodd"
+            d="m3 12 8.527-6v12L3 12Zm9.474 0L21 6v12l-8.526-6Z"
+            fill="#F3CBE3"
+            fillRule="evenodd"
+          />
+        </g>
+        <defs>
+          <clipPath
+            id="a"
+          >
+            <path
+              d="M0 0h18v18H0z"
+              fill="#fff"
+              transform="translate(3 3)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+      Delete
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__spaceBtn Button--secondary Button--icon Button--medium"
+      onClick={[Function]}
+      style={null}
+    >
+      <svg
+        fill="none"
+        height="24"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          clipRule="evenodd"
+          d="M21 12l-8.526-6v12L21 12zm-9.474 0L3 6v12l8.526-6z"
+          fill="#F3CBE3"
+          fillRule="evenodd"
+        />
+      </svg>
+    </button>
+    <button
+      className="Button AlphanumericKeyboard__clearBtn Button--secondary Button--medium"
+      onClick={[Function]}
+      style={null}
+    >
+      Clear
+    </button>
+  </div>
+</div>
+`;

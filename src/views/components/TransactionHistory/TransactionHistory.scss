@@ -1,0 +1,142 @@
+@import '../../../styles/src/variables';
+
+.TransactionHistory {
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+
+  &__header {
+    align-items: center;
+    display: flex;
+    margin-bottom: 3.3rem;
+    padding-top: 2.334rem;
+    position: relative;
+
+    .Button {
+      align-items: center;
+      background: unset;
+      color: map-get( $pink, '40' );
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      margin-left: 2.75rem;
+      width: unset;
+      &::after { content: unset; }
+
+      &--focused {
+        color: $white;
+      }
+
+      &__icon {
+        margin-right: 0.75rem;
+      }
+    }
+
+    svg {
+      display: block;
+      margin-left: auto;
+      margin-right: 5.625rem;
+    }
+  }
+
+  &__title {
+    align-items: center;
+    display: flex;
+    margin-bottom: 1.5rem;
+    margin-left: 5.9375rem;
+
+    p {
+      margin-left: 1.5rem;
+    }
+  }
+
+  &__content {
+    align-items: center;
+    align-items: stretch;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  &__contentScroll {
+    height: 33rem;
+    overflow: auto;
+  }
+
+  &__left {
+    padding-right: 2.7rem;
+    width: 34.375rem;
+
+    .Divider__horizontal {
+      margin-bottom: 1rem;
+      margin-top: 1rem;
+    }
+  }
+
+  &__right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .Divider__vertical {
+      height: 25rem;
+    }
+  }
+
+  &__gradient {
+    /* Down Gradient */
+    background: linear-gradient( 180deg, rgba( 34, 0, 70, 0 ) 0%, #170030 100% );
+    bottom: -0.125rem;
+    height: 3rem;
+    position: absolute;
+    width: 38.6875rem;
+  }
+
+  &__row {
+    align-items: center;
+    display: flex;
+
+    &.dueOn {
+      display: unset;
+    }
+
+    .Text {
+      font-weight: map-get( $fontweights, 'normal' );
+    }
+
+    p:nth-child(2) {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  &__arrowDownRotate180 {
+    -ms-transform: rotate( 180deg ); /* IE 9 */
+    transform: rotate( 180deg );
+  }
+
+  &__hideArr {
+    visibility: hidden;
+  }
+
+  &__background {
+    background: linear-gradient( 146.32deg, #020005 0%, #220046 100% );
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  &__scrollContainer {
+    > h2 {
+      color: $white;
+      left: 50%;
+      position: absolute;
+      text-align: center;
+      top: 50%;
+      transform: translate( -50%, -50% );
+    }
+  }
+}

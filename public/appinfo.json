@@ -1,0 +1,22 @@
+{
+  "id": "com.lg.tataplaybinge.app",
+  "version": "2.3.52",
+  "vendor": "TataPlay",
+  "type": "web",
+  "main": "index.html",
+  "title": "Tata Play Binge: 30+ OTTs in 1",
+  "iconColor":"#ffffff",
+  "icon": "Logo.png",
+  "largeIcon": "Logo_400.png",
+  "splashBackground": "splash.png",
+  "disableBackHistoryAPI": true,
+  "requiredPermissions": [
+    "application.launcher",
+	  "time.query",
+    "activity.operation",
+    "database",
+    "database.internal",
+    "database.operation"
+  ]
+}
+

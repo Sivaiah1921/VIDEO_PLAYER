@@ -1,0 +1,42 @@
+@import '../../../styles/src/variables';
+
+.GenreMediaCard {
+  background: #564372;
+  border: 1.71px solid #8e81a1;
+  border-radius: 0.438rem;
+  border-radius: 0.857rem;
+  height: 100%;
+  overflow: hidden;
+  // transition: transform .2s ease-out;
+  transition: transform ease-out;
+  width: 100%;
+
+  &--withFocus {
+    border: 0.167rem solid $white;
+    border-radius: 0.625rem;
+    box-shadow: inset 0 0 0 0.25rem currentColor;
+    transform: scale( 1.05 );
+  }
+
+  .Text {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+    margin-top: 0.5rem;
+  }
+
+  .Link {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+  }
+
+  .Image {
+    height: 2.75rem;
+
+    img {
+      width: unset;
+    }
+  }
+}

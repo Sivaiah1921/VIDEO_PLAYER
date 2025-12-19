@@ -1,0 +1,231 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<form
+  className="LoginOtpEnteringPane"
+>
+  <div
+    className="LoginOtpEnteringPane__title"
+  />
+  <div
+    className="LoginOtpEnteringPane__otpMessage"
+  >
+    <p
+      className="Text Text--subtitle-1 Text--left Text--bingeBlue-25"
+    >
+      Please enter the OTP sent to undefined
+    </p>
+  </div>
+  <div
+    className="LoginOtpEnteringPane__otpBox"
+  >
+    <div
+      className="InputField"
+    >
+      <div
+        className="InputField__label"
+      >
+        <label
+          className="InputField__label--text"
+        />
+      </div>
+      <div
+        className="InputField__content InputField__content--active"
+      >
+        <div
+          className="InputField__formControls"
+        >
+          <input
+            autoComplete="on"
+            autoCorrect="on"
+            className="InputField__input InputField__input--active"
+            maxLength={1}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onPaste={[Function]}
+            spellCheck={true}
+            tabIndex={0}
+            type="text"
+          />
+        </div>
+        <div />
+      </div>
+    </div>
+    <div
+      className="InputField"
+    >
+      <div
+        className="InputField__label"
+      >
+        <label
+          className="InputField__label--text"
+        />
+      </div>
+      <div
+        className="InputField__content InputField__content--active"
+      >
+        <div
+          className="InputField__formControls"
+        >
+          <input
+            autoComplete="on"
+            autoCorrect="on"
+            className="InputField__input InputField__input--active"
+            maxLength={1}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onPaste={[Function]}
+            spellCheck={true}
+            tabIndex={1}
+            type="text"
+          />
+        </div>
+        <div />
+      </div>
+    </div>
+    <div
+      className="InputField"
+    >
+      <div
+        className="InputField__label"
+      >
+        <label
+          className="InputField__label--text"
+        />
+      </div>
+      <div
+        className="InputField__content InputField__content--active"
+      >
+        <div
+          className="InputField__formControls"
+        >
+          <input
+            autoComplete="on"
+            autoCorrect="on"
+            className="InputField__input InputField__input--active"
+            maxLength={1}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onPaste={[Function]}
+            spellCheck={true}
+            tabIndex={2}
+            type="text"
+          />
+        </div>
+        <div />
+      </div>
+    </div>
+    <div
+      className="InputField"
+    >
+      <div
+        className="InputField__label"
+      >
+        <label
+          className="InputField__label--text"
+        />
+      </div>
+      <div
+        className="InputField__content InputField__content--active"
+      >
+        <div
+          className="InputField__formControls"
+        >
+          <input
+            autoComplete="on"
+            autoCorrect="on"
+            className="InputField__input InputField__input--active"
+            maxLength={1}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onPaste={[Function]}
+            spellCheck={true}
+            tabIndex={3}
+            type="text"
+          />
+        </div>
+        <div />
+      </div>
+    </div>
+    <div
+      className="InputField"
+    >
+      <div
+        className="InputField__label"
+      >
+        <label
+          className="InputField__label--text"
+        />
+      </div>
+      <div
+        className="InputField__content InputField__content--active"
+      >
+        <div
+          className="InputField__formControls"
+        >
+          <input
+            autoComplete="on"
+            autoCorrect="on"
+            className="InputField__input InputField__input--active"
+            maxLength={1}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onPaste={[Function]}
+            spellCheck={true}
+            tabIndex={4}
+            type="text"
+          />
+        </div>
+        <div />
+      </div>
+    </div>
+    <div
+      className="InputField"
+    >
+      <div
+        className="InputField__label"
+      >
+        <label
+          className="InputField__label--text"
+        />
+      </div>
+      <div
+        className="InputField__content InputField__content--active"
+      >
+        <div
+          className="InputField__formControls"
+        >
+          <input
+            autoComplete="on"
+            autoCorrect="on"
+            className="InputField__input InputField__input--active"
+            maxLength={1}
+            onBlur={[Function]}
+            onChange={[Function]}
+            onFocus={[Function]}
+            onPaste={[Function]}
+            spellCheck={true}
+            tabIndex={5}
+            type="text"
+          />
+        </div>
+        <div />
+      </div>
+    </div>
+  </div>
+  <div
+    className="LoginOtpEnteringPane__resendsection"
+  >
+    <button
+      className="Button LoginOtpEnteringPane__resendBtn Button--secondary Button--medium"
+      onClick={[Function]}
+      style={null}
+    />
+  </div>
+</form>
+`;

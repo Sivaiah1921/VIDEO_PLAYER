@@ -1,0 +1,64 @@
+import reducer, {
+	initialState
+} from './{{ properCase name}}.reducer';
+
+import {
+  types,
+} from '../../actions/{{ properCase name }}/{{ properCase name }}.actions';
+
+import _ from 'lodash';
+
+
+describe('{{ properCase name }} reducer', () => {
+
+	
+		it('should have the proper default state', () => {
+			let expectedState = {
+			}
+
+			expect ( initialState ).toEqual( expectedState );
+	
+		});
+
+    it('should be a function', () => {
+			expect( _.isFunction( reducer ) ).toBe(true);
+    });
+
+		it('should return the initial state', () => {
+			expect( reducer( undefined, {} ) ).toEqual( initialState );
+		});
+
+		describe('DEFAULT', () => {
+
+			let arg = 400;
+
+			let actionCreator = {
+				type: types.DEFAULT,
+				arg
+			}
+
+			it('should handle the event and set the \'arg\' attribute', () => {
+
+				let expectedOutput = {
+					arg	
+				};
+
+				expect( reducer({}, actionCreator) ).toEqual( expectedOutput);
+			});
+
+			it('should update the states \'arg\' attribute', () => {
+				
+				actionCreator.arg = Math.random();
+				
+				let expectedOutput = Object.assign( {}, initialState, 
+					{
+						arg: actionCreator.arg
+					}
+				);
+				
+				expect( reducer( initialState, actionCreator) ).toEqual( expectedOutput );
+
+			});
+			
+		});
+});

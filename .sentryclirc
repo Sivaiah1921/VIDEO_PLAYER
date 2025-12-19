@@ -1,0 +1,6 @@
+[auth]
+token=b5412af8e2554a34b7323b15121bb77cdd19448b79414e9da0d211a1b9040ce6
+
+[defaults]
+org=qa-infotech
+project=smart-tv-binge

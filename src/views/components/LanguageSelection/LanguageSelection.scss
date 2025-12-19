@@ -1,0 +1,42 @@
+@import '../../../styles/src/variables';
+
+.LanguageSelection {
+  background-color: #220046;
+  background-position: center;
+  background-size: cover;
+  border: 0.1875rem solid #fff;
+  border-radius: 6px;
+  height: 100%;
+  padding: 1rem;
+  width: 100%;
+
+  &--withFocus {
+    border: 0.1875rem solid white;
+    border-radius: 0.625rem;
+  }
+
+  .RadioButton {
+    align-items: center;
+    display: flex;
+    flex-direction: row-reverse;
+
+    &__input {
+      margin: auto;
+    }
+
+    &__label {
+      align-items: center;
+      display: flex;
+      flex: 1;
+      justify-content: space-between;
+      text-shadow: 0 4px 4px rgba( 0, 0, 0, 0.8 );
+    }
+
+    .Image {
+      img {
+        max-height: 1.5rem;
+        width: auto;
+      }
+    }
+  }
+}

@@ -1,0 +1,16 @@
+@import '../../../styles/src/variables';
+
+.PrimeJourneyModals {
+  &__loader {
+    .Loader {
+      .Loader__content {
+        .Image {
+          img {
+            height: 10rem;
+            width: 10rem;
+          }
+        }
+      }
+    }
+  }
+}

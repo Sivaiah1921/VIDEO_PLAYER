@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  className="SearchGenre"
+>
+  <div
+    className="SearchFilters__button--genre"
+  >
+    <p
+      className="Text Text--body-1 Text--left"
+    >
+      Filter By Genre
+    </p>
+    <div>
+      <div
+        className="SearchFilters__button--langgen"
+      />
+    </div>
+  </div>
+</div>
+`;

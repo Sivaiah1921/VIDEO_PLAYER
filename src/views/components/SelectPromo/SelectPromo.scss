@@ -1,0 +1,80 @@
+@import '../../../styles/src/variables';
+
+.SelectPromo {
+  background: linear-gradient( 279.84deg, #8e81a1 -0.12%, #564372 19.16%, #220046 50.22%, #030106 99.48% );
+  display: flex;
+  height: 25.334rem;
+  position: relative;
+
+  &__BannerImage {
+    height: 26rem;
+    width: 72rem;
+
+    .Image {
+      height: 25.4rem;
+    }
+  }
+
+  &__subContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.416rem;
+    position: absolute;
+    z-index: 2;
+
+    &--BannerText {
+      color: $white;
+      width: 45rem;
+    }
+
+    &--langMessage {
+      color: $white;
+      font-size: 1.41rem;
+      font-weight: 600;
+      line-height: 120%;
+      margin-top: 3.3rem;
+      width: 11.416rem;
+
+      p {
+        margin-left: -7rem;
+      }
+
+      .Button {
+        background: map-get( $pink, '100' );
+        border-radius: 0.625rem;
+        height: 2.5rem;
+        width: 100%;
+
+        span {
+          align-items: center;
+          display: flex;
+          height: 100%;
+          justify-content: center;
+          width: 100%;
+        }
+      }
+
+      .Button--focused::after {
+        border-radius: 0.625rem;
+      }
+    }
+
+    &--primelogo {
+      .Image img {
+        height: 4.083rem;
+        width: 12.25rem;
+      }
+    }
+
+    &--withFocus {
+      .Button {
+        border: 0.16rem $white solid;
+      }
+
+      .Button--focused::after {
+        border: none;
+        border-radius: 0.625rem;
+      }
+    }
+  }
+}

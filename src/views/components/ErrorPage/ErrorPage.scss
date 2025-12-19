@@ -1,0 +1,54 @@
+.ErrorPage {
+  &__containerHeightWithoutHeader {
+    height: 100vh !important;
+  }
+
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 84vh;
+    justify-content: center;
+    position: relative;
+    z-index: 9;
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    margin-bottom: unset;
+    padding-top: 2.334rem;
+    position: relative;
+    z-index: 3;
+
+    .Button {
+      align-items: center;
+      background: unset;
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      margin-left: 2.75rem;
+      width: unset;
+      &::after { content: unset; }
+
+      &__icon {
+        margin-right: 0.75rem;
+      }
+    }
+
+    svg {
+      display: block;
+      margin-left: auto;
+      margin-right: 5.625rem;
+    }
+  }
+
+  &--closeBtn {
+    height: 0;
+    visibility: hidden;
+
+    &--focused::after {
+      visibility: hidden;
+    }
+  }
+}

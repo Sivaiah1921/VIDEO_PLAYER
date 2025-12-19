@@ -1,0 +1,128 @@
+@import '../../../styles/src/variables';
+
+.QrCodePopUp {
+  &__content {
+    &--goBack {
+      .Button {
+        background: inherit;
+        color: $white;
+        display: flex;
+        font-size: 1rem;
+        height: 0.1875rem;
+        outline: none;
+        padding: 0;
+        width: auto;
+      }
+
+      .Button--secondary::after {
+        border: none;
+      }
+
+      svg {
+        //  margin: 0;
+      }
+
+      span {
+        top: 0;
+      }
+    }
+
+    &--body {
+      .Image {
+        margin-bottom: 1.25rem;
+
+        img {
+          height: 5rem;
+          width: 5rem;
+        }
+      }
+
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding-top: 2rem;
+
+      .Text {
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 1.5rem;
+        margin-bottom: 1.25rem;
+        text-align: center;
+      }
+
+      .Text:last-child {
+        padding: 0 6.688rem 1.5rem;
+      }
+    }
+
+    &--QRCode {
+      background-color: $white;
+      border-radius: 0.5rem;
+      // margin-bottom: 1.875rem;
+      padding: 0.75rem;
+    }
+  }
+
+  &__checkBalance {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .Button {
+      align-items: center;
+      background-color: map-get( $pink, '100' );
+      justify-content: center;
+      margin-bottom: 2rem;
+      padding: 0.3rem 0;
+      position: relative;
+      top: 1.25rem;
+      width: 28.125rem;
+    }
+  }
+
+  &__fibreDoneCTA {
+    width: 0;
+
+    .Button {
+      border-radius: 0.41rem;
+      min-width: 7.54rem;
+    }
+
+    .Button--focused::after {
+      border-radius: 0.41rem;
+    }
+  }
+}
+
+.QrCodePopUpModal {
+  align-items: center;
+  gap: 0.625rem;
+  justify-content: center;
+  overflow-y: hidden;
+  padding: 1.75rem 2.5rem;
+  width: 56.8rem;
+}
+
+.QrCodePopUpModalDTHUsers {
+  align-items: center;
+  gap: 0.625rem;
+  justify-content: center;
+  min-height: 26rem;
+  overflow-y: hidden;
+  padding: 3rem 2rem;
+  width: 48.063rem;
+}
+
+.QRCodeSuccess {
+  align-items: center;
+  gap: 0.625rem;
+  justify-content: center;
+  overflow-y: hidden;
+  padding: 3rem 2rem;
+  width: 44.063rem;
+}
+
+.QrCodePrimePopUpModal {
+  padding: 3rem 1rem;
+  width: 52rem;
+}

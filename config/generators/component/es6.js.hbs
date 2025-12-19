@@ -1,0 +1,57 @@
+/**
+ * {{ properCase name }}
+ */
+
+import React, { Component, } from 'react';
+import PropTypes from 'prop-types';
+import './{{ properCase name }}.css';
+
+{{#if wantMessages}}
+import { FormattedMessage, injectIntl } from 'react-intl';
+import messages from './{{ properCase name }}.messages';
+{{/if}}
+
+
+const propTypes = {
+
+}
+
+const defaultProps = {
+
+}
+
+/**
+ * Class 
+ * @extends React.Component
+ */
+class {{ properCase name }} extends Component {
+
+  /**
+   * Create a {{ properCase name }}
+   */
+  constructor(props){
+    super(props);
+  }
+
+  /**
+   * Renders the {{ properCase name }} component
+   */
+  render() {
+    return (
+      <div className="{{ properCase name }}">
+				{{#if wantMessages}} 
+        <FormattedMessage {...messages.header} />
+     		{{/if}} 
+      </div>
+    );
+  }
+}
+
+{{ properCase name }}.propTypes = propTypes;
+{{ properCase name }}.defaultProps = defaultProps;
+
+{{#if wantMessages}}
+export default injectIntl({{ properCase name }});
+{{else}}
+export default {{ properCase name }};
+{{/if}}

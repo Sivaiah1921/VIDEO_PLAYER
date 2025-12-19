@@ -1,0 +1,132 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NumberKeyboard />tests snapshot tests renders correctly AccountCard 1`] = `
+<div
+  className="NumberKeyboard"
+>
+  <div
+    className="NumberKeyboard__row"
+  >
+    <button
+      className="Button NumberKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      1
+    </button>
+    <button
+      className="Button NumberKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      2
+    </button>
+    <button
+      className="Button NumberKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      3
+    </button>
+    <button
+      className="Button NumberKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      4
+    </button>
+    <button
+      className="Button NumberKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      5
+    </button>
+    <button
+      className="Button NumberKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      6
+    </button>
+    <button
+      className="Button NumberKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      7
+    </button>
+    <button
+      className="Button NumberKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      8
+    </button>
+    <button
+      className="Button NumberKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      9
+    </button>
+    <button
+      className="Button NumberKeyboard__key Button--small"
+      onClick={[Function]}
+      style={null}
+    >
+      0
+    </button>
+  </div>
+  <div
+    className="NumberKeyboard__row buttonRow"
+  >
+    <button
+      className="Button NumberKeyboard__deleteBtn Button--secondary Button--icon Button--medium"
+      onClick={[Function]}
+      style={null}
+    >
+      <svg
+        className="Button__icon Button__icon--withIconLeft"
+        style={
+          Object {
+            "height": "1.5rem",
+            "width": "1.5rem",
+          }
+        }
+        viewBox="0 0 24 24"
+      >
+        <g
+          clipPath="url(#a)"
+        >
+          <path
+            clipRule="evenodd"
+            d="m3 12 8.527-6v12L3 12Zm9.474 0L21 6v12l-8.526-6Z"
+            fill="#F3CBE3"
+            fillRule="evenodd"
+          />
+        </g>
+        <defs>
+          <clipPath
+            id="a"
+          >
+            <path
+              d="M0 0h18v18H0z"
+              fill="#fff"
+              transform="translate(3 3)"
+            />
+          </clipPath>
+        </defs>
+      </svg>
+      Delete
+    </button>
+    <button
+      className="Button NumberKeyboard__clearBtn Button--secondary Button--medium"
+      onClick={[Function]}
+      style={null}
+    >
+      Clear
+    </button>
+  </div>
+</div>
+`;

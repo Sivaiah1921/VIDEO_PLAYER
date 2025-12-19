@@ -1,0 +1,49 @@
+/**
+ * {{properCase name }}
+ */
+
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+{{#if wantMessages}}
+import { FormattedMessage } from 'react-intl';
+import messages from './{{ properCase name }}.messages';
+{{/if}}
+{{#if wantSASS}}
+import './{{ properCase name }}.css';
+{{/if}}
+const propTypes = {
+
+}
+
+const defaultProps = {
+
+}
+
+/**
+ * Class 
+ * @extends React.Component
+ */
+export class {{ properCase name }} extends Component { 
+  
+  /**
+   * Renders the {{ properCase name }} component
+   */
+  render() {
+    return (
+      <div className='{{ properCase name }}'>
+      
+				{{#if wantMessages}}
+        <FormattedMessage {...messages.header} />
+     		{{/if}} 
+      </div>
+    );
+  }
+}
+
+{{ properCase name }}.propTypes = propTypes;
+{{ properCase name }}.defaultProps = defaultProps;
+
+
+
+export default {{ properCase name }};

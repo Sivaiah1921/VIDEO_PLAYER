@@ -1,0 +1,357 @@
+@import '../../../styles/src/variables';
+
+.MyPlanSetup {
+  $parent: &;
+
+  margin: 0 4rem;
+  padding-top: 2.4rem;
+  position: relative;
+  width: 73.5rem;
+  z-index: 3;
+
+  &__footerVerbiage {
+    p {
+      font-size: 1.2rem;
+      font-weight: 400;
+
+      a {
+        color: white;
+        pointer-events: none;
+      }
+    }
+  }
+
+  &__footerVerbiage--selected {
+    p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      text-align: left;
+
+      a {
+        color: white;
+        pointer-events: none;
+      }
+    }
+
+    display: flex;
+    margin-top: 1rem;
+    width: 35rem;
+  }
+
+  &__footerATVMessage {
+    p {
+      font-size: 1.3rem;
+      font-weight: map-get( $fontweights, '500' );
+      line-height: 1.5rem;
+    }
+
+    &--withRightSection {
+      margin-top: 2rem;
+      width: 38rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+
+    &--withNoRightSection {
+      justify-content: center;
+
+      .UpgradeMyPlan {
+        &__title {
+          p {
+            line-height: map-get( $lineheights, 'em2_25' );
+            text-align: center;
+          }
+        }
+      }
+
+      #{ $parent }__leftSection {
+        width: unset;
+      }
+    }
+  }
+
+  &__leftSection {
+    grid-column: 1;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    position: relative;
+
+    &--comboPack {
+      margin-bottom: 0;
+    }
+
+    &--withNoRightSection {
+      margin-bottom: 0.5rem;
+    }
+
+    .Button {
+      align-items: center;
+      background: transparent;
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      width: unset;
+      &::after { content: unset; }
+
+      &--focused {
+        color: $white;
+
+        path {
+          fill: $white;
+        }
+      }
+    }
+
+    .Button--icon {
+      padding: 0;
+    }
+
+    svg {
+      @media only screen and (min-width: 1920px) {
+        margin-right: 0.75rem;
+      }
+    }
+  }
+
+  &__complementaryAppsSection {
+    box-shadow: 0 0 14.2548px rgba( 0, 0, 0, 0.15 );
+    box-sizing: border-box;
+    flex: none;
+    flex-grow: 0;
+    height: fit-content;
+    padding: 0.667rem;
+    position: relative;
+    width: 37.625rem;
+  }
+
+  @supports (-webkit-mask: linear-gradient(#fff 0 0)) {
+    &__complementaryAppsSection::before {
+      background: linear-gradient( 270deg, #ffa800 0%, #fff389 45.31%, #ffa800 100% ); /* Gradient colors */
+      border-radius: 0.833rem;
+      bottom: 1px;
+      content: '';
+      left: 1px;
+      -webkit-mask: linear-gradient( #fff 0 0 ) content-box, linear-gradient( #fff 0 0 );
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+      padding: 2px;
+      position: absolute;
+      right: 1px;
+      top: 1px;
+      z-index: -1;
+    }
+  }
+
+  @supports not (-webkit-mask: linear-gradient(#fff 0 0)) {
+    &__complementaryAppsSection::before {
+      border: 2px solid #ffa800;
+      border-radius: 0.833rem;
+      bottom: 1px;
+      content: '';
+      left: 1px;
+      position: absolute;
+      right: 1px;
+      top: 1px;
+    }
+  }
+
+  &__complementaryAppsHeader {
+    align-items: center;
+    display: flex;
+    margin-bottom: 0.75rem;
+    margin-top: 0.875rem;
+
+    .Image img {
+      height: 3.02rem;
+      width: 3.633rem;
+    }
+  }
+
+  &__complementaryMultiApps {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    grid-column-gap: initial;
+    height: initial;
+    margin-bottom: 0;
+    pointer-events: none;
+
+    & > :nth-child(7n) {
+      margin-right: 0 !important; /* Remove margin for the last child in each row */
+    }
+
+    .AppMediaCard {
+      border-radius: 5px;
+      height: 4.8rem;
+      margin-right: 1.654rem;
+
+      &__content {
+        border: none;
+        position: relative;
+        width: 100% !important;
+
+        .Link {
+          letter-spacing: 0;
+          line-height: 0;
+        }
+
+        img {
+          border-radius: 5px;
+          box-shadow: 0 2.81px 8.44px 2.81px #ffffff40;
+          display: block;
+          height: 3.75rem;
+          margin: 0;
+          object-fit: fill !important;
+          width: 3.75rem;
+        }
+
+        .Text--complimentary-apps-text {
+          margin-top: 6px;
+        }
+      }
+    }
+  }
+
+  &__complementaryMoreSection {
+    display: flex;
+    justify-content: center;
+
+    .Button {
+      background-color: transparent;
+      color: map-get( $pink, '40' );
+      font-size: 0.584rem;
+      height: 0.958rem;
+      line-height: 0.7rem;
+
+      svg {
+        height: 0.4167rem;
+        left: 2.8px;
+        position: relative;
+        top: 1px;
+        width: 0.4167rem;
+      }
+    }
+
+    .Button--focused svg path {
+      fill: $white;
+    }
+
+    .Button--focused {
+      color: $white;
+    }
+
+    .Button--focused::after {
+      border: none !important;
+    }
+  }
+
+  &__rightSection {
+    margin-left: 5.6rem;
+    position: relative;
+    top: 3.3rem;
+
+    .SelectDeviceCard {
+      background-color: map-get( $pink, '1' );
+      border-radius: 0.875rem;
+      // gap: 0.875rem;
+      height: 4.6875rem;
+      margin-bottom: 2rem;
+      padding: 0 1.3125rem;
+      position: relative;
+      width: 28.125rem;
+
+      &__ArrowIcon {
+        left: auto;
+        position: absolute;
+        right: 1.8125rem;
+      }
+
+      &:nth-child(2) {
+        svg {
+          margin-left: 0.4375rem;
+        }
+      }
+
+      .Text {
+        color: map-get( $bingeBlue, '100' );
+      }
+
+      &--withFocus {
+        border: 0.1875rem  solid map-get( $pink, '100' );
+        transform: scale( 1.04 );
+
+        &::after {
+          border: 0;
+        }
+      }
+    }
+  }
+
+  &__PrimeLitefdoVerbiage {
+    align-items: center;
+    background: map-get( $purple, '25' );
+    border-radius: 0.4167rem;
+    display: flex;
+    height: 3.5rem;
+    margin-bottom: 1rem;
+    margin-left: 0.1rem;
+    width: 37.7rem;
+
+    .AppMediaCard {
+      border-radius: 5px;
+      height: 2.5rem !important;
+      margin: 0.5rem !important;
+      width: 2.5rem !important;
+
+      &__content {
+        border: none;
+
+        img {
+          border-radius: 5px;
+          height: 2.5rem !important;
+          object-fit: fill !important;
+          width: 2.5rem !important;
+        }
+      }
+    }
+
+    &--info {
+      align-items: center;
+      display: flex;
+      font-size: 1rem;
+      font-weight: 500;
+      height: 2.5rem;
+      width: 33.8334rem;
+    }
+  }
+
+  &__fdoVerbiage {
+    align-items: center;
+    color: $white;
+    display: flex;
+    height: 1.208rem;
+    margin-left: 0.1rem;
+    width: 37.834rem;
+
+    &--info {
+      color: white;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 120%;
+    }
+
+    &--dateInfo {
+      color: $white;
+      font-weight: 600;
+      padding-left: 0.5rem;
+    }
+  }
+}

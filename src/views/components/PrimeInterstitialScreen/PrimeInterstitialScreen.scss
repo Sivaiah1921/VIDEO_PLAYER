@@ -1,0 +1,168 @@
+@import '../../../styles/src/variables';
+
+.PrimeInterstitialPage {
+  background: map-get( $bingeBlue, '125' );
+  height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.PrimeInterstitialScreen {
+  margin-bottom: 2.416rem;
+  padding-top: 2.25rem;
+  width: 72rem;
+
+  &__bodySection {
+    background: linear-gradient( 99.86deg, #564372 0%, #220046 39.49%, #030106 100% );
+    border: 2px solid map-get( $bingeBlue, '50' );
+    border-radius: 0.5rem;
+    height: 23.208rem;
+    margin-left: 6.875rem;
+    width: 66.25rem;
+  }
+
+  &__primeTopSection {
+    display: flex;
+    flex-direction: column;
+    height: 5.5416rem;
+    margin-bottom: 1.833rem;
+    margin-top: 0.833rem;
+
+    .Image {
+      align-self: center;
+      height: 3.75rem;
+      width: 11.25rem;
+    }
+
+    .Text {
+      line-height: 120%;
+      text-align: center;
+    }
+  }
+
+  &__primeCenterSection {
+    display: flex;
+    position: relative;
+  }
+
+  &__primeleftSection {
+    background: linear-gradient( 180deg, #0a0115 16.93%, #1e013d 98.84% );
+    border-radius: 1.333rem;
+    display: flex;
+    width: 35.541rem;
+  }
+
+  &__primeSectionQrText {
+    height: 13.33rem;
+    margin-left: 12.77rem;
+    margin-right: 2.833rem;
+    width: 24.541rem;
+
+    &--HeaderText {
+      margin-bottom: 1rem;
+      margin-top: 2.291rem;
+      width: 23.958rem;
+
+      .Text {
+        line-height: 120%;
+        text-align: center;
+      }
+    }
+
+    &--QrCodeText {
+      align-items: center;
+      display: flex;
+      height: 5.958rem;
+      margin: 0 1.52rem;
+      width: 21.5rem;
+
+      .Text {
+        line-height: 120%;
+        text-align: center;
+      }
+    }
+  }
+
+  &__primeSectonQrCode {
+    align-items: center;
+    background-color: $white;
+    display: flex;
+    height: 13.33rem;
+    padding-left: 1.4rem;
+    width: 13.33rem;
+
+    @media only screen and (width: 1280px) {
+      padding-left: 1rem;
+    }
+  }
+
+  &__footerBottomSectionLink {
+    color: $white;
+    display: flex;
+    font-size: 0.667rem;
+    font-weight: 500;
+    justify-content: space-between;
+    letter-spacing: 0;
+    line-height: 120%;
+    margin-left: 6.875rem;
+    margin-top: 1rem;
+    // margin: 0.667rem 0;
+    text-align: center;
+    width: 66.25rem;
+
+    &--span {
+      color: map-get( $purple, '25' );
+      font-weight: 600;
+      margin: 0 0.15rem;
+    }
+
+    &--benefitsMsg {
+      margin-top: 0.333rem;
+    }
+  }
+
+  &__footerBottomLeftSectionLink {
+    margin-left: 15.937rem;
+  }
+
+  &__footerSection {
+    margin-top: 1rem;
+  }
+
+  &__footerTopSection {
+    margin-left: 6.875rem;
+
+    .Image {
+      height: 4.834rem;
+      width: 66.25rem;
+    }
+  }
+
+  &__footerBingeSection {
+    position: relative;
+    text-align: center;
+
+    svg {
+      height: 1.5rem;
+    }
+  }
+
+  &__headSection {
+    display: flex;
+    margin-bottom: 1rem;
+    margin-left: 6.875rem;
+    width: 66.25rem;
+
+    .Image {
+      background-color: $darkGrayishBlue;
+      border-radius: 0.334rem;
+      height: 7.0887rem;
+      margin-right: 0.834rem;
+      width: 12.583rem;
+    }
+
+    .Image:last-child {
+      margin-right: 0;
+    }
+  }
+}

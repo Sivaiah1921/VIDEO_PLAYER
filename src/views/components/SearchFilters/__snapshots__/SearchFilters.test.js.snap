@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  className="SearchFilters"
+>
+  <div
+    className="SearchFilters__buttons"
+  >
+    <div
+      className="ShowFilterButton"
+    >
+      <button
+        className="Button Button--secondary Button--medium"
+        onClick={[Function]}
+        style={null}
+      >
+        Show Filter
+      </button>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,87 @@
+@import '../../../styles/src/variables';
+
+.SubscriberCard {
+  background: map-get( $bingeBlue, '125' );
+  border: 0.125rem solid map-get( $bingeBlue, '75' );
+  border-radius: 0.625rem;
+  color: $white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  padding: 0.66rem 1.25rem;
+
+  &__container {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+
+    &__Text {
+      width: fit-content;
+
+      p {
+        font-size: 0.833rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1rem;
+        padding: 2px 3px;
+        position: relative;
+        top: 1px;
+      }
+    }
+
+    &__Active {
+      background-color: map-get( $purple, '25' );
+
+      p {
+        color: map-get( $bingeBlue, '75' );
+      }
+    }
+
+    &__Inactive {
+      background-color: map-get( $error, '600' );
+
+      p {
+        color: map-get( $bingeBlue, '125' );
+      }
+    }
+
+    &__Packname {
+      margin-top: 6px;
+
+      p {
+        color: $white;
+        font-size: 1.25rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.5rem;
+      }
+    }
+
+    &__Aliasname {
+      margin-top: 6px;
+
+      p {
+        color: map-get( $bingeBlue, '25' );
+        font-size: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.2rem;
+      }
+    }
+  }
+
+  &__statusText {
+    color: map-get( $bingeBlue, '25' );
+    position: relative;
+  }
+
+  svg {
+    margin: auto 0;
+  }
+
+  &--withFocus {
+    border: 0.1875rem  solid $white;
+    transform: scale( 1.04 );
+  }
+}

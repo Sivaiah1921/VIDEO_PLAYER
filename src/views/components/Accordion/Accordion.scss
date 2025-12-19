@@ -1,0 +1,42 @@
+@import '../../../styles/src/variables';
+
+.Accordion {
+  button {
+    background: map-get( $bingeBlue, '125' );
+    border: 0.125rem solid map-get( $bingeBlue, '75' );
+    border-radius: 0.625rem;
+    color: $white;
+    padding: 0.563rem 1rem 0.563rem 1.563rem;
+    width: 34.375rem;
+  }
+
+  svg {
+    height: 0.75rem;
+    width: 1.5rem;
+  }
+
+  &__question {
+    align-items: center;
+    display: flex;
+
+    .Text {
+      padding-right: 1rem;
+      width: 100%;
+    }
+  }
+
+  &__description {
+    padding: 0.9375rem 0;
+
+    p {
+      font-weight: 400;
+      line-height: 1.3125rem;
+    }
+  }
+
+  &__title {
+    &--focused {
+      border: 0.1875rem solid $white !important;
+    }
+  }
+}

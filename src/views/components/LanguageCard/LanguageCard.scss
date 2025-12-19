@@ -1,0 +1,54 @@
+@import '../../../styles/src/variables';
+
+.LanguageCard {
+  background: linear-gradient( 339.81deg, #220046 59.34%, #e10092 134.97% );
+  border: 0.163rem solid #564372;
+  border-radius: 5.294rem;
+  flex-direction: column;
+  height: 7.167rem;
+  position: relative;
+  transition: transform ease-out;
+  width: 7.167rem;
+
+  &__Text {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+
+  &--withFocus {
+    border: 0.167rem solid $white;
+    border-radius: 5.558rem;
+    box-shadow: inset 0 0 0 0.25rem currentColor;
+    transform: scale( 1.05 );
+  }
+
+  .Image {
+    margin-bottom: 1rem;
+    position: relative;
+    top: 2rem;
+
+    img {
+      filter: hue-rotate( 0deg ) saturate( 100% ) brightness( 2.5 );
+      height: 2rem;
+      margin: 0 auto;
+      margin-top: -.3rem;
+      width: 2rem;
+    }
+  }
+
+  .Link {
+    background-image: unset;
+
+    .Text {
+      // bottom: 2.4rem;
+      color: $white;
+      font-size: 1.046rem;
+      font-weight: 500;
+      line-height: 0.9rem;
+      position: absolute;
+      text-align: center;
+      top: 4rem;
+    }
+  }
+}

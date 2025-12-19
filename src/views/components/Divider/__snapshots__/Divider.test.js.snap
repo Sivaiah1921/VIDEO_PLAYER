@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Divider />tests snapshot tests renders correctly with the \`type\` property set 1`] = `
+<div
+  className="Divider Divider__horizontal"
+/>
+`;
+
+exports[`<Divider />tests snapshot tests renders correctly with the default prop 1`] = `
+<div
+  className="Divider Divider__horizontal"
+/>
+`;

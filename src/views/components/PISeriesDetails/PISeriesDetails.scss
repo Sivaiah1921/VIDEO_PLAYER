@@ -1,0 +1,41 @@
+@import '../../../styles/src/variables';
+
+.PISeriesDetails {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.484rem;
+    padding: 0;
+    width: 68.75rem;
+  }
+
+  &__duration {
+    color: map-get( $purple, '25' );
+    margin-bottom: 0.9375rem;
+  }
+
+  &__title {
+    margin-bottom: 0.9375rem;
+  }
+
+  &__description {
+    margin-bottom: 0.9375rem;
+
+    p {
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    &--otherTv {
+      > p {
+        span {
+          position: relative;
+          top: 0.45rem;
+        }
+      }
+    }
+  }
+}

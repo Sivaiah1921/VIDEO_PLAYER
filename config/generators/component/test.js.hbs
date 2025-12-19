@@ -1,0 +1,17 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {{ properCase name }} from './{{ properCase name }}';
+import { mountWithIntl } from '../../utils/intl-enzyme-test-helper';
+// import { shallow } from 'enzyme';
+// import renderer from 'react-test-renderer';
+// import { createRenderer } from 'react-addons-test-utils';
+// import { IntlProvider } from 'react-intl';
+
+describe('<{{ properCase name }} />', () => {
+  let component;
+
+  it('renders without crashing', () => {
+    component = mountWithIntl(<{{ properCase name }} />);
+    expect(component.find('{{ properCase name}}').length).toBe(1);
+  });
+});

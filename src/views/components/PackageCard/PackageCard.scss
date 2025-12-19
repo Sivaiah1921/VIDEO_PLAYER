@@ -1,0 +1,295 @@
+@import '../../../styles/src/variables';
+
+.PackageCard {
+  display: flex;
+  justify-content: center;
+  margin-right: 20px;
+  position: relative;
+  width: 100%;
+
+  &__tag {
+    background: map-get( $purple, '100' );
+    border-radius: 0.5rem 0.5rem 0 0;
+    left: 0.5rem;
+    padding: 2.8125px 0.439rem;
+    position: absolute;
+    top: -1.75rem;
+  }
+
+  &__bottomSection {
+    display: flex;
+  }
+
+  &__remainingApps {
+    display: flex;
+    justify-content: center;
+
+    &--visibilityHidden {
+      visibility: hidden;
+    }
+
+    p {
+      color: #564372;
+      font-size: 1.3125rem;
+      font-weight: 600;
+      line-height: normal;
+      width: 12.35rem;
+    }
+  }
+
+  &__content {
+    background: #efe8fb;
+    border: 2px solid #564372;
+    border-radius: 28px;
+    box-shadow: 0 0 14.2548px rgba( 0, 0, 0, 0.15 );
+    box-sizing: border-box;
+
+    /* Inside auto layout */
+    flex: none;
+    flex-grow: 0;
+    height: fit-content;
+    mix-blend-mode: normal;
+    order: 1;
+    padding: 1.04rem;
+    position: relative;
+    width: 100%;
+    z-index: 2;
+
+    &--withFocus {
+      border: 0.183rem solid map-get( $pink, '100' ) !important;
+      transform: scale( 1.04 );
+
+      .PackageDetailsCard__tag {
+        top: -1.9rem;
+      }
+    }
+  }
+
+  &__flexiContent {
+    background: unset;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  &__appCountText {
+    display: flex;
+    margin-left: 0.2rem;
+    margin-right: 0;
+
+    svg {
+      display: none;
+      margin-right: 0.5rem;
+    }
+
+    .Text {
+      font-weight: 500;
+    }
+
+    &--bold {
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.5rem;
+      padding-right: 0.25rem;
+    }
+
+    &--normalText {
+      font-size: 1rem;
+      line-height: 1.2rem;
+    }
+  }
+
+  &__planExpired {
+    // padding-top: 1rem;
+    width: 100%;
+
+    p.Text {
+      font-size: 0.92rem;
+      font-weight: map-get( $fontweights, '500' );
+      line-height: map-get( $lineheights, 'em1' );
+    }
+  }
+
+  &__multiapps {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-template-columns: auto auto auto auto auto auto auto auto;
+    margin-bottom: 0.3rem;
+
+    .AppMediaCard {
+      border-radius: 5px;
+
+      &__content {
+        border: none;
+        width: 100% !important;
+
+        .Image img {
+          border-radius: 5px;
+          height: 85px;
+          margin: 0;
+          object-fit: fill !important;
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__expiryDate,
+  &__Verbiage {
+    li {
+      list-style: none;
+    }
+  }
+
+  &__bottom {
+    bottom: 1.625rem;
+    position: absolute;
+
+    &--monthlyPlan {
+      p {
+        font-size: 1.625rem;
+        line-height: 1.625rem;
+
+        span.price {
+          font-size: 2rem;
+        }
+      }
+
+      p:nth-child(1) {
+        margin-bottom: 1rem;
+      }
+
+      left: 50%;
+      transform: translateX( -50% );
+    }
+  }
+
+  &__header {
+    margin-bottom: 0.9rem;
+
+    &--title {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    &--titleRight {
+      display: flex;
+
+      svg {
+        background-color: #220046;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+      }
+
+      &--title {
+        align-self: center;
+
+        span {
+          color: map-get( $bingeBlue, '100' );
+          font-size: 1.33rem;
+          font-weight: 500;
+          line-height: 1.33rem;
+        }
+      }
+    }
+
+    &--titleRightPrice {
+      align-self: center;
+      display: flex;
+      justify-content: flex-end;
+
+      span {
+        color: map-get( $bingeBlue, '100' );
+        font-weight: 500;
+        line-height: 1.625rem;
+      }
+    }
+
+    &--titlePremium {
+      .Text {
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-color: #220046;
+        flex: none;
+        flex-grow: 0;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    &--details {
+      color: #220046;
+      display: flex;
+      margin-bottom: 1rem;
+
+      p:first-child {
+        color: #220046;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__fdoVerbiage {
+    align-items: center;
+    background: map-get( $purple, '25' );
+    display: flex;
+    height: 2.33rem;
+    margin-top: 1.25rem;
+    width: 35.83rem;
+
+    .AppMediaCard {
+      border-radius: 5px;
+      height: 2rem !important;
+      margin-bottom: 0 !important;
+      margin-right: 0.5rem !important;
+      width: 2rem !important;
+
+      &__content {
+        border: none;
+        margin-left: 0.3rem;
+
+        .Image img {
+          border-radius: 5px;
+          height: 2rem !important;
+          margin: 0;
+          object-fit: fill !important;
+          width: 2rem !important;
+        }
+      }
+    }
+
+    &--info {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1rem;
+    }
+
+    &--dateInfo {
+      color: map-get( $purple, '100' );
+      font-weight: 600;
+    }
+  }
+
+  &__topGradient {
+    border-top-left-radius: 1.25rem;
+    border-top-right-radius: 1.25rem;
+    height: 5rem;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+
+  &--price {
+    font-size: 1.25rem;
+    font-weight: 600 !important;
+  }
+
+  &--month {
+    font-size: 1.3rem;
+  }
+}

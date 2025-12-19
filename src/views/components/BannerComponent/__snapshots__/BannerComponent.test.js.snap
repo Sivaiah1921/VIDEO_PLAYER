@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BannerComponent />tests snapshot tests renders correctly BannerComponent 1`] = `
+<div
+  className="BannerComponent"
+>
+  <div
+    className="BannerComponent__backgroundImg"
+  >
+    <div
+      aria-label="Image"
+      className="Image"
+    >
+      <picture>
+        <img
+          alt=""
+          className="Image--loading"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+        />
+      </picture>
+    </div>
+  </div>
+  <div
+    className="BannerComponent__LinearGradient1"
+  />
+  <div
+    className="BannerComponent__LinearGradient2"
+  />
+</div>
+`;

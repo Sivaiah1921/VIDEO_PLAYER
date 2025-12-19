@@ -1,0 +1,196 @@
+@import '../../../styles/src/variables';
+
+.TenurePlanPage {
+  margin-left: 4rem;
+  padding-top: 2.5rem;
+
+  &__topSection {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: unset;
+    margin-bottom: 3rem;
+    position: relative;
+    width: 73.5rem;
+    z-index: 3;
+
+    .Button {
+      align-items: center;
+      background: transparent;
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      padding-left: 0;
+      width: unset;
+      &::after { content: unset; }
+
+      &__icon {
+        margin-right: 0.75rem;
+      }
+    }
+
+    svg {
+      display: block;
+    }
+  }
+
+  &__content {
+    display: flex;
+    margin-top: 1.25rem;
+    position: relative;
+    z-index: 9;
+  }
+
+  &__PrimeLitefdoVerbiage {
+    align-items: center;
+    background: map-get( $purple, '25' );
+    border-radius: 0.4167rem;
+    display: flex;
+    height: 3.5rem;
+    margin-right: 0.3rem;
+    width: 37.3rem;
+
+    .AppMediaCard {
+      border-radius: 5px;
+      height: 2.5rem !important;
+      margin: 0.5rem !important;
+      width: 2.5rem !important;
+
+      &__content {
+        border: none;
+
+        img {
+          border-radius: 5px;
+          height: 2.5rem !important;
+          object-fit: fill !important;
+          width: 2.5rem !important;
+        }
+      }
+    }
+
+    &--info {
+      display: flex;
+      flex-direction: column;
+      font-size: 1rem;
+      font-weight: 500;
+      height: 2.5rem;
+      max-width: 37.625rem;
+      width: 33.8334rem;
+
+      .prime-line {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  &__loader {
+    left: 10rem;
+    position: relative;
+    top: 5rem;
+    width: 37.625rem;
+
+    .Image {
+      height: 10rem;
+      width: 10rem;
+    }
+  }
+
+  &__header {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    align-items: center;
+    background-image: none;
+    display: flex;
+    margin: 1.4375rem 0;
+  }
+
+  &__apps {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+
+    .PackageCard {
+      margin-right: 0;
+
+      &__header--details {
+        left: 2.8rem;
+        margin-bottom: -0.5rem;
+        position: relative;
+        top: -1.8rem;
+      }
+
+      &__header--titleRight {
+        svg {
+          height: 2.5rem !important;
+          width: 2.5rem !important;
+        }
+
+        &--title {
+          align-self: start;
+        }
+      }
+
+      &__content {
+        height: fit-content;
+        pointer-events: none;
+        width: 37.625rem;
+
+        .Image img {
+          height: 3.75rem;
+          width: 3.75rem;
+        }
+      }
+
+      &__multiapps {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        grid-column-gap: unset;
+        height: unset;
+      }
+    }
+
+    .AppMediaCard {
+      height: 3.75rem;
+      margin: unset;
+      margin-bottom: 0.72rem;
+      margin-right: 0.7rem !important;
+      width: 3.75rem;
+
+      @media only screen and (width: 1280px) {
+        margin-right: 0.69rem !important;
+      }
+    }
+
+    .AppMediaCard:nth-child(8n) {
+      margin-right: 0 !important;
+    }
+  }
+
+  &__rightPanel {
+    margin-left: 5rem;
+
+    &--header {
+      color: map-get( $purple, '25' );
+      font-size: map-get( $fontsizes, 'p24' );
+      font-weight: map-get( $fontweights, '400' );
+      line-height: map-get( $lineheights, 'em1_875' );
+      margin-bottom: 1rem;
+      width: 30.313rem;
+    }
+
+    .PlanCard {
+      margin: 0;
+      margin-bottom: 2.291rem;
+
+      svg {
+        position: relative;
+        top: 0.1rem;
+      }
+    }
+  }
+}

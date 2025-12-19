@@ -1,0 +1,27 @@
+import { Meta, Preview, Story, Props } from '@storybook/addon-docs';
+import IconExampleGrid from './Icon.example';
+import Icon from './Icon'
+
+<Meta title="Atoms/Icon" />
+
+# Icons
+
+Icons are built using the stroke guidelines outlined in the Effects category of the documentation. They prioritize simplicity & clarity and help reinforce function and meaning through an illustrated visual que.
+
+There are three sizes for precise resolution requirements:
+
+* __12 x 12 px:__ defined as 's' size internally
+* __16 x 16 px:__ defined as 'm' size internally
+* __24 x 24 px:__ defined as 'l' size internally
+
+<Preview>
+  <Story name="Icon">
+    <div style={{display: 'flex', flexWrap: 'wrap'}}>
+      <IconExampleGrid></IconExampleGrid>
+    </div>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={Icon} />

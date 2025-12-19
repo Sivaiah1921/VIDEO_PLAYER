@@ -1,0 +1,52 @@
+@import '../../../styles/src/variables';
+
+.RadioButton {
+  position: relative;
+
+  &__input {
+    appearance: none;
+    background-color: map-get( $bingeBlue, '50' );
+    border-radius: 50%;
+    cursor: pointer;
+    height: 1.375rem;
+    margin: 0 0.5rem 0.125rem 0;
+    outline: 0;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle;
+    width: 1.375rem;
+  }
+
+  &__hideInput {
+    opacity: 0;
+  }
+
+  &__transformLabel {
+    left: 0;
+    position: absolute;
+  }
+
+  &__input:checked + &__label::before {
+    height: 1.375rem;
+    width: 1.375rem;
+  }
+
+  input[type='radio']:disabled,
+  input[type='radio']:disabled::after {
+    border-color: map-get( $neutral, '200' );
+    cursor: not-allowed;
+  }
+
+  input[type='radio']:checked {
+    background-color: map-get( $pink, '100' );
+  }
+
+  input[type='radio']:checked::after {
+    border: 0.375rem solid $white;
+    border-radius: 50%;
+    content: "";
+    left: 0.3rem;
+    position: absolute;
+    top: 0.3rem;
+  }
+}

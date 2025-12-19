@@ -1,0 +1,228 @@
+@import '../../../styles/src/variables';
+
+.CatalogPartner {
+  margin-left: 3.958rem;
+
+  // commenting for old approach
+  // -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  // overflow-y: auto;
+  // scrollbar-width: none; /* for Firefox */
+  // background:
+  // linear-gradient( 146.32deg,
+  // map-get( $bingeBlue, '125' ) 0%,
+  // map-get( $bingeBlue, '100' ) 100% );
+
+  &::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+  }
+
+  .infinite-scroll-component {
+    position: relative;
+  }
+
+  &__synapsis {
+    position: relative;
+    z-index: 2;
+
+    .Synopsis {
+      margin-left: 0 !important;
+    }
+  }
+
+  &__topSection {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__Error {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+  }
+
+  &__rails {
+    padding-bottom: 30rem;
+  }
+
+  &__scrollContainer {
+    height: 100vh;
+    margin-top: 0.525rem;
+    overflow-y: auto;
+    position: relative;
+    z-index: 3;
+
+    &--isNewHeroBannerEnabled {
+      left: 1.087rem;
+      transform: translateY( -12rem );
+    }
+  }
+
+  &__heroBanner {
+    position: relative;
+
+    .carouselCrownLogo {
+      svg {
+        bottom: 10.75rem;
+        position: absolute;
+        right: 5.875rem;
+        z-index: 9;
+      }
+    }
+
+    &--provider {
+      left: 2rem;
+      position: absolute;
+      top: 3.25rem;
+      z-index: 2;
+
+      .Image img {
+        height: 7.313rem;
+        width: 7.313rem;
+      }
+    }
+
+    .Image {
+      height: 28.5rem !important;
+      width: 100%;
+    }
+
+    &--newHB {
+      .Image {
+        // height: 30.5rem;
+        height: 33.33rem;
+      }
+    }
+
+    // commenting for old approach
+    // .Carousel .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets {
+    //   bottom: 8rem;
+    // }
+  }
+
+  &__banner {
+    position: absolute;
+    width: 100%;
+  }
+
+  .MediaCarousel {
+    overflow: hidden;
+
+    &__Rail {
+      > div {
+        margin-left: 0.2rem;
+        margin-right: 2.8rem;
+        padding-right: 0 !important;
+      }
+
+      display: flex;
+      overflow: hidden;
+    }
+
+    &--LANDSCAPE {
+      min-height: 8.2rem;
+      width: 17rem;
+    }
+
+    &__SPECIAL_BANNER_RAIL,
+    &__BACKGROUND_BANNER_RAIL,
+    &__EDITORIAL,
+    &__RECOMMENDATION {
+      margin: 0.625rem;
+
+      &--PORTRAIT {
+        .Image {
+          img {
+            height: 16.27rem;
+            width: 9.99rem;
+          }
+        }
+
+        &--SMALL {
+          .Image {
+            img {
+              height: 16.27rem;
+              width: 9.99rem;
+            }
+          }
+        }
+
+        &--MEDIUM,
+        &--LARGE {
+          .Image {
+            img {
+              height: 19.125rem;
+              width: 11.99rem;
+            }
+          }
+        }
+
+        &--DEFAULT {
+          .Image {
+            img {
+              height: 16.27rem;
+              width: 9.99rem;
+            }
+          }
+        }
+      }
+
+      &--CIRCULAR {
+        .Image {
+          img {
+            height: 11.25rem;
+            width: 20rem;
+          }
+        }
+      }
+    }
+
+    &__LANGUAGE {
+      &--LANDSCAPE,
+      &--CIRCULAR {
+        height: 7.313rem;
+        width: 7.875rem;
+      }
+    }
+
+    &__GENRE {
+      &--LANDSCAPE {
+        height: 8rem;
+        width: 12rem;
+      }
+    }
+
+    &__PROVIDER {
+      &--CIRCULAR {
+        margin: 0.625rem;
+      }
+    }
+
+    .MediaCardWrapper .MediaCard--withFocus {
+      margin-bottom: unset;
+    }
+  }
+
+  .Carousel .Image {
+    // background-repeat:
+    background-repeat: round;
+    border: none;
+    // border: 0.2rem solid $black;
+    // border-radius: 0.416rem;
+    display: block;
+  }
+
+  &__notifications {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    z-index: 4;
+
+    .Notifications svg {
+      padding-right: 1.5rem;
+      width: 3.875rem;
+    }
+  }
+}

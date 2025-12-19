@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SeasonTab />tests snapshot tests renders correctly AccountCard 1`] = `
+<div
+  className="SeasonTab"
+>
+  <button
+    className="Button Button--small"
+    onClick={[Function]}
+    style={null}
+  />
+  <button
+    className="Button Button--small"
+    onClick={[Function]}
+    style={null}
+  />
+  <button
+    className="Button Button--small"
+    onClick={[Function]}
+    style={null}
+  />
+</div>
+`;

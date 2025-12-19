@@ -1,0 +1,133 @@
+@import '../../../styles/src/variables';
+
+.EditProfile {
+  &__header {
+    align-items: center;
+    display: flex;
+    margin-bottom: 4rem;
+    margin-top: 2.334rem;
+    position: relative;
+
+    .Button {
+      align-items: center;
+      background: unset;
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      margin-left: 2.75rem;
+      width: unset;
+      &::after { content: unset; }
+
+      &__icon {
+        margin-right: 0.75rem;
+      }
+    }
+
+    svg {
+      display: block;
+      margin-left: auto;
+      margin-right: 5.625rem;
+    }
+  }
+
+  &__content {
+    display: flex;
+    margin-left: 4rem;
+  }
+
+  &__contentRight {
+    margin-left: 8rem;
+
+    .Text--bingeBlue-50 {
+      margin-bottom: 0.25rem;
+    }
+  }
+
+  &__title {
+    align-items: center;
+    display: flex;
+    margin-bottom: 1.5rem;
+
+    svg {
+      bottom: 0.19rem;
+      margin-right: 1.25rem;
+      position: relative;
+    }
+
+    &:hover {
+      background-image: none;
+    }
+  }
+
+  &__contentLeft {
+    .AlphanumericKeyboard {
+      padding: 0;
+    }
+
+    .AlphanumericKeyboard .AlphanumericKeyboard__row {
+      width: 30rem;
+
+      .AlphanumericKeyboard__btnCapsArrow svg {
+        margin-right: 0;
+      }
+    }
+
+    .AlphanumericKeyboard .buttonRow {
+      justify-content: flex-start;
+    }
+  }
+
+  &__name,
+  &__registeredMobile {
+    margin-bottom: 2.5rem;
+
+    .Text--title-4 {
+      line-height: 1.9375rem;
+    }
+  }
+
+  &__email {
+    margin-bottom: 7.3rem;
+  }
+
+  &__emailContent {
+    background: map-get( $bingeBlue, '125' );
+    border: 0.125rem solid $white;
+    border-radius: 0.625rem;
+    box-shadow: 0 0 0.625rem rgba( 0, 0, 0, 0.4 );
+    color: white;
+    font-size: map-get( $fontsizes, 'p22' );
+    font-weight: map-get( $fontweights, '500' );
+    height: 2.8125rem;
+    line-height: map-get( $lineheights, 'em1_1' );
+    padding: 0.625rem 1.5rem 0.625rem 1.25rem;
+    text-align: left;
+    width: 22.625rem;
+
+    &--placeholder {
+      color: map-get( $bingeBlue, '50' );
+      font-size: map-get( $fontsizes, 'p22' );
+      font-style: normal;
+      font-weight: map-get( $fontweights, '500' );
+      line-height: 100%;
+    }
+
+    &--errorMessage {
+      margin-top: 1rem;
+      position: absolute;
+    }
+  }
+
+  &__btnUpdate {
+    > .Button {
+      background-color: map-get( $bingeBlue, '50' );
+      color: $white;
+      justify-content: center;
+      width: 25rem;
+
+      &--focused {
+        background-color: map-get( $pink, '100' );
+      }
+    }
+  }
+}

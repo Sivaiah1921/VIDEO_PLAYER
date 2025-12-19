@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  className="PiDetailsDescription"
+>
+  <div
+    className="PiDetailsDescription__content PiDetailsDescription__content--otherTv"
+  >
+    <p
+      className="Text Text--body-2 Text--left Text--white"
+    >
+      In a post-apocalyptic wasteland, Max, a drifter and survivor, unwillingly joins Imperator Furiosa, a rebel warrior, in a quest to overthrow a tyrant who controls.
+      <a
+        className="Link PiDetailsDescription__link Link--secondary Link--likeButtonOutline"
+        onClick={[Function]}
+        target="_self"
+      >
+        <svg
+          className="PiDetailsDescription__Icon"
+          fill="none"
+          height={12}
+          iconSizes="s"
+          viewBox="0 0 25 24"
+          width={12}
+        >
+          <path
+            clipRule="evenodd"
+            d="M13.611 2H11.39v8.889H2.5v2.222h8.889V22h2.222v-8.889H22.5V10.89h-8.889V2Z"
+            fill="#F3CBE3"
+            fillRule="evenodd"
+            strokeWidth="2"
+          />
+        </svg>
+        <p
+          className="Text Text--body-2 Text--left Text--pink-25"
+        >
+          More
+        </p>
+      </a>
+    </p>
+  </div>
+</div>
+`;

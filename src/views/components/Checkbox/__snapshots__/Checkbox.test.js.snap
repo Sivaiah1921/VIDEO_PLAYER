@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot tests renders checkBox correctly with proper props 1`] = `
+<div
+  className="Checkbox"
+>
+  <span
+    className="Checkbox__input Checkbox__input--checkbox"
+  >
+    <input
+      className="Checkbox__checkbox"
+      name="checkBox"
+      tabIndex={0}
+      type="checkbox"
+    />
+    <label
+      className="Checkbox__normalCheckBox"
+    />
+  </span>
+</div>
+`;

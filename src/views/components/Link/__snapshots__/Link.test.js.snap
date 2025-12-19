@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Link />tests snapshot tests renders correctly default 1`] = `
+<a
+  className="Link"
+  onClick={[Function]}
+  target="_self"
+/>
+`;
+
+exports[`<Link />tests snapshot tests renders correctly with compact and disabled props 1`] = `
+<a
+  className="Link Link--compact"
+  onClick={[Function]}
+  target="_self"
+/>
+`;
+
+exports[`<Link />tests snapshot tests renders correctly with compact props 1`] = `
+<a
+  className="Link Link--compact"
+  onClick={[Function]}
+  target="_self"
+>
+  Now you see text with default properties
+</a>
+`;
+
+exports[`<Link />tests snapshot tests renders correctly with secondary 1`] = `
+<a
+  className="Link Link--secondary"
+  onClick={[Function]}
+  target="_self"
+/>
+`;
+
+exports[`<Link />tests snapshot tests renders correctly with secondary and disabled 1`] = `
+<a
+  className="Link Link--secondary"
+  onClick={[Function]}
+  target="_self"
+/>
+`;
+
+exports[`<Link />tests snapshot tests renders correctly with withHover and disabled props 1`] = `
+<a
+  className="Link Link--withHover"
+  onClick={[Function]}
+  target="_self"
+/>
+`;
+
+exports[`<Link />tests snapshot tests renders correctly with withHover props 1`] = `
+<a
+  className="Link Link--withHover"
+  onClick={[Function]}
+  target="_self"
+>
+  Now you see text with default properties
+</a>
+`;

@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ParentalPinStatus />tests snapshot tests renders correctly ParentalPinStatus 1`] = `
+<div
+  className="ParentalPinStatus"
+>
+  <div
+    className="ParentalPinStatus__topPanel"
+  >
+    <svg
+      className="ParentalPinStatus__topPanel__Icon"
+      fill="none"
+      height={20}
+      viewBox="0 0 14 20"
+      width={14}
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clipRule="evenodd"
+        d="M11.375 6.667V4.762C11.375 2.133 9.415 0 7 0S2.625 2.133 2.625 4.762v1.905H0V20h14V6.667h-2.625Zm-7-1.905C4.375 3.18 5.548 1.905 7 1.905c1.453 0 2.625 1.276 2.625 2.857v1.905h-5.25V4.762ZM1.75 8.572v9.523h10.5V8.571H1.75Z"
+        fill="#fff"
+        fillRule="evenodd"
+      />
+    </svg>
+    <p
+      className="Text Text--header-2 Text--left"
+    >
+      Parental Pin
+    </p>
+  </div>
+  <div
+    className="ParentalPinStatus__centerPanel"
+  >
+    <div
+      className="ParentalPinStatus__centerPanel__top"
+    >
+      <p
+        className="Text Text--parental-subtitle-1 Text--left"
+      >
+        PIN Status
+      </p>
+      <div>
+        <div
+          className="Checkbox"
+        >
+          <span
+            className="Checkbox__input Checkbox__input--toggleButton"
+          >
+            <input
+              aria-checked={false}
+              checked={false}
+              className=""
+              id="switcher"
+              name="switcher"
+              onChange={[Function]}
+              tabIndex={0}
+              type="checkbox"
+            />
+            <label
+              className=""
+              htmlFor="switcher"
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      className="ParentalPinStatus__centerPanel__center"
+    />
+    <div
+      className="ParentalPinStatus__centerPanel__bottom"
+    >
+      <p
+        className="Text Text--header-2 Text--left"
+      >
+        Viewing Restrictions
+      </p>
+      <p
+        className="Text Text--parental-subtitle-3 Text--left"
+      >
+         U/A 16+
+      </p>
+    </div>
+  </div>
+  <div
+    className="ParentalPinStatus__bottomPanel"
+  >
+    <div
+      className="ParentalPinStatus__bottomPanel__header"
+    >
+      <p
+        className="Text Text--parental-subtitle-1 Text--left"
+      >
+        Want to modify Parental PIN?
+      </p>
+    </div>
+    <div
+      className="ParentalPinStatus__bottomPanel__content"
+    >
+      <span
+        className="Text Text--parental-subtitle-2 Text--left"
+      >
+        You can change your Parental PIN and Viewing Restrictions from www.tataplaybinge.com or from Tata Play Binge Mobile App
+      </span>
+    </div>
+  </div>
+</div>
+`;

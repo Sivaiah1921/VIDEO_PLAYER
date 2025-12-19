@@ -1,0 +1,70 @@
+@import '../../../styles/src/variables';
+
+.UpgradePlanPopup {
+  &__layout {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+
+    .Text--appleTv-header {
+      font-size: 1.666rem;
+    }
+  }
+
+  &__content {
+    margin-bottom: 1.25rem;
+    width: 35.5rem;
+
+    .Text--appleTv-content {
+      font-weight: 500;
+      line-height: 1.5rem;
+    }
+  }
+
+  &__upgradeButton {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+
+    .Button {
+      background-color: transparent;
+      border: 0.1875rem solid $white;
+      justify-content: center;
+      line-height: 0;
+      padding: 0;
+      width: 15.833rem;
+    }
+
+    .Button--focused {
+      background-color: map-get( $pink, '100' );
+    }
+
+    .Button--focused::after {
+      border: none;
+    }
+  }
+
+  &__closeButton {
+    .Button {
+      align-items: center;
+      background-color: transparent;
+      display: flex;
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+}
+
+.UpgradePlanPopupModal {
+  padding: 1rem;
+}

@@ -1,0 +1,149 @@
+@import '../../../styles/src/variables';
+
+.TermsOfUse {
+  color: $white;
+  position: relative;
+  z-index: 2;
+
+  ::-webkit-scrollbar {
+    display: none;
+    width: 0.0625rem;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    margin-left: 7rem;
+  }
+
+  &__content {
+    display: flex;
+    height: 29rem;
+    justify-content: center;
+  }
+
+  &__contentScroll {
+    height: 29rem !important;
+    overflow: auto !important;
+  }
+
+  &__leftPanel {
+    display: flex;
+    flex-direction: column;
+    width: 101%;
+
+    html,
+    body {
+      background: unset;
+
+      .page-main-heading {
+        u {
+          font-size: map-get( $fontsizes, 'p26' );
+          font-style: normal;
+          font-weight: map-get( $fontweights, '500' );
+          line-height: map-get( $lineheights, 'em2' );
+          text-transform: uppercase;
+        }
+      }
+
+      .eula-container {
+        color: unset;
+        padding: unset;
+      }
+
+      ol.first_list {
+        padding-inline-start: unset;
+      }
+
+      .eula-container p.privacy-sub-head,
+      .privacy-sub-head strong,
+      p,
+      li {
+        @include body-2;
+
+        color: $white;
+        font-weight: unset !important;
+        line-height: map-get( $lineheights, 'em2_0625' );
+      }
+    }
+
+    :nth-child(1) {
+      color: $white;
+      font-size: 1.2rem;
+      // font-weight: 500;
+      margin-bottom: 1.25rem;
+      // width: 35.75rem;
+    }
+
+    :nth-child(2) {
+      width: 46rem;
+    }
+  }
+
+  &__rightPanel {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.625rem;
+    margin-top: 2rem;
+
+    .Divider {
+      height: 21.875rem;
+      width: 0.125rem;
+    }
+  }
+
+  &__arrowDownRotate180 {
+    -ms-transform: rotate( 180deg );
+    transform: rotate( 180deg );
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    margin-bottom: 3rem;
+    padding-top: 2.334rem;
+    position: relative;
+
+    .Button {
+      align-items: center;
+      background: unset;
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      margin-left: 2.75rem;
+      width: unset;
+
+      &::after {
+        content: unset;
+      }
+
+      &__icon {
+        margin-right: 0.75rem;
+      }
+
+      &--focused {
+        color: $white;
+
+        path {
+          fill: $white;
+        }
+      }
+    }
+
+    svg {
+      display: block;
+      margin-left: auto;
+      margin-right: 5.625rem;
+    }
+  }
+
+  &__background {
+    background: linear-gradient( 146.32deg, #020005 0%, #220046 100% );
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+}

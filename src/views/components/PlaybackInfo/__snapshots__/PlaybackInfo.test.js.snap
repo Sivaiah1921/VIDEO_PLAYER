@@ -1,0 +1,240 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+Array [
+  <div
+    className="PlaybackInfo"
+  >
+    <div
+      className="PlaybackInfo__scrollContainer"
+      id="scrollContainer"
+    >
+      <div
+        className="infinite-scroll-component__outerdiv"
+        style={Object {}}
+      >
+        <div
+          className="infinite-scroll-component "
+          style={
+            Object {
+              "WebkitOverflowScrolling": "touch",
+              "height": "auto",
+              "overflow": "auto",
+            }
+          }
+        >
+          <div
+            className="PlaybackInfo__Banner "
+          >
+            <div
+              className="BannerComponent"
+            >
+              <div
+                className="BannerComponent__backgroundImg"
+              >
+                <div
+                  aria-label="Image"
+                  className="Image"
+                >
+                  <picture>
+                    <img
+                      alt="Background BannerComponent image"
+                      className="Image--loading"
+                      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                    />
+                  </picture>
+                </div>
+              </div>
+              <div
+                className="BannerComponent__LinearGradient1"
+              />
+              <div
+                className="BannerComponent__LinearGradient2"
+              />
+            </div>
+          </div>
+          <div
+            className="PlaybackInfo__header"
+          >
+            <div
+              className="PlaybackInfo__title"
+            >
+              <div
+                className="piTitleCard"
+              >
+                <div
+                  className="piTitleCard__leftPanel"
+                >
+                  <div
+                    className="Image"
+                    style={
+                      Object {
+                        "height": "54px",
+                        "width": "54px",
+                      }
+                    }
+                  >
+                    <picture>
+                      <img
+                        alt=""
+                        className="Image--loading"
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+                      />
+                    </picture>
+                  </div>
+                </div>
+                <div
+                  className="piTitleCard__rightPanel"
+                >
+                  <div
+                    className="piTitleCard__rightPanel__rightTopPanel piTitleCard__rightPanel__noContents"
+                  >
+                    <p
+                      className="Text Text--title-1 Text--left Text--white"
+                    >
+                      NoTitleContents
+                    </p>
+                  </div>
+                  <div
+                    className="piTitleCard__rightPanel__rightBottomPanel"
+                  >
+                    <p
+                      className="Text Text--subtitle-3 Text--left Text--white"
+                    >
+                       
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="PlaybackInfo__description"
+            >
+              <div
+                className="PiDetailsDescription"
+              >
+                <div
+                  className="PiDetailsDescription__content"
+                >
+                  <p
+                    className="Text Text--body-2 Text--left Text--white"
+                  >
+                    <a
+                      className="Link PiDetailsDescription__link Link--secondary Link--likeButtonOutline"
+                      onClick={[Function]}
+                      target="_self"
+                    >
+                      <svg
+                        className="PiDetailsDescription__Icon"
+                        fill="none"
+                        height={12}
+                        iconSizes="s"
+                        viewBox="0 0 25 24"
+                        width={12}
+                      >
+                        <path
+                          clipRule="evenodd"
+                          d="M13.611 2H11.39v8.889H2.5v2.222h8.889V22h2.222v-8.889H22.5V10.89h-8.889V2Z"
+                          fill="#F3CBE3"
+                          fillRule="evenodd"
+                          strokeWidth="2"
+                        />
+                      </svg>
+                      <p
+                        className="Text Text--body-2 Text--left Text--pink-25"
+                      >
+                        More
+                      </p>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              className="PlaybackInfo__languageList"
+            />
+            <div
+              className="PlaybackInfo__buttons"
+            >
+              <button
+                className="Button Button--play Button--secondary Button--icon Button--medium"
+                onClick={[Function]}
+                style={null}
+              >
+                <svg
+                  className="Button__icon Button__icon--withIconLeft"
+                  fill="none"
+                  height={20}
+                  viewBox="0 0 21 20"
+                  width={21}
+                >
+                  <path
+                    clipRule="evenodd"
+                    d="M4.798 1.963c-.35-.395-1.242-.395-1.242 0v16.074c0 .395.895.395 1.246 0l11.708-7.322a1.105 1.105 0 0 0 .006-1.43L4.798 1.963Z"
+                    fill="#fff"
+                    fillRule="evenodd"
+                  />
+                </svg>
+                Play
+              </button>
+              <button
+                className="Button Button--mybingelist Button--secondary Button--icon Button--medium"
+                onClick={[Function]}
+                style={null}
+              >
+                <svg
+                  className="Button__icon Button__icon--withIconLeft"
+                  fill="none"
+                  height={12}
+                  viewBox="0 0 25 24"
+                  width={12}
+                >
+                  <path
+                    clipRule="evenodd"
+                    d="M13.611 2H11.39v8.889H2.5v2.222h8.889V22h2.222v-8.889H22.5V10.89h-8.889V2Z"
+                    fill="#F3CBE3"
+                    fillRule="evenodd"
+                    strokeWidth="2"
+                  />
+                </svg>
+                Add to Binge List
+              </button>
+            </div>
+            <div
+              className="PlaybackInfo__seasonContainer"
+            >
+              <div
+                className="PlaybackInfo__seasons"
+              >
+                0
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="Loader"
+    >
+      <div
+        className="Loader__content"
+      >
+        <div
+          className="Image"
+        >
+          <picture>
+            <img
+              alt=""
+              className="Image--loading"
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>,
+  <div
+    className="PlaybackInfo__notifications"
+  />,
+]
+`;

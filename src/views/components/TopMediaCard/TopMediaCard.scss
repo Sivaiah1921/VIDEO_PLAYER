@@ -1,0 +1,88 @@
+@import '../../../styles/src/variables';
+
+.TopMediaCard {
+  display: flex;
+  height: 100%;
+  margin-right: 0.8rem;
+  position: relative;
+  right: 1.5rem;
+  width: 100%;
+
+  &--withFocus {
+    border: 0.1875rem solid white;
+    border-radius: 0.625rem;
+  }
+
+  &__rightMedia {
+    // margin-left: -1rem;
+    z-index: 1;
+
+    &--media {
+      .Image {
+        img {
+          border-radius: 0.35rem;
+
+          /* Commented due to binge top10rail revamp changes */
+          // height: 13.333rem;
+          // width: 8.889rem;
+          height: 19.12rem;
+          width: 12.75rem;
+        }
+      }
+    }
+
+    &--provider {
+      margin-top: 0.5rem;
+
+      .Image {
+        img {
+          height: 1.875rem;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  &__indexIcon {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    width: 4.025rem;
+    will-change: z-index;
+
+    /* Commented due to binge top10rail revamp changes */
+    // width: 5.65rem;
+    // &--posTen {
+    //   width: 7.55rem;
+    // }
+
+    .Image {
+      img {
+        /* Commented due to binge top10rail revamp changes */
+        //height: 9rem;
+        height: 7.1rem;
+        min-width: 5.6rem !important;
+        position: relative;
+        right: -.9rem;
+        top: 11.25rem;
+      }
+    }
+  }
+
+  .icon-front {
+    opacity: 1;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    will-change: z-index;
+    z-index: 2;
+  }
+
+  .MediaCardWrapper {
+    .MediaCard--withFocus {
+      border-radius: 0.33rem !important;
+      margin-bottom: 1.4rem !important;
+      transform: scale( 1.02 );
+
+      &::before {
+        border-radius: 0.33rem !important;
+      }
+    }
+  }
+}

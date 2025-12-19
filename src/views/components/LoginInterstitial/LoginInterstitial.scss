@@ -1,0 +1,157 @@
+@import '../../../styles/src/variables';
+
+.LoginInterstitial {
+  &__bottomContainer--phone {
+    height: 19.41rem;
+    margin-top: 6.45rem;
+    width: 63.3rem;
+  }
+
+  &__container--steps {
+    display: flex;
+    width: 100%;
+  }
+
+  &__checkbox {
+    width: 20rem;
+  }
+
+  &__leftSide {
+    color: white;
+    display: flex;
+    flex: 6;
+    flex-direction: column;
+    white-space: pre-wrap;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .leftSide_text {
+    display: flex;
+  }
+
+  .leftSide_text > :first-child {
+    flex: 0 0 18%;
+    font-size: 1.5rem;
+    line-height: 1.62rem;
+  }
+
+  .leftSide_text > :nth-child(2) {
+    @include login-toggle-text();
+
+    flex: 0 0 80%;
+  }
+
+  &__leftSide__qr {
+    background-color: $white;
+    border-radius: 0.5rem;
+    height: 15rem;
+    margin-left: 5.7rem;
+    margin-top: 0.83rem;
+    padding: 1.4rem 1.4rem;
+    width: 15rem;
+  }
+
+  &__rightSide {
+    color: white;
+    display: flex;
+    flex: 6;
+    flex-direction: column;
+    margin-left: 1.8rem;
+    white-space: pre-wrap;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  .rightSide_text {
+    display: flex;
+  }
+
+  .rightSide_text > :first-child {
+    flex: 0 0 18%;
+    font-size: 1.5rem;
+    line-height: 1.62rem;
+    margin-left: 2.4rem;
+  }
+
+  .rightSide_text > :nth-child(2) {
+    @include login-toggle-text();
+
+    flex: 0 0 75%;
+  }
+
+  &__rightSide__content {
+    display: flex;
+    margin-bottom: 2rem;
+  }
+
+  &__rightSide__code {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem 0 0 6.2rem;
+  }
+
+  .code-digit {
+    display: inline-block;
+    font-size: 3.75rem;
+    font-weight: 700;
+    height: 5.66rem;
+    line-height: 5.66rem;
+    text-align: center;
+    width: 5.66rem;
+  }
+
+  &__rightSide__expirytext {
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    margin: 0 0 0 5rem;
+  }
+
+  &__rightSide__alert {
+    color: map-get( $error, '600' );
+  }
+
+  &__Qrerror-container {
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__error-message {
+    margin-top: 4.33rem;
+
+    p {
+      font-size: 1.83rem;
+      font-weight: 600;
+      line-height: 2.2rem;
+    }
+  }
+
+  &__reload-btn {
+    margin-top: 1rem;
+    width: auto;
+
+    .Button--focused {
+      background: #e10092;
+    }
+
+    .Button--secondary {
+      font-weight: 600;
+    }
+  }
+
+  &__login-via-remote,
+  &__ORText,
+  &__retry-message {
+    margin-top: 1.25rem;
+
+    p {
+      @include login-qr-error;
+    }
+  }
+}

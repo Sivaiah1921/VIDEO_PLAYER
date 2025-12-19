@@ -1,0 +1,31 @@
+/**
+ * Test for {{ properCase name }} actions
+ */
+
+import { types, actions } from './{{ properCase name }}.actions';
+import _ from 'lodash';
+
+
+
+describe('{{ properCase name }} action types', () => {
+	
+	describe('Alert Window Resize', () => {
+		
+		it('The action type should exist', () => {
+			expect(types.DEFAULT).toBe('{{ constantCase name }}::DEFAULT');
+		});
+
+		it('The action creator function should exist', () => {
+			expect( _.isFunction(actions.triggerDefault) ).toBe(true);
+		});
+
+		it('The action creator function should return the proper action creator object', () => {
+			let creator = actions.triggerDefault(399);	
+			expect( creator ).toEqual({
+				type: types.DEFAULT,
+				arg: 399
+			})
+		});
+	});
+});
+

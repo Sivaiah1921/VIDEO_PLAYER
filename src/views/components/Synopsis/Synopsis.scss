@@ -1,0 +1,54 @@
+@import '../../../styles/src/variables';
+
+.Synopsis {
+  height: 18.5rem; // todo 15rem or 17.5 // Need To Check
+  margin-left: 3rem;
+
+  &__Banner {
+    position: absolute;
+
+    .BannerComponent__backgroundImg {
+      position: unset;
+    }
+  }
+
+  &__header {
+    margin-left: 0.625rem;
+    position: relative;
+    transform: translateY( 1.2rem );
+  }
+
+  &__title {
+    position: relative;
+  }
+
+  &__description {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;        /* Limit to 2 lines */
+    overflow: hidden;
+    position: relative;
+    text-overflow: ellipsis;
+    top: 0.5rem;
+  }
+
+  &__languageList {
+    position: relative;
+    top: 1.3125rem;
+  }
+
+  &__large_portrait {
+    height: 15rem !important;
+  }
+
+  .PiDetailsDescription__content .Text {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    font-family: 'Volte Play', system-ui;
+    // height: 6rem; // TODO- Need to verify this, adding for quick fix
+    // -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-align: left;
+  }
+}

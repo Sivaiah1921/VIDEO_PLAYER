@@ -1,0 +1,76 @@
+@import '../../../styles/src/variables';
+@import '../../../styles/src/mixins';
+
+.SeasonTab {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  margin-left: 1rem;
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  overflow-x: hidden;
+  scrollbar-width: none; /* for Firefox */
+  width: 46.875rem;
+
+  .Button {
+    @include seasionTabText-1;
+
+    background-color: unset;
+    color: #8e81a1;
+    font-size: 1.5rem;
+    line-height: 0;
+    line-height: 1.66rem;
+    margin: 0 1rem;
+    margin-left: inherit;
+    min-width: unset !important;
+    padding: 0;
+    white-space: nowrap;
+
+    span.Text {
+      font-weight: 500;
+    }
+
+    &::after {
+      content: unset;
+    }
+
+    &--focused {
+      @include seasionTabText-2;
+
+      border: unset;
+      border-bottom: 0.125rem solid map-get( $pink, '100' );
+      border-radius: inherit;
+      font-size: map-get( $fontsizes, 'p22' );
+      font-weight: map-get( $fontweights, '600' );
+      line-height: map-get( $lineheights, 'em2_5' );
+      min-width: fit-content;
+      padding: 0;
+
+      span.Text {
+        font-size: 1.5rem;
+        font-weight: 600;
+        line-height: 1.66rem;
+      }
+
+      &::after {
+        content: unset;
+      }
+    }
+  }
+
+  .Button:last-child {
+    padding-right: 1rem;
+  }
+
+  &__head {
+    @include seasionTabText-1;
+
+    color: map-get( $purple, '40' );
+
+    &--withFocus {
+      @include seasionTabText-2;
+
+      align-items: center;
+    }
+  }
+}

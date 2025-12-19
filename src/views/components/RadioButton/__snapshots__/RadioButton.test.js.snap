@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RadioButton />tests snapshot tests renders correctly with the \`type\` property submit 1`] = `
+<div
+  className="RadioButton"
+>
+  <input
+    aria-labelledby="radio-btn_label"
+    className="RadioButton__input"
+    disabled={false}
+    id="radio-btn"
+    name="radio-btn"
+    onClick={[Function]}
+    type="radio"
+    value="radio"
+  />
+  <label
+    className="RadioButton__label"
+    htmlFor="radio-btn"
+    id="radio-btn_label"
+  />
+</div>
+`;
+
+exports[`<RadioButton />tests snapshot tests renders correctly with the default props 1`] = `
+<div
+  className="RadioButton"
+>
+  <input
+    aria-labelledby="radio-btn_label"
+    className="RadioButton__input"
+    disabled={false}
+    id="radio-btn"
+    name="radio-btn"
+    onClick={[Function]}
+    type="radio"
+    value="radio"
+  />
+  <label
+    className="RadioButton__label"
+    htmlFor="radio-btn"
+    id="radio-btn_label"
+  />
+</div>
+`;
+
+exports[`<RadioButton />tests snapshot tests renders radio button with all props  1`] = `
+<div
+  className="RadioButton"
+>
+  <input
+    aria-labelledby="buttonComponent_label"
+    className="RadioButton__input"
+    disabled={false}
+    id="buttonComponent"
+    name="buttonComponent"
+    onClick={[Function]}
+    type="radio"
+    value="radio"
+  />
+  <label
+    className="RadioButton__label"
+    htmlFor="buttonComponent"
+    id="buttonComponent_label"
+  />
+</div>
+`;
+
+exports[`<RadioButton />tests snapshot tests renders with hideInput props to hide radio button 1`] = `
+<div
+  className="RadioButton"
+>
+  <input
+    aria-labelledby="buttonComponent_label"
+    className="RadioButton__input RadioButton__hideInput"
+    disabled={false}
+    id="buttonComponent"
+    name="buttonComponent"
+    onClick={[Function]}
+    type="radio"
+    value="radio"
+  />
+  <label
+    className="RadioButton__label RadioButton__transformLabel"
+    htmlFor="buttonComponent"
+    id="buttonComponent_label"
+  />
+</div>
+`;

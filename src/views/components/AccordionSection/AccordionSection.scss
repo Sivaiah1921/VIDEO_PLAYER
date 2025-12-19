@@ -1,0 +1,69 @@
+@import '../../../styles/src/variables';
+@import '../../../styles/src/grid';
+
+.AccordionSection {
+  @include infiniteGrid;
+
+  button {
+    background: $white;
+    border: none;
+    border-bottom: 0.063rem solid $black;
+    cursor: pointer;
+    list-style-type: none;
+    outline: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $black;
+    }
+  }
+
+  &__icon {
+    font-size: 1.3rem;
+  }
+
+  &__title {
+    @include body-1;
+
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    grid-column: 1 / 7;
+    justify-content: space-between;
+    padding: 1rem 0;
+  }
+
+  &__body {
+    grid-column: 1 / 7;
+    padding: 1rem 0 1rem 0;
+
+    .Markdown {
+      padding: 1.5rem 0 0.5rem 0;
+    }
+  }
+
+  &--detailAccordion {
+    .AccordionSection__title .Text-ds {
+      @include body-2;
+    }
+  }
+
+  .accordionAddIcon {
+    animation: accordionAddIcon 0.2s;
+  }
+
+  @keyframes accordionAddIcon {
+    0% { transform: rotate( 0deg ); }
+    100% { transform: rotate( -90deg ); }
+  }
+
+  .accordionMinusIcon {
+    animation: accordionMinusIcon 0.2s;
+  }
+
+  @keyframes accordionMinusIcon {
+    0% { transform: rotate( 90deg ); }
+    100% { transform: rotate( 180deg ); }
+  }
+}

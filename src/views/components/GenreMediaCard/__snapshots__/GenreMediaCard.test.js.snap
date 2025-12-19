@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  className="GenreMediaCard"
+  focused={false}
+>
+  <a
+    className="Link Link--secondary"
+    onClick={[Function]}
+    target="_self"
+  >
+    <div
+      className="Image"
+      style={
+        Object {
+          "background": "#6f85ce url( undefined )",
+        }
+      }
+    />
+  </a>
+</div>
+`;

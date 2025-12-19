@@ -1,0 +1,785 @@
+@import '../../../styles/src/variables';
+@import '../../../styles/src/mixins';
+
+.MediaCarousel {
+  $parent: &;
+  $Image: '.Image';
+
+  // added this margin for fixing card skip issue
+  margin: 0.625rem 0;
+  overflow: hidden;
+
+  > p {
+    line-height: 2.5rem;
+  }
+
+  @keyframes fadeIn {
+    100% { opacity: 1; }
+    0% { opacity: 0; }
+  }
+
+  @keyframes fadeOut {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  &__animationStart {
+    animation: fadeIn 2s;
+  }
+
+  &__animationEnd {
+    animation: fadeOut 2s;
+  }
+
+  &__selectedChannelCard {
+    .Button--secondary::after {
+      border: none;
+    }
+
+    .Button--focused {
+      background-color: map-get( $pink, '40' ) !important;
+    }
+
+    .Button--focused::after {
+      border: 0.16rem solid $white;
+    }
+  }
+
+  &__suffle {
+    display: flex;
+
+    // .ShuffleMediaCard,
+    // .ShuffleMediaCardFocus {
+    //   margin: 0 1rem;
+    // }
+  }
+
+  &__SHUFFLE_RAIL,
+  &__TVOD {
+    &--PORTRAIT {
+      .Image {
+        img {
+          height: 16.27rem;
+          width: 10.83rem;
+        }
+      }
+    }
+  }
+
+  &__Rail {
+    display: flex;
+    overflow: hidden;
+    padding: .9rem 0.2rem 1.75rem 0.5rem;
+
+    > div {
+      padding-right: 1.8rem;
+    }
+
+    #{ $parent }__PROVIDER--CIRCULAR {
+      padding-right: 1.25rem;
+
+      .Image {
+        img {
+          height: 7.313rem;
+          width: 7.313rem;
+        }
+      }
+
+      &:first-child {
+        margin-left: 0.25rem;
+      }
+    }
+  }
+
+  &__browseByChannels {
+    background-color: map-get( $bingeBlue, '100' );
+    height: 17rem;
+    margin-bottom: 0.8rem;
+    padding: 1rem 0 1rem 1rem;
+
+    .Button {
+      height: 2.5rem;
+      padding: 0 1.458rem;
+      // box-sizing: border-box;
+
+      span {
+        color: #9a9a9a;
+      }
+    }
+
+    .Button--secondary {
+      font-weight: 500;
+      line-height: 1.25rem;
+    }
+
+    .Button--secondary::after {
+      border: 2px solid #9a9a9a;
+    }
+
+    .Button--focused {
+      // background-color: map-get( $pink, '100' );
+      // font-weight: 600;
+      // padding: 0 1.442rem;
+    }
+
+    .selectedCard {
+      background-color: map-get( $pink, '40' );
+
+      span {
+        color: #220046;
+      }
+    }
+
+    .Button.selectedCard.Button--secondary::after {
+      border: 0.1667rem solid map-get( $pink, '40' );
+    }
+
+    .Button.selectedCard.Button--focused.Button--secondary {
+      span {
+        opacity: 0;
+      }
+    }
+
+    .Button.selectedCard.Button--focused.Button--secondary::after {
+      border: 0.1667rem solid $white;
+      color: black;
+      content: attr( data-label );
+      font-weight: 600;
+      left: 0;
+      opacity: 1;
+      padding-left: 0;
+      padding-top: 11px;
+      position: absolute;
+      top: 0;
+      transform: scale( 1.01 );
+      z-index: 1;
+    }
+
+    .Button.selectedCard.withLeftImage.Button--focused.Button--secondary::after {
+      color: black;
+      content: attr( data-label );
+      font-weight: 600;
+      left: 0;
+      opacity: 1;
+      padding-left: 44px !important;
+      padding-top: 11px;
+      position: absolute;
+      top: 0;
+      transform: scale( 1.01 );
+      z-index: 1;
+    }
+
+    .Button--focused.Button--secondary::after {
+      border: 0.1667rem solid $white;
+    }
+  }
+
+  &__ChipsbrowseByChannels {
+    background-color: unset !important;
+    height: unset !important;
+    padding: 0.667rem 1rem 1.25rem 0.1rem;
+
+    @media only screen and (width: 1280px) {
+      padding: 1.25rem 0 1rem 1rem !important;
+    }
+
+    .MediaCarousel__Rail {
+      > div {
+        margin-left: 0 !important;
+        margin-right: 0.4rem !important;
+      }
+    }
+  }
+
+  @media only screen and (width: 1280px) {
+    .Button.selectedCard.Button--focused.Button--secondary::after {
+      padding-top: 7px !important;
+    }
+  }
+
+  &__ChipsbrowseByChannelsWithOutMouse {
+    .Button.Button--focused.Button--secondary::after {
+      border: 2px solid #9a9a9a;
+    }
+  }
+
+  &__BINGE_CHIP_RAIL {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  &__ExtraPadding {
+    padding: 1rem 0.2rem 1.3rem 0.25rem !important;
+  }
+
+  &__episodeRailWelcome {
+    position: relative;
+
+    &__backgroundImage {
+      .Image {
+        height: 14.1rem;
+        width: $episodeRailWelcome;
+      }
+    }
+
+    &__gradient {
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: $episodeRailWelcome;
+    }
+
+    &__railLogo {
+      .Image {
+        height: 1.83rem;
+        left: 1rem;
+        position: absolute;
+        top: 1rem;
+        width: 1.83rem;
+      }
+    }
+  }
+
+  &__episodeRailWelcomeColour {
+    height: 14.1rem;
+    left: $episodeRailWelcome;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &__specialRailWelcome {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-right: 2px;
+    position: relative;
+
+    &__backgroundImage {
+      .Image {
+        height: 18.75rem;
+        width: 27rem;
+        // position: relative;
+      }
+    }
+
+    &__lottieAnimation {
+      bottom: 0;
+      height: 18.75rem;
+      overflow: hidden;
+      position: absolute;
+      width: 27rem;
+      z-index: 2;
+
+      svg {
+        transform: none !important;
+      }
+    }
+
+    &__specialImage {
+      bottom: 0;
+      position: absolute;
+      z-index: 2;
+
+      .Image img {
+        height: 18.75rem;
+        width: auto;
+      }
+    }
+
+    &__headerContentWrapper {
+      display: flex;
+      left: 0;
+      position: absolute;
+      top: 0;
+      z-index: 5;
+
+      &--headerText {
+        .Text {
+          height: 1.29rem;
+          max-width: 14rem;
+          overflow: hidden;
+          padding: 0.3rem 1.2rem 0.3rem 1.2rem;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        p {
+          @include specialRail-headerText;
+
+          font-weight: 600 !important;
+          line-height: 0.8rem;
+        }
+      }
+
+      &--polygon {
+        height: 1.29rem;
+        left: -1.1rem;
+        position: relative;
+        top: 0.3px;
+        transform: skewX( 40deg );
+        transform-origin: top right;
+        width: 1.1rem;
+      }
+    }
+
+    &__headerSubText {
+      left: 1.41rem;
+      position: absolute;
+      top: 6.56rem;
+      width: 13.5rem;
+      z-index: 5;
+
+      p {
+        @include specialRail-headerSubText;
+
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-height: 100% !important;
+        margin-bottom: 0.3rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+      }
+
+      .subTextContent {
+        p {
+          @include specialRail-headerSubTextContent;
+
+          -webkit-box-orient: vertical;
+          display: -webkit-box;
+          -webkit-line-clamp: 4; /* Limit text to 3 lines */
+          line-height: 120%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: pre-wrap;
+        }
+      }
+    }
+
+    &__gradient {
+      background: linear-gradient( 90deg, rgba( 0, 0, 0, 0 ) 0%, #000 100% );
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 5.5rem;
+      z-index: 3;
+    }
+
+    &__gradientLeft {
+      background: linear-gradient( 90deg, #020005 0%, rgba( 2, 0, 5, 0 ) 75.6% );
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 18.7rem;
+    }
+  }
+
+  &__GenereRailItems {
+    display: flex;
+    margin: .7rem 1.2rem .7rem 10rem;
+    margin-bottom: 0.8rem;
+    overflow: hidden;
+    padding: 1rem 1rem 0 0.5rem;
+    z-index: 20;
+
+    .GenreMediaCard {
+      height: 5.6rem;
+      margin-right: 1rem;
+      width: 8.334rem;
+
+      .Text {
+        font-size: 1rem;
+        line-height: 1rem;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  &__GenreRail {
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    // width: 72rem;
+    .Text--header-genere {
+      height: 3.23125rem;
+      left: 2rem;
+      position: absolute;
+      top: 3.4rem;
+      width: 6.95125rem;
+      z-index: 10;
+    }
+  }
+
+  &__RailLive {
+    padding-left: 0.5rem;
+  }
+
+  &__wrapperGenreCard {
+    left: 0;
+    position: absolute;
+    top: 1rem;
+    z-index: 24;
+  }
+
+  &__GenreCard {
+    height: 9.375rem;
+    position: absolute;
+    // margin-right: -3.125rem;
+    width: 9.4375rem;
+
+    svg {
+      left: 3px;
+      position: absolute;
+      z-index: 10;
+    }
+  }
+
+  &__GenreCardText {
+    :nth-child(1) {
+      height: 3.23125rem;
+      left: 3rem;
+      position: absolute;
+      top: 2.75rem;
+      width: 6.95125rem;
+      z-index: 10;
+    }
+
+    :nth-child(2) {
+      height: 3.23125rem;
+      left: 2.5rem;
+      position: absolute;
+      top: 4.1rem;
+      width: 6.95125rem;
+      z-index: 10;
+    }
+  }
+
+  &__GenreCardBg {
+    background-color: black;
+    border-radius: 50%;
+    height: 9.375rem;
+    position: absolute;
+    width: 9.4375rem;
+    z-index: 5;
+  }
+
+  &__GenreBackgroundReel1 {
+    margin-left: -10rem;
+
+    svg {
+      height: 9.291rem;
+      width: 182.166rem;
+    }
+  }
+
+  &__GenreBackgroundReelLeft {
+    margin-left: -10.3rem;
+
+    svg {
+      height: 9.291rem;
+      width: 182.166rem;
+    }
+  }
+
+  &__GenreBackgroundReel2 {
+    height: 9.375rem;
+    margin-left: -14rem;
+    width: 41.0625rem;
+  }
+
+  &--LANDSCAPE {
+    min-height: 8.2rem;
+    width: 17rem;
+  }
+
+  &--provider {
+    .Image {
+      img {
+        height: 3rem;
+        width: auto;
+      }
+    }
+  }
+
+  &__DARSHAN_CHANNEL {
+    &--LANDSCAPE {
+      .Image {
+        img {
+          height: 9.97rem;
+          width: 16.66rem;
+        }
+      }
+    }
+
+    &--PORTRAIT {
+      .Image {
+        img {
+          height: 16.5rem;
+          width: 10rem;
+        }
+      }
+    }
+  }
+
+  &__SERIES_SPECIAL_RAIL {
+    .Image {
+      img {
+        height: 15.75rem;
+        width: 28rem;
+      }
+    }
+  }
+
+  &__SPECIAL_BANNER_RAIL,
+  &__BACKGROUND_BANNER_RAIL,
+  &__PRIME,
+  &__TITLE_RAIL,
+  &__EDITORIAL,
+  &__RECOMMENDATION,
+  &__LIVE_EVENT_RAIL,
+  &__HB_SEE_ALL,
+  &__BINGE_CHANNEL {
+    margin: 0.625rem;
+
+    &--PORTRAIT {
+      border-radius: 0.35rem;
+      height: 16.27rem;
+      width: 10.83rem;
+
+      &--SMALL {
+        #{$Image} {
+          img {
+            border-radius: 0.35rem;
+            height: 16.27rem;
+            width: 10.83rem;
+          }
+        }
+      }
+
+      &--MEDIUM,
+      &--LARGE {
+        border-radius: 0.35rem;
+        height: 19.125rem;
+        width: 12.75rem;
+      }
+    }
+
+    &--LANDSCAPE {
+      &--SMALL {
+        .Image {
+          img {
+            border-radius: 0.35rem;
+            height: 11.25rem;
+            width: 20rem;
+          }
+        }
+      }
+
+      &--LARGE {
+        .Image {
+          img {
+            border-radius: 0.35rem;
+            height: 15.75rem;
+            width: 28rem;
+          }
+        }
+      }
+
+      &--DEFAULT {
+        .Image {
+          img {
+            border-radius: 0.35rem;
+            height: 11.25rem;
+            width: 20rem;
+          }
+        }
+      }
+
+      .Image {
+        img {
+          border-radius: 0.35rem;
+          height: 11.25rem;
+          width: 20rem;
+        }
+      }
+    }
+  }
+
+  &__SeriesSpecialRailWelcome {
+    position: relative;
+
+    &__backgroundImage {
+      .Image {
+        height: 18.75rem;
+        width: 27rem;
+      }
+    }
+
+    &__gradient {
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 27rem;
+    }
+
+    &__railLogo {
+      .Image {
+        height: 1.583rem;
+        left: 8px;
+        position: absolute;
+        top: 8px;
+        width: 1.583rem;
+        z-index: 1;
+      }
+    }
+  }
+
+  &--bestofAppx-provider {
+    .Image {
+      img {
+        height: 3.333rem;
+        margin: 0 1rem 0.45rem 0.45rem;
+        width: auto;
+      }
+    }
+  }
+
+  &__labelImage {
+    .Image {
+      height: 2.333rem;
+      padding: 0.27rem;
+      width: 2.333rem;
+    }
+
+    margin-right: 0.5rem;
+  }
+
+  &__labelImage-lottieAnimation {
+    height: 2.33rem;
+    overflow: hidden;
+    width: 2.33rem;
+    z-index: 2;
+
+    svg {
+      transform: none !important;
+    }
+  }
+
+  &__visibility-hidden {
+    display: none;
+  }
+
+  &__BINGE_TOP_10_RAIL--TOP_PORTRAIT {
+    .MediaCard--provider {
+      .Image {
+        img {
+          height: 1.875rem;
+          width: auto;
+        }
+      }
+    }
+  }
+
+  &__LANGUAGE {
+    &--CIRCULAR {
+      margin-right: 1rem;
+    }
+
+    &--LANDSCAPE,
+    &--CIRCULAR {
+      align-items: center;
+      display: flex;
+      height: 7.313rem;
+      margin: 0;
+    }
+  }
+
+  &__GENRE {
+    &--LANDSCAPE {
+      height: 8rem;
+      margin-left: 0.4rem;
+
+      // .GenreMediaCard {
+      //   width: 12rem;
+      // }
+    }
+  }
+
+  &__heading {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 0 0.2rem;
+
+    .Text--rail-heading {
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.8rem;
+    }
+
+    .Text--bestApps-heading {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  }
+
+  &__liveCircle {
+    background-color: #e56c6c;
+    border-radius: 0.33rem;
+    bottom: 0.1rem;
+    height: 0.66rem;
+    margin-left: 0.6rem;
+    position: relative;
+    width: 0.66rem;
+  }
+
+  &__SeriesSpecialRailbottom {
+    margin-bottom: 1.5rem;
+  }
+
+  &__specialRailbottom {
+    margin-bottom: 1.5rem;
+  }
+
+  &__BackgroundBannerRailbottom {
+    margin-bottom: 1.5rem;
+  }
+
+  &__BackgroundBannerRail {
+    margin-left: 1.58rem;
+    padding: 1rem 0 0 1.6rem !important;
+
+    .MediaCardWrapper {
+      width: min-content;
+    }
+
+    .MediaCard {
+      // margin-bottom: 0 !important;
+    }
+  }
+
+  &__SeriesSpecialRail {
+    margin-left: 1.58rem;
+    padding: 1rem 0 0 1.6rem !important;
+
+    .MediaCard {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &__specialRail {
+    padding: 1rem 0 0 1.6rem !important;
+
+    .MediaCard {
+      margin-bottom: 0 !important;
+    }
+  }
+}

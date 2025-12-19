@@ -1,0 +1,35 @@
+@import '../../../styles/src/variables';
+
+.ShuffleMediaCard,
+.ShuffleMediaCardFocus {
+  align-items: center;
+  border: 0.125rem solid map-get( $bingeBlue, '75' );
+  border-radius: 0.55rem;
+  color: map-get( $pink, '25' );
+  cursor: pointer;
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  flex-grow: 0;
+  height: 16rem;
+  justify-content: center;
+  order: 0;
+  overflow: hidden;
+  padding: 0 2rem !important;
+  // transition: transform .2s ease-out;
+  transition: transform ease-out;
+  width: 10rem;
+
+  .Text {
+    font-size: 1.875rem;
+  }
+
+  &__Icon {
+    margin-bottom: 0.625rem;
+  }
+}
+
+.ShuffleMediaCardFocus {
+  border: 0.1875rem solid $white;
+  transform: scale( 1.02 );
+}

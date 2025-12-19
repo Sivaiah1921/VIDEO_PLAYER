@@ -1,0 +1,694 @@
+@import './_typography.module';
+
+@mixin title-1 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p36' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_2' );
+}
+
+@mixin title-2 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p30' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em2_25' );
+}
+
+// Popup Title
+@mixin title-3 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p26' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_2' );
+}
+
+@mixin title-4 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p25' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_2' );
+}
+
+
+// Page description
+@mixin body-1 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p24' );
+  font-weight: map-get( $fontweights, 'normal' );
+  line-height: map-get( $lineheights, 'em1_1' );
+}
+
+// PI description
+@mixin body-2 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p22' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_1' );
+}
+
+// seasionTab title 1
+@mixin seasionTabText-1 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p22' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em2_5' );
+}
+
+// seasionTab title 2
+@mixin seasionTabText-2 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p24' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em2_5' );
+  color: $white;
+}
+
+// Popup description
+@mixin body-3 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, 'normal' );
+  line-height: map-get( $lineheights, 'em1_5' );
+}
+
+// Page description 2
+@mixin body-4 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, 'normal' );
+  line-height: map-get( $lineheights, 'em1_1' );
+}
+
+// Language title
+@mixin body-5 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'base' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'base' );
+}
+
+// Language card text
+@mixin subtitle-1 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_25' );
+  letter-spacing: map-get( $letterspacing, 'p_18' );
+}
+
+@mixin year-category {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_56' );
+}
+
+@mixin age-limit {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_2' );
+}
+
+@mixin subtitle-2 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p18' );
+  font-weight: map-get( $fontweights, 'normal' );
+  line-height: map-get( $lineheights, 'em1_56' );
+  letter-spacing: map-get( $letterspacing, 'p_18' );
+}
+
+@mixin subtitle-3 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'base' );
+  font-weight: map-get( $fontweights, 'normal' );
+  line-height: map-get( $lineheights, 'em1_2' );
+}
+
+// PI Title
+@mixin subtitle-4 { 
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_56' );
+  letter-spacing: map-get( $letterspacing, 'p_48' );
+}
+
+@mixin header-1 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p40' );
+  font-weight: map-get( $fontweights, 'normal' );
+  line-height: map-get( $lineheights, 'em1_1' );
+}
+
+@mixin header-2 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p30' );
+  font-weight: map-get( $fontweights, 'normal' );
+  line-height: map-get( $lineheights, 'em2_25' );
+}
+
+@mixin header-3 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p22' );
+  font-weight: map-get( $fontweights, '600' );
+  line-height: map-get( $lineheights, 'em1_62' );
+}
+
+@mixin header-4 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p22' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_62' );
+}
+
+@mixin faq-heading {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p22' );
+  line-height: map-get( $lineheights, 'em1_62' );
+}
+
+@mixin header-5 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p24' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em2' );
+}
+
+@mixin pi-media-carousel-heading {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p24' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em2_5' );
+}
+
+@mixin header-6 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p26' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_62' );
+}
+
+@mixin numberInput {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p30' );
+  font-weight: map-get( $fontweights, '600' );
+  line-height: map-get( $lineheights, 'em1_2' );
+}
+
+@mixin pi-title {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p30' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em2_25' );
+}
+
+@mixin numberInput-2 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p24' );
+  font-weight: map-get( $fontweights, '600' );
+  line-height: map-get( $lineheights, 'em1_2' );
+}
+
+@mixin inputText {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, '600' );
+  line-height: map-get( $lineheights, 'em1_2' );
+}
+
+@mixin buttonInputText {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, '600' );
+  line-height: map-get( $lineheights, 'em1_25' );
+}
+
+@mixin button {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, '600' );
+  line-height: map-get( $lineheights, 'em1_56' );
+  background-color: map-get( $pink, '100' );
+}
+
+@mixin button-secondary {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, 'normal' );
+  line-height: map-get( $lineheights, 'em1_437' );
+  color: map-get( $pink, '25' );
+}
+
+@mixin button-keyboard {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  @include button();
+  line-height: map-get( $lineheights, 'base' );
+}
+
+@mixin button-filter {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  @include button();
+  line-height: map-get( $lineheights, 'em1_2' );
+}
+
+@mixin link {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p14' );
+  font-weight: map-get( $fontweights, '300' );
+  letter-spacing: map-get( $letterspacing, 'p_25' );
+  line-height: map-get( $lineheights, 'em1_4' );
+  transition: scale 0.25s;
+}
+
+@mixin pi-description {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p22' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_4' );
+}
+
+@mixin link-secondary {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p12' );
+  font-weight: 300;
+  letter-spacing: map-get( $letterspacing, 'p_3' );
+  line-height: map-get( $lineheights, 'em1_3' );
+  transition: scale 0.25s;
+}
+
+@mixin link-compact {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p12' );
+  font-weight: map-get( $fontweights, '300' );
+  letter-spacing: map-get( $letterspacing, 'p_25' );
+  line-height: map-get( $lineheights, 'em1_4' );
+}
+
+@mixin list {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'base' );
+  font-weight: map-get( $fontweights, 'normal' );
+  letter-spacing: map-get( $letterspacing, 'p_25' );
+  line-height: map-get( $lineheights, 'em2' );
+}
+
+@mixin rail-title {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p24' );
+  font-weight: map-get( $fontweights, '500' );
+  letter-spacing: map-get( $letterspacing, 'p_25' );
+  line-height: map-get( $lineheights, 'em2_5' );
+}
+
+@mixin fontStyleItalic(){
+  font-style: $font-italic;
+}
+
+@mixin textDecorationUnderline(){
+  text-decoration: $text-decoration-underline;
+}
+
+@mixin textDecorationLineThrough(){
+  text-decoration: $text-decoration-line-through;
+}
+
+@mixin languageTitle {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, '500' );
+  letter-spacing: map-get( $letterspacing, 'p_18' );
+  line-height: map-get( $lineheights, 'em1_56' );
+}
+
+// parental subtitle
+@mixin parental-subtitle-1 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p24' );
+  font-weight: map-get( $fontweights, 'normal' );
+  line-height: map-get( $lineheights, 'em2' ); 
+}
+// parental subtitle
+@mixin parental-subtitle-2 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, 'normal' );
+  line-height: map-get( $lineheights, 'em1_75' ); 
+}
+// parental subtitle
+@mixin parental-subtitle-3 {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p26' );
+  font-weight: map-get( $fontweights, 'normal' );  
+  line-height: map-get( $lineheights, 'em1_2' );
+}
+
+// bingeList subtitle
+@mixin bingeList-subtitle {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p36' );
+  font-weight: map-get( $fontweights, 'normal' );  
+  line-height: map-get( $lineheights, 'em2_25' );
+}
+
+// AutoPlay Title
+@mixin autoPlay-title {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p26' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em2' );
+}
+
+// AutoPlay subTitle
+@mixin autoPlay-subtitle { 
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_375' );
+}
+
+@mixin edit-profile-heading { 
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  line-height: map-get( $lineheights, 'em1_375' );
+}
+
+// termsOfUse description
+@mixin termsOfUse-subtitle {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p22' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em2_0625' );
+}
+
+// back button
+@mixin back-button {
+  font-weight: map-get( $fontweights, '500' );
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size:  map-get($fontsizes,'p21');
+  line-height: map-get( $lineheights, 'em1_3125' );
+}
+
+@mixin basicTextStyles {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_5' );
+}
+
+// savings plancard subtitle
+@mixin planCard-subtitle {
+  @include basicTextStyles();
+}
+// Series Deatail title
+@mixin seriesDetail-title {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p22' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_5' ); 
+}
+// Series Deatail subtitle
+@mixin seriesDetail-subtitle {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_75' ); 
+}
+
+@mixin rail-heading {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p24' );
+  font-weight: map-get( $fontweights, '400' );
+}
+@mixin rail-sub-heading {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'px20' ) !important;
+  font-weight: map-get( $fontweights, '500' );
+  line-height: 1.2rem !important;
+}
+
+@mixin account-cards-text {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p18' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_25' );
+}
+
+@mixin crown-subscription-text {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'em0_9375' );
+  line-height: map-get( $lineheights, 'em1_25' );
+}
+
+@mixin text-free-episode {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: 0.833rem;
+  font-weight: 500;
+  line-height: 1rem;
+}
+
+@mixin header-genere {
+  @include basicTextStyles();
+}
+
+@mixin proider-modal-text {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p24' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_80' );
+}
+
+@mixin proider-modal-header {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p26' );
+  font-weight: map-get( $fontweights, '600' );
+  line-height: map-get( $lineheights, 'em1_7875' );
+}
+
+@mixin prime-modal-title {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p41' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em2' );
+}
+
+@mixin prime-divider {
+  font-family: map-get( $fontfamilies, 'Lato' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, '700' );
+  line-height: map-get( $lineheights, 'em2' );
+}
+
+@mixin prime-modal-subTitle {
+  @include basicTextStyles();
+  color: map-get( $purple, '25' );
+}
+
+@mixin appleTv-header {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p26' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em2' );
+}
+
+@mixin apple-header {
+  @include proider-modal-text();
+}
+
+@mixin appleTv-content {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, 'normal' );
+  line-height: map-get( $lineheights, 'em1_375' );
+}
+
+@mixin lang-text {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p22' );
+  font-weight: map-get( $fontweights, '600' );
+  line-height: map-get( $lineheights, 'em2' );
+}
+
+@mixin prime-header {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p24' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em2_26' );
+}
+
+@mixin prime-qrCode-header {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p24' );
+  font-weight: map-get( $fontweights, '600' );
+  line-height: map-get( $lineheights, 'em1_8' );
+}
+
+@mixin prime-qrCode-subHeader {
+  @include basicTextStyles();
+}
+
+@mixin prime-existinguser-header {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p24' );
+  font-weight: map-get( $fontweights, '600' );
+  line-height: map-get( $lineheights, 'em1_8' );
+}
+
+@mixin prime-existinguser-subHeader  {
+  @include basicTextStyles();
+}
+
+@mixin prime-lite-text {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, '600' );
+  line-height: map-get( $lineheights, 'em1_5' );
+}
+
+@mixin prime-benefits-text {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'base' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_90' );
+}
+
+@mixin promo-text {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p96' );
+  font-weight: map-get( $fontweights, '600' );
+  line-height: map-get( $lineheights, 'em4_8' );
+}
+
+@mixin flexi-heading {
+  font-family: map-get( $fontfamilies, 'VoltePlay' ) !important;
+  font-size: map-get( $fontsizes, 'p41' ) !important;
+  font-weight: map-get( $fontweights, '500' ) !important;
+  line-height: map-get( $lineheights, 'em2' ) !important;
+}
+
+@mixin flexi-subHeading {
+  font-family: map-get( $fontfamilies, 'VoltePlay' ) !important;
+  font-size: map-get( $fontsizes, 'p20' ) !important;
+  font-weight: map-get( $fontweights, '500' ) !important;
+  line-height: map-get( $lineheights, 'em1_5' ) !important;
+  color: #D6C6F4;
+  
+}
+
+@mixin provider-modal-header {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p27' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em2' );
+}
+
+@mixin provider-modal-descrption-steps {
+  @include basicTextStyles();
+}
+
+@mixin provider-modal-descrption-details {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, '400' );
+  line-height: map-get( $lineheights, 'em1_5' );
+}
+
+@mixin appleTv-samsungContent {
+  font-family: map-get($fontfamilies, 'VoltePlay');
+  font-size: map-get($fontsizes, 'p20');
+  font-weight: map-get( $fontweights, '400' );;
+  line-height: map-get($lineheights, 'em2_25' );
+}
+
+@mixin pi-distroText {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p26base24' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_3' );
+}
+
+@mixin apple-modal-subTitle {
+  @include basicTextStyles();
+}
+
+@mixin prime-banner-text {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'base' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_base25' );
+}
+
+@mixin banner-title {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_25' );
+}
+
+@mixin deviceManagementSubText {
+  @include pi-distroText();
+}
+
+@mixin deviceManagementPrimaryText {
+  @include pi-distroText();
+  font-size: map-get( $fontsizes, 'base' );
+  line-height: map-get( $lineheights, 'em1_2' );
+}
+
+@mixin specialRail-headerSubText {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p41' );
+  font-weight: map-get( $fontweights, '600' );
+  line-height: map-get( $lineheights, 'em2_0625' );
+}
+
+@mixin specialRail-headerSubTextContent {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'base' );
+  font-weight: map-get( $fontweights, 'normal' );
+  line-height: map-get( $lineheights, 'em1_2' );
+}
+
+@mixin specialRail-headerText {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'base' );
+  font-weight: map-get( $fontweights, '500' );
+}
+
+@mixin complimentary-apps-text {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p12base24' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em0_6' );
+  color: map-get( $pink, '40' );
+}
+
+@mixin complimentary-apps-title {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p32base24' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_6base24' );
+}
+@mixin login-toggle-text {
+  font-size: map-get( $fontsizes, 'p24' );
+  line-height: map-get( $lineheights, 'em1_8' );
+}
+
+@mixin login-toggle-input {
+  font-size: map-get( $fontsizes, 'p20' );
+  font-weight: map-get( $fontweights, '600' );
+  line-height: map-get( $lineheights, 'em1_25' );
+}
+@mixin prime-heroBanner-title {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p62base24' );
+  font-weight: map-get( $fontweights, '600' );
+  line-height: map-get( $lineheights, 'em3_1base24' );
+}
+
+@mixin login-qr-error {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'p24' );
+  font-weight: map-get( $fontweights, '500' );
+  line-height: map-get( $lineheights, 'em1_8' );
+}

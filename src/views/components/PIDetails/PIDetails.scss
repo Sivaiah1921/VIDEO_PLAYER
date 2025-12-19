@@ -1,0 +1,138 @@
+@import '../../../styles/src/variables';
+
+.PIDetails {
+  &__content {
+    display: flex;
+  }
+
+  &__arrow {
+    path {
+      fill: map-get( $bingeBlue, '50' );
+    }
+  }
+
+  &__left {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3.1875rem;
+    margin-top: 2rem;
+    max-height: 30.3125rem;
+    overflow-y: scroll;
+    width: 25rem;
+
+    &--withNoScrollBar {
+      width: 27rem;
+    }
+  }
+
+  &__right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-left: 1.6875rem;
+
+    .Button {
+      outline: none;
+
+      &__icon--withIconLeft {
+        left: -0.75rem;
+      }
+
+      &--focused {
+        svg {
+          path {
+            fill: $white;
+          }
+        }
+
+        &::after {
+          border: none;
+        }
+      }
+    }
+
+    .Divider {
+      height: 30.9375rem;
+      width: 0.125rem;
+    }
+  }
+  /* stylelint-disable no-descending-specificity */
+  &__arrowDownRotate180 {
+    -ms-transform: rotate( 180deg ); /* IE 9 */
+    transform: rotate( 180deg );
+
+    path {
+      fill: map-get( $bingeBlue, '50' );
+    }
+  }
+
+  &__closeButton {
+    margin-left: 3.4375rem;
+    margin-top: 2rem;
+
+    .Button {
+      @include back-button;
+
+      align-items: center;
+      background-color: unset;
+      color: map-get( $pink, '40' );
+      display: flex;
+      gap: unset;
+      height: unset;
+      margin-bottom: 1rem;
+      outline: unset;
+      padding: 0;
+
+      &--focused {
+        &::after {
+          content: unset;
+        }
+      }
+
+      &__icon--withIconLeft {
+        margin-right: 0.625rem;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 1.25rem;
+    // > p {
+    //   line-height: unset;
+    // }
+  }
+
+  &__description {
+    margin-bottom: 1.25rem;
+  }
+
+  &__starring,
+  &__director,
+  &__producers,
+  &__subtitles,
+  &__audios {
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 0.375rem;
+
+    > p:first-child {
+      font-weight: 500;
+      width: 8rem;
+    }
+  }
+
+  &__subtitles {
+    margin-bottom: 3.5625rem;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 0.0625rem;
+}
+
+.PIModal {
+  max-height: 37rem;
+  padding: 0;
+  width: 33.25rem;
+}

@@ -1,0 +1,326 @@
+@import '../../../styles/src/variables';
+
+.SeriesDetailPage {
+  position: relative;
+  top: 3.25rem;
+  transition: transform map-get( $motions, 'anim-time-base' );
+
+  &__keyboard {
+    margin-left: -0.625rem;
+  }
+
+  .AlphanumericKeyboard {
+    &__delete,
+    &__spaceBtn,
+    &__clearBtn,
+    &__key {
+      border-bottom: unset;
+      font-weight: unset;
+    }
+  }
+
+  &__topContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 5rem;
+
+    svg {
+      position: relative;
+    }
+  }
+
+  .Button--focused {
+    border: unset;
+    border-radius: unset;
+    color: $white;
+    line-height: 1.56;
+    padding: 0;
+    transform: scale( 1.03 );
+
+    svg {
+      path {
+        fill: $white;
+      }
+    }
+
+    .AlphanumericKeyboard {
+      &__delete,
+      &__spaceBtn,
+      &__clearBtn {
+        border-bottom: unset;
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+  .SeasonTab .Button--focused {
+    border-bottom: 0.125rem solid map-get( $pink, '100' );
+  }
+
+  &__scrollContainer {
+    height: 100vh;
+  }
+
+  &__loaderWithKeyboard {
+    height: 100vh;
+
+    .Image {
+      display: flex;
+      margin-left: 15rem;
+      margin-top: 10rem;
+      position: absolute;
+      width: 10rem;
+      z-index: 100;
+    }
+  }
+
+  &__loaderWithOutKeyboard {
+    height: 100vh;
+
+    .Image {
+      display: flex;
+      margin-left: 30rem;
+      margin-top: 13rem;
+      position: absolute;
+      width: 10rem;
+      z-index: 100;
+    }
+  }
+
+  &__container {
+    display: flex;
+    grid-template-columns: auto auto;
+    justify-content: left;
+    margin-left: 2rem;
+    position: relative;
+  }
+
+  &__containerLeft {
+    margin: 0 0.625rem;
+    width: 27.5rem;
+  }
+
+  &__containerRight {
+    margin-right: 1.8rem;
+    width: 100%;
+
+    &--resultMessage2 {
+      margin-bottom: 0.7rem;
+      margin-left: 0.25rem;
+    }
+  }
+
+  &__inputContainer {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    height: 4.5rem;
+    left: 2rem;
+    margin-bottom: 1.75rem;
+    padding: 1.5rem 1.25rem;
+    position: relative;
+    width: 26.6875rem;
+
+    input::placeholder {
+      color: map-get( $purple, '40' ) !important;
+      font-size: 1.5rem !important;
+    }
+
+    .InputField {
+      align-items: center;
+      border: 0.125rem solid #8e81a1;
+      border-radius: 3.125rem;
+      height: 4.5rem;
+      margin-left: -1.3rem;
+      overflow: hidden;
+      width: 26.375rem;
+
+      &--focused {
+        border: 0.125rem solid $white;
+
+        .InputField__formControls {
+          .InputField__input {
+            &--placeholderActive {
+              @include inputText();
+
+              color: $white !important;
+            }
+          }
+        }
+      }
+
+      &__content {
+        background-color: unset;
+        border: unset;
+        border-radius: unset;
+        margin-bottom: 0.25rem;
+        margin-right: 13%;
+        margin-top: unset;
+        overflow: hidden;
+        padding-left: 0.625rem;
+
+        .InputField__formControls {
+          align-items: center;
+          display: flex;
+          height: 4rem;
+          justify-content: space-around;
+          padding-left: 1rem;
+
+          svg {
+            left: auto;
+            position: absolute;
+            right: 10%;
+            top: 40%;
+          }
+
+          .InputField__input {
+            @include inputText();
+
+            padding: unset;
+            text-align: left;
+
+            &--placeholderActive {
+              @include inputText();
+
+              color: #8e81a1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__tabs {
+    margin-left: 0.7rem;
+    width: 100%;
+
+    .SeasonTab {
+      margin-left: unset;
+    }
+  }
+
+  &__mediaCard {
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-columns: max-content max-content max-content max-content max-content;
+    height: 100vh;
+    overflow: auto;
+    padding: 0 0.3rem 1rem 0.3rem;
+
+    > div {
+      margin-bottom: 1.3125rem;
+      margin-right: 1.5rem;
+    }
+
+    .MediaCardWrapper {
+      margin-bottom: 2.3125rem;
+      margin-right: 1.5rem;
+    }
+
+    .MediaCard {
+      /* Commented due to UI/UX Portrait & Landscape changes */
+      height: 7.5rem;
+      margin-bottom: 0.375rem;
+      width: 13.125rem;
+      // width: 20rem;
+      // height: 11.25rem;
+
+      &--episodeTitle {
+        width: 13.125rem;
+      }
+
+      &--withFocus {
+        /* Commented due to UI/UX Portrait & Landscape changes */
+        height: 7.5rem;
+        // height: 11.25rem;
+        // width: 20rem;
+        // margin-left: 0.2rem;
+      }
+    }
+
+    &--itemWrapped {
+      grid-template-columns: max-content max-content max-content;
+    }
+  }
+
+  .AlphanumericKeyboard__row {
+    width: 27.5rem;
+
+    &.buttonRow {
+      left: -1.5rem;
+      position: relative;
+
+      .Button {
+        border-radius: 5rem;
+
+        &--focused {
+          background-color: map-get( $pink, '100' );
+        }
+      }
+
+      button {
+        line-height: 1.56;
+        padding-left: 1rem;
+        padding-right: 1rem;
+
+        &.AlphanumericKeyboard__clearBtn {
+          padding-left: 2.5rem;
+          padding-right: 2.5rem;
+        }
+      }
+    }
+  }
+
+  .InputField--disable.InputField .InputField__content {
+    border: unset;
+  }
+
+  .MediaCardWrapper {
+    width: min-content;
+
+    .Image img {
+      border-radius: 0.35rem;
+
+      /* Commented due to UI/UX Portrait & Landscape changes */
+      height: 7.5rem;
+      width: 13.125rem;
+      // height: 11.25rem;
+      // width: 20rem;
+    }
+
+    span {
+      line-height: 1.25;
+    }
+
+    .MediaCard--title {
+      span {
+        width: 13.125rem;
+      }
+    }
+  }
+
+  .SeasonTab {
+    width: 92%;
+  }
+
+  .Loader {
+    left: 37%;
+    top: 60%;
+    width: auto;
+
+    .Loader__content {
+      left: 36%;
+      position: absolute;
+      top: 12%;
+    }
+  }
+
+  &__containerLeft + &__containerRight {
+    .Loader {
+      left: 64%;
+      top: 63%;
+      width: 56%;
+    }
+  }
+}

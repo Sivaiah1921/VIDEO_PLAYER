@@ -1,0 +1,193 @@
+@import '../../../styles/src/variables';
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+
+  .Home {
+    &__noContent {
+      align-items: center;
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+    }
+
+    &__navigation {
+      height: 100%;
+      min-width: 7.875rem;
+      position: absolute;
+      z-index: 9;
+    }
+
+    &__Banner {
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+
+      .BannerComponent__backgroundImg {
+        position: unset;
+      }
+    }
+
+    &__topSection {
+      position: relative;
+      z-index: 2;
+    }
+
+    &__rails {
+      padding-bottom: 30rem;
+    }
+
+    &__scrollContainer {
+      height: 100vh;
+      margin-left: 1.667rem;
+      overflow-y: auto;
+      position: relative;
+      z-index: 3;
+
+      &--isNewHeroBannerEnabled {
+        transform: translateY( -12rem );
+      }
+
+      &--topViewHieght {
+        padding-top: .525rem;
+      }
+    }
+
+    &__heroBanner {
+      position: relative;
+
+      svg {
+        left: 1.667rem;
+        position: absolute;
+        top: 3.25rem;
+        z-index: 9;
+      }
+
+      .Image {
+        height: 26.87rem;
+        width: 100%;
+      }
+
+      &--newHB {
+        .Image {
+          height: 33.33rem;
+        }
+      }
+
+      .categoryPageType {
+        bottom: 2.75rem;
+        left: 0.3rem;
+        position: absolute;
+        z-index: 9;
+
+        p {
+          color: white;
+          font-size: 2.5rem;
+          font-weight: 500;
+          line-height: 110%;
+        }
+      }
+
+      .carouselCrownLogo {
+        svg {
+          position: absolute;
+          right: 6.875rem;
+          top: 20.75rem;
+          z-index: 9;
+        }
+      }
+    }
+
+    &__BannerShuffleSynopsis {
+      width: 100%;
+      z-index: 1;
+
+      div {
+        height: 19rem;
+      }
+
+      .BannerComponent {
+        overflow: unset;
+
+        &__backgroundImg {
+          position: unset;
+
+          .Image {
+            margin-left: 0;
+            position: relative;
+            top: -3rem;
+            width: 100%;
+
+            img {
+              height: 26.6875rem;
+              width: 72.125rem;
+            }
+          }
+        }
+      }
+    }
+
+    &__appleNotification {
+      .Notifications {
+        /* Dark Blue */
+        background: map-get( $bingeBlue, '125' ) !important;
+      }
+    }
+
+    .piTitleCard__rightMostPanel {
+      svg {
+        position: unset;
+      }
+    }
+
+    .MediaCardWrapper {
+      .MediaCard {
+        margin-bottom: 0.5625rem;
+      }
+    }
+
+    .Notifications {
+      margin-right: 7.875rem;
+    }
+
+    .ErrorPage__retry {
+      .Button {
+        display: table-cell;
+        height: 3.2rem;
+        padding: unset;
+      }
+    }
+
+    .DeviceManagementPage__notification {
+      margin-left: -6.5rem;
+      padding-right: 0.6rem;
+
+      .Notifications {
+        background: var( --nudge-gradient, linear-gradient( 315deg, #a22736 0%, #220046 100% ) );
+        border: 4.5px solid var( --binge-blue, #220046 );
+
+        /* Dark Blue */
+        // background: #020005;
+
+        /* Binge Blue */
+        // border: 3px solid #220046;
+        border-bottom-color: #020005;
+        // border-radius: 20px 20px 0 0;
+        // box-shadow: 0 -4px 12px rgba( 0, 0, 0, 0.55 );
+
+        border-radius: 30px 30px 0 0;
+        box-shadow: 0 -6px 18px 0 rgba( 0, 0, 0, 0.55 );
+        display: flex;
+        justify-content: center;
+        margin-right: -0.6rem;
+      }
+    }
+
+    .Synopsis {
+      margin-left: 1.667rem;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<UserAccountDetail />tests snapshot tests renders correctly UserAccountDetail 1`] = `
+<div
+  className="UserAccountDetail"
+>
+  <div
+    className="UserAccountDetail__row"
+  >
+    <p
+      className="Text Text--body-3 Text--left Text--bingeBlue-25"
+    >
+      Tata Sky Balance
+    </p>
+  </div>
+  <div
+    className="UserAccountDetail__row"
+  />
+</div>
+`;

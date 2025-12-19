@@ -1,0 +1,1153 @@
+@import '../../../styles/src/variables';
+@import '../../../styles/src/mixins';
+
+.HomeMediaCarousel {
+  $parent: &;
+  $Image: '.Image';
+
+  // added this margin for fixing card skip issue
+  margin: 0.625rem 0;
+  overflow: hidden;
+
+  > p {
+    line-height: 2.5rem;
+  }
+
+  @keyframes fadeIn {
+    100% { opacity: 1; }
+    0% { opacity: 0; }
+  }
+
+  @keyframes fadeOut {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  &__animationStart {
+    animation: fadeIn 2s;
+  }
+
+  &__animationEnd {
+    animation: fadeOut 2s;
+  }
+
+  &__suffle {
+    display: flex;
+    position: relative;
+  }
+
+  .ShuffleMediaCard,
+  .ShuffleMediaCardFocus {
+    margin-left: 0.1rem;
+    margin-right: 1rem;
+  }
+
+  &__SHUFFLE_RAIL {
+    &--PORTRAIT {
+      &--SMALL {
+        .Image {
+          img {
+            height: 16.27rem;
+            width: 10.83rem;
+          }
+        }
+      }
+
+      &--MEDIUM,
+      &--LARGE {
+        .Image {
+          img {
+            height: 19.125rem;
+            width: 12.75rem;
+          }
+        }
+      }
+
+      &--DEFAULT {
+        .Image {
+          img {
+            height: 16.27rem;
+            width: 10.83rem;
+          }
+        }
+      }
+
+      .Image {
+        img {
+          /* Earlier values before UI/UX Portrait/Landscape Change */
+          // height: 16.5rem;
+          // width: 10rem;
+          height: 16.27rem;
+          width: 10.83rem;
+        }
+      }
+    }
+  }
+
+  &__TVOD {
+    &--PORTRAIT {
+      .Image {
+        img {
+          height: 16.27rem;
+          width: 10.83rem;
+        }
+      }
+    }
+  }
+
+  &__BackgroundBannerRailbottom {
+    margin-bottom: 1.5rem;
+  }
+
+  &__BackgroundBannerRail {
+    margin-left: 1.58rem;
+    padding: 1rem 0 0 1.6rem !important;
+
+    .MediaCardWrapper {
+      width: min-content;
+    }
+
+    .MediaCard {
+      // margin-bottom: 0 !important;
+    }
+  }
+
+  &__specialRailbottom {
+    margin-bottom: 1.5rem;
+  }
+
+  &__specialRail {
+    padding: 1rem 0 0 1.6rem !important;
+
+    .MediaCard {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &__SeriesSpecialRailbottom {
+    margin-bottom: 1.5rem;
+  }
+
+  &__SeriesSpecialRail {
+    margin-left: 1.58rem;
+    padding: 1rem 0 0 1.6rem !important;
+
+    .MediaCard {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  &__appRailContent {
+    background: rgba( 239, 232, 251, 0.2 );
+    border-radius: 0.417rem;
+
+    /* Earlier values before UI/UX Portrait/Landscape Change */
+    // height: 22.5rem;
+    // margin-left: 4rem;
+    // padding: 1.25rem;
+    // width: 62rem;
+    height: 21.33rem;
+    margin-left: 2.937rem;
+    padding: 0.8333rem;
+    width: 65.8rem;
+
+    &--content {
+      display: flex;
+      min-height: 15.541rem;
+      min-width: 65rem;
+
+      .HomeMediaCarousel__bbaAppContent {
+        align-items: flex-start;
+        display: flex;
+        margin-top: 1rem;
+        // flex-wrap: wrap;
+      }
+    }
+
+    &--button {
+      position: relative;
+      text-align: center;
+
+      /* Earlier values before UI/UX Portrait/Landscape Change */
+      // top: 1.7rem
+      top: 0.7rem;
+      width: 100%;
+
+      .Button {
+        background-color: transparent;
+        border: 0.125rem solid map-get( $pink, '40' );
+        color: map-get( $pink, '40' );
+        font-size: 1rem;
+        font-weight: map-get( $fontweights, '600' );
+      }
+
+      .Button--focused {
+        background-color: map-get( $pink, '100' );
+        border: 0.167rem solid $white;
+        color: $white;
+      }
+
+      .Button--focused::after {
+        border: none !important;
+      }
+    }
+
+    .MediaCardWrapper {
+      margin: 0 0.55rem;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+
+      img {
+        border-radius: 0.25rem;
+
+        /* Earlier values before UI/UX Portrait/Landscape Change */
+        // height: 15rem;
+        // width: 8.875rem;
+        height: 14.625rem;
+        width: 9.75rem;
+      }
+    }
+  }
+
+  &__episodeRailWelcome {
+    position: relative;
+
+    &__backgroundImage {
+      .Image {
+        height: 14.1rem;
+        width: $episodeRailWelcome;
+      }
+    }
+
+    &__gradient {
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: $episodeRailWelcome;
+    }
+
+    &__railLogo {
+      .Image {
+        height: 1.83rem;
+        left: 1rem;
+        position: absolute;
+        top: 1rem;
+        width: 1.83rem;
+      }
+    }
+  }
+
+  &__episodeRailWelcomeColour {
+    height: 100%;
+    left: $episodeRailWelcome;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &__SeriesSpecialRailWelcome {
+    position: relative;
+
+    &__backgroundImage {
+      .Image {
+        height: 18.75rem;
+        width: 27rem;
+      }
+    }
+
+    &__gradient {
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 27rem;
+    }
+
+    &__railLogo {
+      .Image {
+        height: 1.583rem;
+        left: 8px;
+        position: absolute;
+        top: 8px;
+        width: 1.583rem;
+        z-index: 1;
+      }
+    }
+  }
+
+  &__specialRailWelcome {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding-right: 2px;
+    position: relative;
+
+    &__backgroundImage {
+      .Image {
+        height: 18.75rem;
+        width: 27rem;
+        // position: relative;
+      }
+    }
+
+    &__lottieAnimation {
+      bottom: 0;
+      height: 18.75rem;
+      overflow: hidden;
+      position: absolute;
+      width: 27rem;
+      z-index: 2;
+
+      svg {
+        transform: none !important;
+      }
+    }
+
+    &__specialImage {
+      bottom: 0;
+      position: absolute;
+      z-index: 2;
+
+      .Image img {
+        height: 18.75rem;
+        width: auto;
+      }
+    }
+
+    &__headerContentWrapper {
+      display: flex;
+      left: 0;
+      position: absolute;
+      top: 0;
+      z-index: 5;
+
+      &--headerText {
+        .Text {
+          height: 1.29rem;
+          max-width: 14rem;
+          overflow: hidden;
+          padding: 0.3rem 1.2rem 0.3rem 1.2rem;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        p {
+          @include specialRail-headerText;
+
+          font-weight: 600 !important;
+          line-height: 0.8rem;
+        }
+      }
+
+      &--polygon {
+        height: 1.29rem;
+        left: -1.1rem;
+        position: relative;
+        top: 0.3px;
+        transform: skewX( 40deg );
+        transform-origin: top right;
+        width: 1.1rem;
+      }
+    }
+
+    &__headerSubText {
+      left: 1.41rem;
+      position: absolute;
+      top: 6.56rem;
+      width: 13.5rem;
+      z-index: 5;
+
+      p {
+        @include specialRail-headerSubText;
+
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-height: 100% !important;
+        margin-bottom: 0.3rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+      }
+
+      .subTextContent {
+        p {
+          @include specialRail-headerSubTextContent;
+
+          -webkit-box-orient: vertical;
+          display: -webkit-box;
+          -webkit-line-clamp: 4; /* Limit text to 3 lines */
+          line-height: 120%;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: pre-wrap;
+        }
+      }
+    }
+
+    &__gradient {
+      background: linear-gradient( 90deg, rgba( 0, 0, 0, 0 ) 0%, #000 100% );
+      height: 100%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 5.5rem;
+      z-index: 3;
+    }
+
+    &__gradientLeft {
+      background: linear-gradient( 90deg, #020005 0%, rgba( 2, 0, 5, 0 ) 75.6% );
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 18.7rem;
+    }
+  }
+
+  &__labelImage-lottieAnimation {
+    height: 2.33rem;
+    overflow: hidden;
+    width: 2.33rem;
+    z-index: 2;
+
+    svg {
+      transform: none !important;
+    }
+  }
+
+  &__specialRailWelcomeColour {
+    // background-color: #020005;
+    height: 100%;
+    left: 27rem;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+  }
+
+  &__Rail {
+    display: flex;
+    overflow: hidden;
+    padding: .8rem 1rem 1.75rem 0.4rem;
+
+    > div {
+      padding-right: 0.8rem;
+    }
+
+    #{ $parent }__PROVIDER--CIRCULAR {
+      padding-right: 1.25rem;
+
+      .Image {
+        img {
+          height: 7.313rem;
+          width: 7.313rem;
+        }
+      }
+
+      &:first-child {
+        margin-left: 1rem;
+      }
+    }
+  }
+
+  &__chipRail {
+    padding: 0.667rem 1rem 1.25rem 0.1rem;
+
+    > div {
+      padding-right: 0.4rem !important;
+    }
+  }
+
+  &__ExtraPadding {
+    display: flex;
+    padding: .725rem 1rem 1.3rem 0.6rem !important;
+  }
+
+  &__BBARail {
+    align-items: center;
+    margin-left: 4.5rem;
+    position: relative;
+
+    &::before {
+      background: linear-gradient( 90deg, #1f0040 0%, rgba( 34, 0, 70, 0 ) 100% );
+      bottom: 0;
+      content: '';
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      width: 10.416rem;
+      z-index: 1;
+    }
+
+    &::after {
+      background: linear-gradient( 270deg, #090013 10%, rgba( 34, 0, 70, 0 ) 100% );
+      bottom: 0;
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 10.416rem;
+      z-index: 1;
+    }
+  }
+
+  &__AppRail {
+    #{ $parent }__PROVIDER--CIRCULAR {
+      padding-right: unset;
+    }
+
+    div:first-child {
+      margin-left: 0.07rem;
+    }
+  }
+  // &__specialRail {
+  //   align-self: center;
+  //   margin-left: 1.6rem;
+  //   padding: 0;
+  //   padding-right: 1rem;
+  // }
+
+  &__GenereRailItems {
+    display: flex;
+    margin: 0.7rem 0;
+    margin-left: 10rem;
+    overflow: hidden;
+    padding: 1rem 1rem 1.3rem 0.2rem;
+    z-index: 20;
+
+    .GenreMediaCard {
+      height: 6rem;
+      margin-right: 0.6rem;
+      width: 8.75rem;
+    }
+  }
+
+  &__GenreRail {
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+  }
+
+  &__wrapperGenreCard {
+    position: absolute;
+    z-index: 24;
+
+    .Text--header-genere {
+      height: 3.23125rem;
+      left: 2rem;
+      position: absolute;
+      top: 3.4rem;
+      width: 6.95125rem;
+      z-index: 10;
+    }
+  }
+
+  &__GenreCard {
+    height: 9.375rem;
+    position: absolute;
+    // margin-right: -3.125rem;
+    width: 9.4375rem;
+
+    svg {
+      left: 3px;
+      position: absolute;
+      z-index: 10;
+    }
+  }
+
+  &__GenreCardText {
+    :nth-child(1) {
+      height: 3.23125rem;
+      left: 2.95rem;
+      position: absolute;
+      top: 3.3rem;
+      width: 6.95125rem;
+      z-index: 10;
+    }
+
+    :nth-child(2) {
+      height: 3.23125rem;
+      left: 2.5rem;
+      position: absolute;
+      top: 4.6rem;
+      width: 6.95125rem;
+      z-index: 10;
+    }
+  }
+
+  &__GenreCardBg {
+    background-color: black;
+    border-radius: 50%;
+    height: 9.375rem;
+    position: absolute;
+    width: 9.4375rem;
+    z-index: 5;
+  }
+
+  &__GenreBackgroundReel1 {
+    margin-left: -10rem;
+
+    svg {
+      height: 9.291rem;
+      width: 183.166rem;
+    }
+  }
+
+  &__GenreBackgroundReel2 {
+    height: 9.375rem;
+    margin-left: -16.3rem;
+    width: 41.0625rem;
+  }
+
+  &--LANDSCAPE {
+    min-height: 8.2rem;
+    width: 17rem;
+  }
+
+  &--provider {
+    .Image {
+      img {
+        height: 3rem;
+        width: auto;
+      }
+    }
+  }
+
+  &--bestofAppx-provider {
+    .Image {
+      img {
+        height: 3.333rem;
+        margin: 0 1rem 0.45rem 0.2rem;
+        width: auto;
+      }
+    }
+  }
+
+  &__DARSHAN_CHANNEL {
+    &--LANDSCAPE {
+      margin-right: 0.5rem;
+
+      .Image {
+        img {
+          /* Earlier values before UI/UX Portrait/Landscape Change */
+          // height: 9.97rem;
+          // width: 16.66rem;
+          height: 11.25rem;
+          width: 20rem;
+        }
+      }
+    }
+
+    &--PORTRAIT {
+      .Image {
+        img {
+          /* Earlier values before UI/UX Portrait/Landscape Change */
+          // height: 16.5rem;
+          // width: 10rem;
+          height: 16.27rem;
+          width: 10.83rem;
+        }
+      }
+    }
+  }
+
+  &__SERIES_SPECIAL_RAIL {
+    .Image {
+      img {
+        border-radius: 0.35rem;
+        height: 15.75rem;
+        width: 28rem;
+      }
+    }
+  }
+
+  &__SPECIAL_BANNER_RAIL,
+  &__BACKGROUND_BANNER_RAIL,
+  &__PRIME,
+  &__TITLE_RAIL,
+  &__EDITORIAL,
+  &__WATCHLIST,
+  &__CONTINUE_WATCHING,
+  &__LIVE_EVENT_RAIL,
+  &__RECOMMENDATION,
+  &__MARKETING_ASSET,
+  &__BINGE_CHANNEL {
+    margin: 0.625rem;
+
+    &--PORTRAIT {
+      &--SMALL {
+        #{$Image} {
+          img {
+            border-radius: 0.35rem;
+            height: 16.27rem;
+            width: 10.83rem;
+          }
+        }
+      }
+
+      &--MEDIUM,
+      &--LARGE {
+        #{$Image} {
+          img {
+            border-radius: 0.35rem;
+            height: 19.125rem;
+            width: 12.75rem;
+          }
+        }
+      }
+
+      &--DEFAULT {
+        #{$Image} {
+          img {
+            border-radius: 0.35rem;
+            height: 16.27rem;
+            width: 10.83rem;
+          }
+        }
+      }
+      #{$Image} {
+        img {
+          border-radius: 0.35rem;
+          height: 16.27rem;
+          width: 10.83rem;
+        }
+      }
+    }
+
+    &--LANDSCAPE {
+      &--SMALL {
+        .Image {
+          img {
+            border-radius: 0.35rem;
+
+            /* commented due to HeroBanner revamp changes */
+            // height: 8.125rem;
+            // width: 14.188rem;
+            height: 11.25rem;
+            width: 20rem;
+          }
+        }
+      }
+
+      &--LARGE {
+        .Image {
+          img {
+            border-radius: 0.35rem;
+            height: 15.75rem;
+            width: 28rem;
+          }
+        }
+      }
+
+      &--DEFAULT {
+        .Image {
+          img {
+            border-radius: 0.35rem;
+            height: 11.25rem;
+            width: 20rem;
+          }
+        }
+      }
+
+      .Image {
+        img {
+          border-radius: 0.35rem;
+          height: 11.25rem;
+          width: 20rem;
+        }
+      }
+    }
+  }
+
+  &__Title {
+    // margin-left: 0.2rem; // Todo task
+
+    &--channelRailTitle {
+      margin-left: 0.4rem;
+    }
+  }
+
+  &__labelImage {
+    .Image {
+      height: 2.333rem;
+      padding: 0.27rem;
+      width: 2.333rem;
+    }
+
+    margin-right: 0.5rem;
+  }
+
+  &__PROVIDER_BROWSE_APPS--LANDSCAPE {
+    .AppMediaCard--withoutFocus {
+      border: 0.25rem solid map-get( $pink, '50' ) !important;
+      border-radius: 10% !important;
+      transform: scale( 1.1 );
+
+      .Image {
+        img {
+          height: 5rem !important;
+          // height: 6.5625rem !important;
+          opacity: unset !important;
+          width: 5rem !important;
+          // width: 6.5625rem !important;
+        }
+      }
+    }
+
+    .AppMediaCard--withFocus {
+      border: 0.25rem solid $white !important;
+      border-radius: 10% !important;
+
+      .Image {
+        img {
+          // height: 6.5625rem !important;
+          height: 5rem !important;
+          opacity: unset !important;
+          width: 5rem !important;
+          // width: 6.5625rem !important;
+        }
+      }
+    }
+
+    .AppMediaCard {
+      margin: 0;
+
+      .Image {
+        img {
+          border-radius: 0% !important;
+          // height: 5.2083rem;
+          height: 3.667rem;
+          opacity: 0.65;
+          width: 3.667rem;
+          // width: 5.2083rem;
+        }
+      }
+    }
+  }
+
+  &__PROVIDER--CIRCULAR {
+    .AppMediaCard--withFocus {
+      border: 0.15rem solid $white !important;
+      border-radius: 10% !important;
+    }
+
+    .AppMediaCard__content {
+      .Image {
+        img {
+          margin: 0.2rem;
+        }
+      }
+    }
+  }
+
+  &__LANGUAGE {
+    &--LANDSCAPE,
+    &--CIRCULAR {
+      align-items: center;
+      display: flex;
+      height: 7.313rem;
+      margin: 0;
+      margin-right: 0.2rem !important;
+    }
+
+    &--LANDSCAPE,
+    &--CIRCULAR:first-child {
+      margin-left: 0.4rem;
+    }
+  }
+
+  &__GENRE {
+    &--LANDSCAPE {
+      height: 8rem;
+      margin-left: 0.4rem;
+    }
+  }
+
+  &__heading {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+
+    .Text {
+      font-size: 1.5rem;
+      font-weight: 600;
+      line-height: 1.8rem;
+      white-space: pre-wrap;
+    }
+  }
+
+  &__liveCircle {
+    background-color: #e56c6c;
+    border-radius: 0.33rem;
+    bottom: 0.1rem;
+    height: 0.66rem;
+    margin-left: 0.6rem;
+    position: relative;
+    width: 0.66rem;
+  }
+
+  &__RailLive {
+    padding-left: 0.5rem;
+  }
+
+  &__BBAArrowLeft {
+    height: 1.667rem;
+
+    /* Earlier values before UI/UX Portrait/Landscape Change */
+    //  left: 3.5rem;
+    left: 2.3rem;
+    position: absolute;
+    top: 2.667rem;
+    // top: 3.5rem;
+
+    /* Earlier top was 6.667rem but due to hero rail revamp icons got misaligned */
+    z-index: 2;
+  }
+
+  &__BBAArrowRight {
+    height: 1.667rem;
+    position: absolute;
+
+    /* Earlier values before UI/UX Portrait/Landscape Change */
+    // right: 4.2rem;
+    right: 1rem;
+    top: 2.667rem;  /* Earlier top was 6.667rem but due to hero rail revamp icons got misaligned */
+    z-index: 2;
+  }
+
+  &__browseByApp {
+    /* Browse By Gradient */
+    background: linear-gradient( 295deg, map-get( $bingeBlue, '125' ) 0%, map-get( $bingeBlue, '100' ) 100% );
+    height: 35.1rem;
+    margin: 0.833rem 0;
+    padding: 0.925rem 1.042rem 0 0;
+    position: relative;
+    #{ $parent }__heading {
+      justify-content: center;
+      margin-bottom: 0.667rem;
+
+      .Text {
+        color: white;
+        font-size: 1.25rem;
+        font-weight: map-get( $fontweights, '500' );
+      }
+    }
+  }
+
+  &__ChipsbrowseByChannels {
+    background-color: unset !important;
+    height: unset !important;
+    margin-bottom: 0.8rem;
+    padding: 1rem 0 1rem 1rem;
+
+    @media only screen and (width: 1280px) {
+      padding: 1.25rem 0 1rem 1rem !important;
+    }
+
+    .Button {
+      height: 2.5rem;
+      padding: 0 1.458rem;
+      // box-sizing: border-box;
+
+      span {
+        color: #9a9a9a;
+      }
+    }
+
+    .Button--secondary {
+      font-weight: 500;
+      line-height: 1.25rem;
+    }
+
+    .Button--secondary::after {
+      border: 2px solid #9a9a9a;
+    }
+
+    .Button--focused {
+      // background-color: map-get( $pink, '100' );
+      // padding: 0 1.442rem;
+    }
+
+    .selectedCard {
+      background-color: map-get( $pink, '40' );
+
+      span {
+        color: #220046;
+      }
+    }
+
+    .Button.selectedCard.Button--secondary::after {
+      border: 0.1667rem solid map-get( $pink, '40' );
+    }
+
+    .Button.selectedCard.Button--focused.Button--secondary {
+      span {
+        opacity: 0;
+      }
+    }
+
+    .Button.selectedCard.Button--focused.Button--secondary::after {
+      border: 0.1667rem solid $white;
+      color: black;
+      content: attr( data-label );
+      font-weight: 600;
+      left: 0;
+      opacity: 1;
+      padding-left: 0;
+      padding-top: 11px;
+      position: absolute;
+      top: 0;
+      transform: scale( 1.01 );
+      z-index: 1;
+    }
+
+    .Button.selectedCard.withLeftImage.Button--focused.Button--secondary::after {
+      color: black;
+      content: attr( data-label );
+      font-weight: 600;
+      left: 0;
+      opacity: 1;
+      padding-left: 44px !important;
+      padding-top: 11px;
+      position: absolute;
+      top: 0;
+      transform: scale( 1.01 );
+      z-index: 1;
+    }
+
+    .Button--focused.Button--secondary::after {
+      border: 0.1667rem solid $white;
+    }
+  }
+
+  &__browseByChannels {
+    background-color: map-get( $bingeBlue, '100' );
+    height: 100%;
+    margin-bottom: 0.8rem;
+    padding: 1rem 0 1rem 1rem;
+
+    .Button {
+      height: 2.5rem;
+      padding: 0 1.458rem;
+      // box-sizing: border-box;
+    }
+
+    .Button--secondary {
+      font-weight: 500;
+      line-height: 1.25rem;
+    }
+
+    .Button--focused {
+      // background-color: map-get( $pink, '100' );
+      font-weight: 600;
+      // padding: 0 1.442rem;
+    }
+
+    .selectedCard {
+      background-color: map-get( $pink, '100' );
+      font-weight: 600;
+    }
+
+    .Button.selectedCard.Button--focused.Button--secondary {
+      span {
+        opacity: 0;
+      }
+    }
+
+    .Button.selectedCard.Button--focused.Button--secondary::after {
+      border: 0.1667rem solid $white;
+      color: $white;
+      content: attr( data-label );
+      font-weight: 600;
+      left: 0;
+      opacity: 1;
+      padding-left: 0;
+      padding-top: 11px;
+      position: absolute;
+      top: 0;
+      transform: scale( 1.01 );
+      z-index: 1;
+    }
+  }
+
+  @media only screen and (width: 1280px) {
+    .Button.selectedCard.Button--focused.Button--secondary::after {
+      padding-top: 7px !important;
+    }
+  }
+
+  &__ChipsbrowseByChannelsWithOutMouse {
+    .Button.Button--focused.Button--secondary::after {
+      border: 2px solid #9a9a9a;
+    }
+  }
+
+  &__BINGE_TOP_10_RAIL--TOP_PORTRAIT {
+    margin-left: -0.65rem;
+    padding-right: 0 !important;
+    padding-top: 0.5rem;
+
+    .MediaCard--provider {
+      .Image {
+        img {
+          height: 1.875rem;
+          width: auto;
+        }
+      }
+    }
+
+    &:nth-child(10) {
+      .Image {
+        img {
+          right: -0.7rem;
+        }
+      }
+
+      .TopMediaCard {
+        &__indexIcon {
+          .Image {
+            img {
+              min-width: 9.5rem !important;
+              right: -0.7rem !important;
+            }
+          }
+        }
+      }
+    }
+
+    &:first-child {
+      .TopMediaCard {
+        &__indexIcon {
+          .Image {
+            img {
+              min-width: 4.5rem !important;
+              padding-left: 0.5rem;
+              right: -0.7rem !important;
+            }
+          }
+        }
+      }
+    }
+
+    .TopMediaCard__rightMedia--posTen {
+      position: relative;
+      // right: 2.95rem;
+    }
+  }
+
+  &__visibility-hidden {
+    display: none;
+  }
+}

@@ -1,0 +1,206 @@
+@import '../../../styles/src/variables';
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content; }
+  &::-moz-placeholder { @content; }
+  &:-moz-placeholder { @content; }
+  &:-ms-input-placeholder { @content; }
+}
+
+// NOTICE - ALL styles for InputField MUST be defined inside of this parent container
+// and follow the BEM methodology http://getbem.com/introduction/
+
+.InputField {
+  margin-bottom: .625rem;
+  margin-top: .9375rem;
+
+  &--focused {
+    border: 0.1875rem solid $white;
+  }
+
+  input::-webkit-contacts-auto-fill-button {
+    display: none;
+  }
+
+  input::-ms-clear {
+    display: none;
+    height: 0;
+    width: 0;
+  }
+
+  &__label {
+    color: $black;
+    padding-left: 0.7rem;
+
+    @include body-1;
+  }
+
+  &--capitalize {
+    text-transform: capitalize;
+  }
+
+  &__actions {
+    display: inline-block;
+    padding: .5rem .5rem .5rem .375rem;
+
+    .Button-ds,
+    .InputField__Action--valid {
+      cursor: pointer;
+      display: inline-block;
+      height: 1.25rem;
+      margin-right: .5rem;
+      margin-top: .125rem;
+      width: 1.25rem;
+    }
+
+    &__Action--valid {
+      color: map-get( $validate, '400' );
+
+      &--disabled {
+        background-color: $white;
+      }
+    }
+
+    &__Action--hidden {
+      visibility: hidden;
+    }
+  }
+
+  &__content {
+    background-color: black;
+    border: .0625rem solid $white;
+    border-radius: 1rem;
+    height: 3rem;
+    margin-bottom: .25rem;
+    overflow: hidden;
+    padding-left: .625rem;
+
+    &--active.InputField__content--focused {
+      border: .0625rem solid $white;
+      border-bottom: .125rem solid $white;
+    }
+
+    .InputField__formControls {
+      display: flex;
+      margin-top: .25rem;
+
+      .InputField__input {
+        background-clip: padding-box;
+        border: none;
+        box-sizing: inherit;
+        color: $white;
+        display: block;
+        flex: 1;
+        font-size: map-get( $fontsizes, 'base' );
+        height: 99%;
+        margin: 0;
+        overflow: visible;
+        padding: 0.6rem 0.14rem 0 0.14rem;
+        touch-action: manipulation;
+        width: 100%;
+
+        &--active {
+          background-color: transparent;
+          border: $white;
+          color: $white;
+        }
+
+        &:focus {
+          box-shadow: none;
+          outline: 0;
+        }
+
+        @include placeholder {
+          color: $black;
+          font-size: map-get( $fontsizes, 'base' );
+          opacity: .5;
+        }
+      }
+    }
+  }
+
+  &--disable.InputField {
+    color: map-get( $neutral, '500' );
+    pointer-events: none;
+
+    .InputField__content {
+      border: .0625rem solid map-get( $neutral, '400' );
+
+      .InputField__formControls > input.InputField__input {
+        &::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+          color: map-get( $neutral, '400' );
+          opacity: 1; /* Firefox */
+        }
+
+        &::-ms-input-placeholder { /* Microsoft Edge */
+          color: map-get( $neutral, '400' );
+        }
+
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+          color: map-get( $neutral, '400' );
+        }
+      }
+
+      .InputField__input--active {
+        color: map-get( $neutral, '400' );
+      }
+    }
+  }
+
+  &__content.InputField--error {
+    background-color: map-get( $error, '100' );
+    border-color: map-get( $error, '400' );
+    color: map-get( $error, '400' );
+
+    &:hover {
+      border: .0625rem solid $black;
+    }
+
+    .InputField__formControls {
+      .InputField__input {
+        background-color: map-get( $error, '100' );
+        border: none;
+      }
+    }
+  }
+}
+
+.LoginOtpEnteringPane {
+  .InputField {
+    .InputField__content--focusedNext {
+      border: 3px solid $white;
+    }
+
+    .InputField__content--white {
+      border: 0.125rem solid map-get( $bingeBlue, '75' );
+    }
+
+    .InputField__content--red {
+      border: 0.0625rem solid map-get( $error, '600' );
+    }
+
+    .InputField__content--error {
+      border: 0.0625rem solid map-get( $error, '600' );
+    }
+  }
+}
+
+.ParentalPinSetup {
+  .InputField {
+    .InputField__content--focusedNext {
+      border: 3px solid $white;
+    }
+
+    .InputField__content--white {
+      border: 0.125rem solid map-get( $bingeBlue, '75' );
+    }
+
+    .InputField__content--red {
+      border: 0.0625rem solid map-get( $error, '600' );
+    }
+
+    .InputField__content--error {
+      border: 0.0625rem solid map-get( $error, '600' );
+    }
+  }
+}

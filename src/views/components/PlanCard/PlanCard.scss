@@ -1,0 +1,55 @@
+@import '../../../styles/src/variables';
+
+.PlanCard {
+  align-items: center;
+  background: map-get( $pink, '1' );
+  border: 0.125rem solid map-get( $bingeBlue, '75' );
+  border-radius: 0.879rem;
+  box-sizing: border-box;
+  display: flex;
+  flex: none;
+  flex-direction: row;
+  flex-grow: 0;
+  gap: 0.879rem;
+  height: 4.6875rem;
+  justify-content: space-between;
+  order: 0;
+  padding: 0 1.3125rem;
+  position: relative;
+  width: 28.125rem;
+
+  &__container {
+    align-items: center;
+    color: $white;
+    display: flex;
+    font-size: 1.375rem;
+  }
+
+  &__amount {
+    // margin-right: 4rem;
+  }
+
+  &__icon {
+    margin-right: 1.066rem;
+  }
+
+  &__savings {
+    background-color: map-get( $purple, '100' );
+    border-top-left-radius: 0.3125rem;
+    border-top-right-radius: 0.3125rem;
+    color: $white;
+    display: flex;
+    height: 1.6875rem;
+    justify-content: center;
+    left: 0.75rem;
+    position: absolute;
+    top: -1.75rem;
+    width: 6.06625;
+  }
+
+  &--withFocus {
+    border: 0.183rem solid map-get( $pink, '100' );
+    border-radius: 0.625rem;
+    transform: scale( 1.04 );
+  }
+}

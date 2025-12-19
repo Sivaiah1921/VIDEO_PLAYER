@@ -1,0 +1,148 @@
+@import '../../../styles/src/variables';
+
+.LoginPane {
+  padding-right: 5rem;
+  position: relative;
+  width: 30rem;
+
+  .InputField__content .InputField__formControls .InputField__input--active {
+    font-family: map-get( $fontfamilies, 'VoltePlay' );
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding-top: unset;
+  }
+
+  &__title {
+    margin-bottom: 2.4rem;
+  }
+
+  &__mobileNumber {
+    margin-top: 1rem;
+    position: relative;
+    width: 100%;
+
+    .Text {
+      bottom: 0.625rem;
+      font-weight: map-get( $fontweights, '600' );
+      left: 0.8125rem;
+      position: absolute;
+    }
+
+    .InputField {
+      margin: 0;
+
+      &__label {
+        color: map-get( $bingeBlue, '25' );
+        margin-bottom: 0.625rem;
+        padding-left: 0.1rem;
+
+        &--text {
+          font-size: map-get( $fontsizes, 'p20' );
+          line-height: 1.375rem;
+        }
+      }
+
+      &__formControls {
+        padding-left: 2.5rem;
+      }
+
+      &__input::-webkit-inner-spin-button,
+      &__input::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        margin: 0;
+      }
+
+      &__content {
+        display: flex;
+      }
+    }
+
+    &--error .InputField__content {
+      border: 0.0625rem solid map-get( $error, '600' );
+    }
+  }
+
+  &__checkBoxPanel {
+    align-items: center;
+    align-items: baseline;
+    display: flex;
+    height: 1.5rem;
+    margin-bottom: 1.375rem;
+
+    &--btnTandC.Button--small.Button--icon {
+      align-items: center;
+      background: unset;
+      color: map-get( $pink, '25' );
+      display: flex;
+      font-size: 1rem;
+      font-weight: map-get( $fontweights, '600' );
+      width: unset;
+
+      &::after {
+        border: unset;
+      }
+
+      &.Button--focused {
+        color: $white;
+
+        svg {
+          display: inline;
+        }
+      }
+    }
+
+    .Checkbox {
+      span.Text {
+        font-weight: 600;
+        line-height: 1.125rem;
+      }
+
+      &__input {
+        margin-right: 0.875rem;
+      }
+
+      .Checkbox__checkbox {
+        right: 0;
+      }
+
+      .Checkbox__normalCheckBox::after {
+        left: -65%;
+      }
+    }
+
+    button > span.Button__insideContentLabel {
+      line-height: 1.125rem;
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__proceed {
+    &__QRLogin,
+    &__RMN {
+      left: 0;
+      padding-right: 5rem;
+      position: absolute;
+      right: 0;
+      text-align: center;
+
+      .Button {
+        align-items: center;
+        background-color: map-get( $bingeBlue, '50' );
+        justify-content: center;
+        padding: 0.3rem 0;
+        width: 25rem;
+      }
+    }
+
+    &__QRLogin {
+      bottom: 0;
+      top: 20.2rem;
+    }
+
+    &__RMN {
+      bottom: 9rem;
+    }
+  }
+}

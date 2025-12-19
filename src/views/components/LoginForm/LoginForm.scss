@@ -1,0 +1,351 @@
+@import '../../../styles/src/variables';
+
+.LoginForm {
+  &__header {
+    align-items: center;
+    display: flex;
+    margin-bottom: unset;
+    margin-top: 2.334rem;
+    position: relative;
+    z-index: 3;
+
+    .Button {
+      align-items: center;
+      background: unset;
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      margin-left: 2.75rem;
+      width: unset;
+      &::after { content: unset; }
+
+      &__icon {
+        margin-right: 0.75rem;
+      }
+    }
+
+    svg {
+      display: block;
+      margin-left: auto;
+      margin-right: 5.625rem;
+    }
+  }
+
+  &__new_container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    position: relative;
+    scrollbar-width: none; /* for Firefox */
+    z-index: 2;
+
+    &::-webkit-scrollbar {
+      display: none; /* for Chrome, Safari, and Opera */
+    }
+
+    &__topContainer {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2.2rem;
+      // margin-bottom: 3rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    &__checkbox {
+      width: 20rem;
+    }
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 3.5rem;
+  }
+
+  &__container {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    position: relative;
+    scrollbar-width: none; /* for Firefox */
+    z-index: 2;
+
+    &::-webkit-scrollbar {
+      display: none; /* for Chrome, Safari, and Opera */
+    }
+
+    .Image {
+      position: relative;
+    }
+
+    .NumberKeyboard {
+      margin-right: 8.333rem;
+      padding-bottom: 9.75rem;
+      width: auto;
+      z-index: 1;
+
+      .buttonRow {
+        .NumberKeyboard__deleteBtn svg {
+          margin-right: 1rem;
+
+          @media only screen and (width: 1280px) {
+            margin-bottom: -0.208rem;
+          }
+        }
+      }
+
+      &__deleteBtn,
+      &__clearBtn {
+        width: 46%;
+      }
+    }
+
+    .PreviouslyUsedLoginPane {
+      margin-top: unset;
+    }
+
+    .Loader {
+      top: 20rem;
+    }
+
+    .otp-loader {
+      top: 15.8rem;
+    }
+  }
+
+  &__rmnContent {
+    display: flex;
+    gap: 6rem;
+  }
+
+  &__loader {
+    .Image {
+      border: none;
+      height: 10rem;
+      outline: none;
+      position: absolute;
+      right: 36rem;
+      top: 13rem;
+      width: 10rem;
+      z-index: 100000;
+    }
+  }
+
+  &__LinearGradient1 {
+    background: linear-gradient( 90deg, map-get( $bingeBlue, '125' ) 0%, rgba( 2, 0, 5, 0 ) 100% );
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  &__LinearGradient2 {
+    background: linear-gradient( 180deg, rgba( 2, 0, 5, 0.0001 ) 50%, map-get( $bingeBlue, '125' ) 100% );
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  .LoginOtpEnteringPane {
+    margin-top: 5.5rem;
+    z-index: 1;
+
+    &__title {
+      margin-bottom: 1.667rem;
+    }
+  }
+
+  .LoginPane {
+    &__QRLogin {
+      margin-left: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    &__RMN {
+      margin-top: 1.5rem;
+    }
+  }
+
+  &__modal {
+    height: 31.25rem;
+    position: relative;
+  }
+
+  &__content {
+    display: flex;
+    height: 24rem;
+    width: 42.62rem;
+  }
+
+  &__scrollContent {
+    margin-top: 5.5rem;
+    overflow-y: scroll;
+  }
+
+  &__left {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3.18rem;
+    // margin-top: 2rem;
+    position: relative;
+    width: 33.56rem;
+
+    html {
+      // position: absolute !important;
+      top: 0 !important;
+    }
+
+    html,
+    body {
+      background: unset !important;
+
+      .page-main-heading,
+      .privacy-sub-head {
+        strong {
+          font-size: 1.4rem !important;
+          font-weight: 600 !important;
+        }
+      }
+
+      .eula-content {
+        font-size: 1.1rem;
+      }
+
+      .form-container {
+        > li.eula-text {
+          list-style-type: none;
+        }
+      }
+
+      p,
+      li {
+        color: $white;
+        font-size: 1.25rem;
+        margin: 1rem 0;
+
+        a {
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 27rem;
+        }
+      }
+
+      p:first-child {
+        font-size: 1.2rem;
+        position: relative;
+      }
+    }
+  }
+
+  &__right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 24rem;
+    margin-left: 1.68rem;
+    position: absolute;
+    right: 2.5rem;
+    top: 2rem;
+    z-index: 999999;
+
+    .Divider {
+      height: 21.5rem;
+      width: 0.125rem;
+    }
+  }
+
+  &__arrow {
+    path {
+      fill: $white;
+    }
+  }
+
+  &__arrowDownRotate180 {
+    -ms-transform: rotate( 180deg ); /* IE 9 */
+    transform: rotate( 180deg );
+
+    path {
+      fill: $white;
+    }
+  }
+
+  &__closeButton {
+    display: flex;
+    justify-content: center;
+    margin-top: 2.3125rem;
+    position: relative;
+    z-index: 9999;
+
+    .Button {
+      @include back-button;
+
+      align-items: center;
+      background-color: unset;
+      color: map-get( $pink, '40' );
+      display: flex;
+      outline: unset;
+      padding: 1rem;
+      padding-bottom: 1.15625rem;
+
+      &--focused {
+        &::after {
+          content: unset;
+        }
+
+        color: $white;
+        font-weight: bold;
+
+        svg path {
+          fill: $white;
+        }
+      }
+
+      &__icon--withIconLeft {
+        float: left;
+        margin-right: 0.625rem;
+      }
+    }
+  }
+
+  .NumberKeyboard__row {
+    &__QRLogin {
+      left: -2rem;
+    }
+
+    &__RMN {
+      margin-top: 1rem;
+    }
+  }
+
+  &__otpError {
+    background: $black;
+    bottom: 5%;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    position: absolute;
+    right: 0;
+    width: 49%;
+    z-index: 1;
+  }
+
+  &__background {
+    // background: linear-gradient( 146.32deg, #020005 0%, #220046 100% );
+    background: linear-gradient( 99.86deg, #564372 0%, #220046 39.49%, #030106 100% ), linear-gradient( 146.32deg, #020005 0%, #220046 100% );
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+  }
+}

@@ -1,0 +1,88 @@
+@import '../../../styles/src/variables';
+
+.ActivateJourneyPopUp {
+  &__layout {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0.25rem 1.5rem;
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+
+    &--providerlogos {
+      display: flex;
+      margin-bottom: 1rem;
+
+      :first-child {
+        margin-right: 1rem;
+      }
+    }
+
+    .Text--appleTv-header {
+      font-size: 1.667rem;
+    }
+  }
+
+  &__content {
+    margin-bottom: 1.25rem;
+    width: 35.5rem;
+
+    .Text--appleTv-content {
+      color: map-get( $purple, '25' );
+      font-weight: map-get( $fontweights, '500' );
+      line-height: 1.5rem;
+    }
+  }
+
+  &__upgradeButton {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+
+    .Button {
+      background-color: transparent;
+      border: 0.1875rem solid $white;
+      justify-content: center;
+      line-height: 0;
+      padding: 0;
+      width: 25rem;
+    }
+
+    .Button--focused {
+      background-color: map-get( $pink, '100' );
+    }
+
+    .Button--focused::after {
+      border: none;
+    }
+  }
+
+  &__closeButton {
+    width: 100%;
+
+    .Button {
+      align-items: center;
+      background: transparent;
+      display: flex;
+      flex-wrap: nowrap;
+      font-size: 1rem;
+      height: unset;
+      padding: 0;
+      width: unset;
+      &::after { content: unset; }
+
+      &__icon {
+        margin-right: 0.75rem;
+      }
+    }
+  }
+}
+
+.ActivateJourneyPopUpModal {
+  padding: 1rem;
+}

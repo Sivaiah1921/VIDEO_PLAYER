@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshot tests renders correctly with the default props 1`] = `
+<div
+  className="LanguageCard"
+  focused={false}
+>
+  <a
+    className="Link"
+    onClick={[Function]}
+    target="_self"
+  >
+    <div
+      className="Image"
+    >
+      <picture>
+        <img
+          alt=""
+          className="Image--loading"
+        />
+      </picture>
+    </div>
+    <p
+      className="Text Text--subtitle-1 Text--left Text--bingeBlue-25"
+    />
+  </a>
+</div>
+`;

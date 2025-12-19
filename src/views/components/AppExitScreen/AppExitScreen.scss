@@ -1,0 +1,75 @@
+@import '../../../styles/src/variables';
+
+.AppExitScreen {
+  // background: #5b32b6;
+  // background: linear-gradient(146.32deg, #020005 58.81%, #220046 100%);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    left: 50%;
+    // top: 50%;
+    margin-top: 25%;
+    padding: 2.083rem;
+    position: relative;
+    transform: translate( -50%, -50% );
+
+    svg {
+      height: 3.75rem;
+      padding-bottom: 2rem;
+      width: 3.75rem;
+
+      path {
+        width: auto;
+      }
+    }
+
+    .Text--title-1 {
+      margin-bottom: 1rem;
+    }
+
+    .Text--body-5 {
+      padding-top: 2.5rem;
+      width: 23.063rem;
+    }
+  }
+
+  &__button {
+    .Button {
+      background-color: transparent;
+      border: 0.1875rem solid #fff;
+      border-radius: 1.375rem;
+      height: 2.833rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+      outline: 0;
+      overflow: hidden;
+      padding: 0.333rem;
+
+      &:first-child {
+        margin-right: 1rem;
+      }
+
+      &--focused {
+        background-color: #e10092;
+
+        span {
+          position: relative;
+          z-index: 1000000000;
+        }
+      }
+
+      &--focused::after {
+        background-color: #e10092;
+        border: none;
+        border-radius: unset;
+      }
+    }
+  }
+}

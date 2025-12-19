@@ -1,0 +1,45 @@
+/**
+ * {{ properCase name }} Redux reducer Module
+ *
+ */
+
+import { createSelector } from 'reselect';
+import { 
+  types as {{ properCase name }}Types,
+  actions as {{ properCase name }}Actions  
+} from '../../actions/{{ properCase name }}/{{ properCase name }}.actions';
+
+/**
+ * default state for the {{ properCase name }} reducer
+ */
+
+export const initialState = {
+
+};
+
+
+/**
+ * Reducer 
+ *
+ * The reducer is a pure function that takes the previous state and an action, and returns the next state.
+ * It should never Mutate its arguments, Perform side effects like API calls and routing transitions;
+ * or call non-pure functions, e.g. Date.now() or Math.random().
+ */
+export default function reducer( state = initialState, action ){
+
+  switch(action.type){
+    case {{ properCase name }}Types.DEFAULT: 
+      return Object.assign(
+        {},
+        state,
+        {
+ 					arg: action.arg         
+        }
+      )
+
+    default:
+      return state;
+  }
+};
+
+

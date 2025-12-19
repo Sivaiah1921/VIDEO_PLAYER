@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<NotificationsPopUp />tests snapshot tests renders correctly modal 1`] = `
+<div
+  className="NotificationsPopUp"
+>
+  <div>
+    <div
+      aria-modal="true"
+      className="Modal__wrapper"
+      role="dialog"
+    >
+      <dialog
+        className="Modal NotificationsPopUpModal"
+      >
+        <form
+          method="dialog"
+        >
+          <div
+            className="NotificationsPopUp__content"
+          >
+            <svg
+              className="NotificationsPopUp__icon"
+              fill="none"
+              height={66}
+              viewBox="0 0 66 66"
+              width={66}
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clipRule="evenodd"
+                d="M5.79171 32.9997C5.79171 17.9729 17.9733 5.79134 33 5.79134C48.0268 5.79134 60.2084 17.9729 60.2084 32.9997C60.2084 48.0264 48.0268 60.208 33 60.208C17.9733 60.208 5.79171 48.0264 5.79171 32.9997ZM33 0.208008C14.8897 0.208008 0.208374 14.8893 0.208374 32.9997C0.208374 51.11 14.8897 65.7913 33 65.7913C51.1104 65.7913 65.7917 51.11 65.7917 32.9997C65.7917 14.8893 51.1104 0.208008 33 0.208008ZM27.894 37.6789L22.7508 32.5385H14.8526L25.918 43.5979L27.889 45.5677L29.8625 43.6004L51.1462 22.3822H43.238L27.894 37.6789Z"
+                fill="#009E35"
+                fillRule="evenodd"
+              />
+            </svg>
+            <p
+              className="Text Text--title-3 Text--center Text--white"
+            >
+              Plan Renewal Successful
+            </p>
+            <p
+              className="Text Text--body-3 Text--center Text--white"
+            >
+              Your plan has been renewed from Standard (monthly) to Premium (monthly)
+            </p>
+            <p
+              className="Text Text--body-5 Text--center Text--white"
+            >
+              You will be charged 200 from 01/05/2022
+            </p>
+            <div
+              className="NotificationsPopUp__button"
+            >
+              <button
+                className="Button Button--small"
+                onClick={[Function]}
+                style={null}
+              >
+                Done
+              </button>
+            </div>
+          </div>
+        </form>
+      </dialog>
+    </div>
+  </div>
+</div>
+`;

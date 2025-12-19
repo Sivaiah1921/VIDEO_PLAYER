@@ -1,0 +1,118 @@
+@import '../../../styles/src/variables';
+
+.AutoPlayTrailer {
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5625rem;
+  }
+
+  &__checkBox {
+    display: flex;
+    flex-direction: row;
+    height: 3rem;
+    margin: 2.5rem 0;
+    outline: unset;
+    width: 29.375rem;
+
+    .Checkbox {
+      outline: 0;
+
+      input {
+        outline: 0;
+      }
+
+      .Checkbox__input--toggleButton input {
+        border: 0.1875rem solid #a3a6c2;
+      }
+
+      .Checkbox__input--toggleButton label {
+        bottom: 0;
+        top: 0.47rem;
+      }
+
+      .Checkbox__normalCheckBox--withFocus {
+        border: 0;
+      }
+
+      .Checkbox__input--focus input {
+        border: 0.1875rem solid $white;
+      }
+    }
+  }
+
+  &__button {
+    .Button {
+      background-color: transparent;
+      border: 0.1875rem solid $white;
+      justify-content: center;
+      line-height: 0;
+      padding: 0;
+      width: 25rem;
+    }
+
+    .Button--focused {
+      background-color: map-get( $pink, '100' );
+    }
+
+    .Button--focused::after {
+      border: none;
+    }
+  }
+}
+
+.AutoPlayTrailerModal {
+  align-items: center;
+  display: flex;
+  display: none;
+  justify-content: center;
+  padding: 2.8125rem 2.75rem;
+  width: 34.375rem;
+
+  .Loader {
+    background: transparent;
+  }
+
+  &__notifications {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    z-index: 999999;
+
+    .Notifications svg {
+      padding-right: 1.5rem;
+      width: 3.875rem;
+    }
+  }
+}
+
+.AutoPlayTrailer__content .Checkbox .Checkbox__input--toggleButton input:checked + label {
+  left: 0.69rem;
+  margin-top: 0.5px;
+}
+
+.AutoPlayTrailer__contentTV .Checkbox .Checkbox__input--toggleButton input:checked + label {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 4.188rem;
+}
+
+.AutoPlayTrailer__content .Checkbox .Checkbox__input--toggleButton input:not(:checked) + label {
+  left: 5.3rem;
+  margin-top: 0.5px;
+}
+
+.AutoPlayTrailer__contentTV .Checkbox .Checkbox__input--toggleButton input:not(:checked) + label {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}

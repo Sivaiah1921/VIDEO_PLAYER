@@ -1,0 +1,127 @@
+@import '../../../styles/src/variables';
+
+.SubscriberForm {
+  align-items: center;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+
+  &__header {
+    align-items: center;
+    display: flex;
+    position: absolute;
+    top: 2.334rem;
+    width: 100%;
+
+    .Button {
+      align-items: center;
+      background: unset;
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      margin-left: 2.75rem;
+      width: unset;
+      &::after { content: unset; }
+
+      &__icon {
+        margin-right: 0.75rem;
+      }
+    }
+
+    svg {
+      display: block;
+      margin-left: auto;
+      margin-right: 5.625rem;
+    }
+  }
+
+  .BackgroundComponent {
+    z-index: 0;
+  }
+
+  .SelectDeviceCard {
+    margin-bottom: 1rem;
+  }
+
+  .SelectDeviceCard:hover::after {
+    border: none;
+  }
+
+  &__loader {
+    left: 39rem;
+    position: absolute;
+    top: 24.5rem;
+  }
+
+  &__container {
+    left: 27rem;
+    position: absolute;
+    top: 6.5rem;
+    width: 30rem;
+
+    &__title {
+      margin-bottom: 0.625rem;
+    }
+  }
+
+  &__info {
+    color: map-get( $bingeBlue, '25' );
+    margin-bottom: 1.5rem;
+    width: 25rem;
+
+    &--text {
+      font-size: map-get( $lineheights, 'em1_37' );
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    height: 27.25rem;
+    margin-left: -1rem;
+    overflow-y: scroll;
+    padding-top: 1rem;
+  }
+
+  &__left {
+    padding: 0 1rem;
+    position: relative;
+  }
+
+  &__right {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 24rem;
+    margin-left: 1.68rem;
+    position: absolute;
+    right: -2.5rem;
+  }
+
+  &__arrow {
+    margin-bottom: 2rem;
+
+    path {
+      fill: map-get( $bingeBlue, '50' );
+    }
+  }
+
+  &__arrowDownRotate180 {
+    -ms-transform: rotate( 180deg ); /* IE 9 */
+    transform: rotate( 180deg );
+
+    path {
+      fill: map-get( $bingeBlue, '50' );
+    }
+  }
+
+  &__Error {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    z-index: 10;
+  }
+}

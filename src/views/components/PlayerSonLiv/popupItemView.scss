@@ -1,0 +1,107 @@
+.popup-itemview-container {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+
+  .modalPopup {
+    height: calc( 100vh - 14.175rem );
+    overflow-y: scroll;
+
+    .Button {
+      background: rgba( 240, 240, 240, 0.01 );
+      border: 3px solid #564372;
+      border-radius: 12px;
+      height: 3.67rem;
+      margin-bottom: 1.25rem;
+      overflow-y: scroll;
+      width: 20.83rem;
+
+      .Button__insideContentLabel {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        margin-left: 1.67rem;
+        margin-right: 1.67rem;
+
+        .popupItemView {
+          align-items: center;
+          display: flex;
+          flex: 1;
+          justify-content: space-between;
+          // margin-left: 1.67rem;
+          // margin-right: 1.67rem;
+        }
+      }
+    }
+
+    .Button--focused {
+      border: unset;
+    }
+
+    .Button--focused::after {
+      background: rgba( 240, 240, 240, 0.01 );
+      border: 0.25rem solid #f0f0f0;
+      border-radius: 0.5rem;
+    }
+
+    .Button p,
+    .Button span {
+      color: #f0f0f0;
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 120%;
+    }
+
+    .Button--small {
+      border-radius: 12px;
+      padding: 0;
+    }
+  }
+
+  .popup-body {
+    background: rgba( 15, 15, 15, 0.87 );
+    box-shadow: rgba( 0, 0, 0, 0.35 ) 0 5px 15px;
+    height: 100vh;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 28.33rem;
+
+    .popupHeader {
+      padding-bottom: 1.5rem;
+      padding-left: 1.29rem;
+      padding-right: 3.29rem;
+      padding-top: 2.95rem;
+      position: sticky;
+
+      .popupTitle {
+        color: #f0f0f0;
+        font-size: 1.67rem;
+        font-style: normal;
+        font-weight: 600;
+        height: 2.33rem;
+        line-height: 140%;
+      }
+
+      .popupSubTitle {
+        color: #f0f0f0;
+        font-size: 1.167rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%;
+        padding-top: 0.67rem;
+      }
+    }
+  }
+
+  &--visibility {
+    visibility: visible;
+  }
+}

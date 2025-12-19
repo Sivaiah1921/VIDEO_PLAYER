@@ -1,0 +1,94 @@
+@import '../../../styles/src/mixins';
+@import '../../../styles/src/variables';
+
+.Button {
+  $parent: &;
+
+  p,
+  span {
+    font-family: map-get( $fontfamilies, 'VoltePlay' );
+  }
+
+  &--chipsImages {
+    align-items: center !important;
+    display: flex !important;
+
+    .Image {
+      height: 1.334rem;
+      margin-right: 0.5rem;
+      width: 1.334rem;
+    }
+  }
+
+  &__lottieAnimation {
+    height: 1.334rem;
+    margin-right: 0.5rem;
+    overflow: hidden;
+    width: 1.334rem;
+    z-index: 2;
+
+    svg {
+      transform: none !important;
+    }
+  }
+
+  &__subscriptionText {
+    margin-left: auto;
+
+    p {
+      color: white;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 110%;
+    }
+  }
+
+  @include buttonMixin();
+
+  &__icon {
+    &--withIconLeft {
+      margin-right: 0.75rem;
+      position: relative;
+    }
+
+    &--withIconRight {
+      margin-left: auto;
+      margin-right: 0;
+      position: relative;
+    }
+
+    &-label {
+      border: none;
+    }
+  }
+
+  &--withLeftRightIcon {
+    #{ $parent }__icon--withIconRight {
+      margin-left: auto;
+      position: unset;
+    }
+    #{ $parent }__icon--withIconLeft {
+      position: unset;
+    }
+
+    svg:nth-child(2) {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+
+  &__insideContentLabel {
+    &--withBackLeftIcon {
+      color: map-get( $bingeBlue, '40' );
+      font-weight: 500;
+      position: relative;
+      top: 3px;
+    }
+
+    white-space: nowrap;
+  }
+}
+
+.Button:focus {
+  outline: none !important;
+}

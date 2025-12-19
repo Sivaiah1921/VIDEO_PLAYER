@@ -1,0 +1,54 @@
+@import '../../../styles/src/variables';
+
+.ParentalPin {
+  &__header {
+    align-items: center;
+    display: flex;
+    margin-bottom: 11.125rem;
+    margin-top: 2.334rem;
+    position: relative;
+
+    .Button {
+      align-items: center;
+      background: unset;
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      margin-left: 2.75rem;
+      width: unset;
+      &::after { content: unset; }
+
+      &__icon {
+        margin-right: 0.75rem;
+      }
+    }
+
+    svg {
+      display: block;
+      margin-left: auto;
+      margin-right: 5.625rem;
+    }
+  }
+
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+
+  &__icon {
+    margin-bottom: 1.417rem;
+  }
+
+  &__content {
+    margin-top: 1.5rem;
+    text-align: center;
+    width: 40.313rem;
+  }
+
+  &__container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}

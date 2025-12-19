@@ -1,0 +1,48 @@
+@import '../../../styles/src/variables';
+
+.Loader {
+  align-content: normal;
+  align-items: center;
+  background: $background;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  height: 100%;
+  justify-content: center;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate( -50%, -50% );
+  width: 100%;
+  z-index: 999999;
+
+  .Image img {
+    height: 10rem;
+    width: 10rem;
+  }
+
+  &__bottom {
+    align-items: flex-end;
+    background: transparent !important;
+    display: flex;
+    padding-bottom: 4rem;
+  }
+
+  &__playerBgColor {
+    background: black !important;
+  }
+
+  .Button {
+    background-color: transparent;
+
+    &--focused::after {
+      border: none;
+    }
+  }
+
+  .playerLoader {
+    .Button {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AutoPlayTrailer />tests snapshot tests renders correctly modal 1`] = `
+<div
+  className="AutoPlayTrailer"
+>
+  <div>
+    <div
+      aria-modal="true"
+      className="Modal__wrapper"
+      role="dialog"
+    >
+      <dialog
+        className="Modal AutoPlayTrailerModal"
+      >
+        <form
+          method="dialog"
+        >
+          <div
+            className="AutoPlayTrailer__content"
+          >
+            <svg
+              fill="none"
+              style={
+                Object {
+                  "height": "5rem",
+                  "width": "5rem",
+                }
+              }
+              viewBox="0 0 80 80"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                clipRule="evenodd"
+                d="M40 63.3333C52.8866 63.3333 63.3333 52.8866 63.3333 40C63.3333 27.1134 52.8866 16.6667 40 16.6667C27.1134 16.6667 16.6667 27.1134 16.6667 40C16.6667 52.8866 27.1134 63.3333 40 63.3333ZM40 70C56.5685 70 70 56.5685 70 40C70 23.4315 56.5685 10 40 10C23.4315 10 10 23.4315 10 40C10 56.5685 23.4315 70 40 70Z"
+                fill="#8E81A1"
+                fillRule="evenodd"
+              />
+              <path
+                clipRule="evenodd"
+                d="M33.3335 30H41.0311L47.6654 37.3917L50.0002 39.9931L47.6677 42.5964L41.0344 50H33.345L42.3066 39.9977L33.3335 30Z"
+                fill="#8E81A1"
+                fillRule="evenodd"
+              />
+            </svg>
+            <div
+              className="AutoPlayTrailer__title"
+            >
+              <p
+                className="Text Text--autoPlay-title Text--left"
+              >
+                Autoplay Trailer
+              </p>
+            </div>
+            <div
+              className="AutoPlayTrailer__checkBox"
+            >
+              <p
+                className="Text Text--autoPlay-subtitle Text--left"
+              >
+                When autoplay is on, the trailer will start playing automatically
+              </p>
+              <div
+                className="Checkbox"
+              >
+                <span
+                  className="Checkbox__input Checkbox__input--toggleButton"
+                >
+                  <input
+                    className=""
+                    id="switcher"
+                    onChange={[Function]}
+                    tabIndex={0}
+                    type="checkbox"
+                  />
+                  <label
+                    className=""
+                    htmlFor="switcher"
+                  />
+                </span>
+              </div>
+            </div>
+            <div
+              className="AutoPlayTrailer__button"
+            >
+              <button
+                className="Button Button--primary Button--small"
+                onClick={[Function]}
+                style={null}
+              >
+                Done
+              </button>
+            </div>
+          </div>
+        </form>
+      </dialog>
+    </div>
+  </div>
+</div>
+`;

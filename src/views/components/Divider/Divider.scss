@@ -1,0 +1,27 @@
+@import '../../../styles/src/variables';
+@import '../../../styles/src/mixins';
+
+.Divider {
+  @include bottomSpacer();
+
+  &__horizontal {
+    border-top: 0.0625rem solid map-get( $neutral, '650' );
+  }
+
+  &__horizontal--gradient {
+    background: linear-gradient( 180deg, rgba( 231, 150, 199, 0 ) 0%, #f3cbe3 49.48%, rgba( 231, 150, 199, 0 ) 100% );
+    height: 100%;
+    transform: matrix( 0, 1, 1, 0, 0, 0 );
+    width: 0.125rem;
+  }
+
+  &__vertical {
+    background: linear-gradient( 180deg, rgba( 255, 255, 255, 5e-05 ) 0%, rgba( 255, 255, 255, 0.5 ) 46.5%, rgba( 255, 255, 255, 5e-05 ) 100% );
+    display: inline-block;
+    height: 95%;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+    transform: matrix( -1, 0, 0, 1, 0, 0 );
+    width: 0.25rem;
+  }
+}

@@ -1,0 +1,121 @@
+@import '../../../styles/src/variables';
+
+.ParentalPinStatus {
+  &__header {
+    align-items: center;
+    display: flex;
+    margin-bottom: 4rem;
+    margin-top: 2.334rem;
+    position: relative;
+
+    .Button {
+      align-items: center;
+      background: unset;
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      margin-left: 2.75rem;
+      width: unset;
+      &::after { content: unset; }
+
+      &__icon {
+        margin-right: 0.75rem;
+      }
+    }
+
+    svg {
+      display: block;
+      margin-left: auto;
+      margin-right: 5.625rem;
+    }
+  }
+
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  position: relative;
+
+  &__topPanel {
+    align-items: center;
+    display: flex;
+    justify-content: start;
+    margin-left: 7rem;
+
+    :nth-child(1) {
+      margin-right: 1.625rem;
+    }
+
+    p {
+      line-height: 2.25rem;
+    }
+  }
+
+  &__centerPanel {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 1.25rem;
+
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      width: 34.375rem;
+    }
+
+    &__center {
+      border: 0.0625rem solid map-get( $neutral, '650' );
+      margin: 2.6562rem 0;
+      width: 34.375rem;
+    }
+
+    &__bottom {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      width: 34.375rem;
+
+      :nth-child(1) {
+        line-height: 2.25rem;
+      }
+
+      :nth-child(2) {
+        border: 0.125rem solid $white;
+        border-radius: 5px;
+        line-height: 2rem;
+        padding: 0 0.3125rem;
+      }
+    }
+  }
+
+  &__bottomPanel {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 5.625rem;
+    margin-top: 10.8125rem;
+
+    &__header {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      width: 34.375rem;
+
+      p {
+        line-height: 2rem;
+      }
+    }
+
+    &__content {
+      margin-top: 1.25rem;
+      text-align: center;
+      width: 38.625rem;
+
+      span {
+        line-height: 1.75rem;
+      }
+    }
+  }
+}

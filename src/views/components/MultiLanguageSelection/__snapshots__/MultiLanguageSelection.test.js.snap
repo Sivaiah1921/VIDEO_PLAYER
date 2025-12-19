@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  className="MultiLanguageSelection"
+  role="button"
+  style={
+    Object {
+      "backgroundImage": "url(https://res.cloudinary.com/uat-main/image/upload/v1646214191/tatasky-uat/cms-ui/images/custom-content/1646214190687.jpg)",
+    }
+  }
+  tabIndex="0"
+>
+  <p
+    className="Text Text--body-5 Text--left Text--white"
+  >
+    Telugu
+  </p>
+  <div
+    className="Image"
+  >
+    <picture>
+      <img
+        alt=""
+        className="Image--loading"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+      />
+    </picture>
+  </div>
+  <div
+    className="Checkbox"
+  >
+    <span
+      className="Checkbox__input Checkbox__input--checkbox"
+    >
+      <input
+        aria-checked={false}
+        checked={false}
+        className="Checkbox__checkbox"
+        id="Telugu"
+        name="Telugu"
+        tabIndex={0}
+        type="checkbox"
+      />
+      <label
+        className="Checkbox__normalCheckBox Checkbox__normalCheckBox--custom"
+        htmlFor="Telugu"
+      />
+    </span>
+  </div>
+</div>
+`;

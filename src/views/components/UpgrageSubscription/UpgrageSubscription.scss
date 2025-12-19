@@ -1,0 +1,121 @@
+@import '../../../styles/src/variables';
+
+.UpgrageSubscription {
+  position: relative;
+  width: auto;
+  z-index: 2;
+
+  &__header {
+    align-items: center;
+    display: flex;
+    margin-bottom: 0.5rem;
+    margin-top: 2.75rem;
+    position: relative;
+    z-index: 2;
+
+    .Button {
+      align-items: center;
+      background-color: transparent;
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      margin-left: 5.625rem;
+      width: unset;
+      &::after { content: unset; }
+
+      &__icon {
+        margin-right: 0.75rem;
+      }
+    }
+
+    svg {
+      display: block;
+      margin-left: auto;
+      margin-right: 5.625rem;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__content {
+    margin-top: 3rem;
+
+    &--title {
+      margin-bottom: 2rem;
+    }
+
+    &--subTitle2 {
+      margin-bottom: 1.875rem;
+    }
+
+    &--title,
+    &--subTitle,
+    &--subTitle2 {
+      .Text {
+        font-weight: map-get( $fontweights, '600' );
+      }
+    }
+
+    &--subTitle,
+    &--subTitle2 {
+      .Text {
+        font-size: map-get( $fontsizes, 'p22' );
+      }
+    }
+
+    &--appList {
+      background: map-get( $pink, '1' );
+      border-radius: 30px;
+    }
+
+    &--apps {
+      margin-left: 0.5rem;
+      width: 44rem;
+
+      .PackageCard {
+        &__multiapps {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          height: auto;
+          margin-bottom: auto;
+          pointer-events: none;
+        }
+      }
+
+      .AppMediaCard {
+        margin-bottom: 0.25rem;
+        margin-right: 0.5rem;
+
+        &__content .Image img {
+          border-radius: 9px;
+          height: 4.6875rem;
+          width: 4.3rem;
+        }
+      }
+    }
+
+    &--button {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+
+      .Button {
+        position: relative;
+        top: 1rem;
+        width: 34.375rem;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    position: absolute;
+    white-space: nowrap;
+  }
+}

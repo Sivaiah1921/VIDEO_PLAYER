@@ -1,0 +1,27 @@
+@import '../../../styles/src/variables';
+
+.Notifications {
+  align-items: center;
+  background-color: map-get( $bingeBlue, '125' );
+  // border-radius: 1.25rem 1.25rem 0 0;
+  // border-top: 0.1875rem solid map-get( $bingeBlue, '75' );
+  box-shadow: 0 -0.25rem 0.75rem rgba( 0, 0, 0, 0.55 );
+  display: flex;
+  justify-content: center;
+
+  &--withPrimeNudge {
+    border: 4px solid map-get( $bingeBlue, '100' );
+    border-radius: 1.25rem 1.25rem 0 0;
+  }
+
+  svg {
+    // height: 1.875rem; // wull test in all places.
+    padding-right: 2rem;
+    width: 1.875rem;
+  }
+
+  .Text {
+    color: $white;
+    padding: 1.125rem 0;
+  }
+}

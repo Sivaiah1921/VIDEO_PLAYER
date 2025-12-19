@@ -1,0 +1,14 @@
+@import '../../../styles/src/variables';
+
+.AutoCompleteSuggestions {
+  width: 100%;
+
+  .Button {
+    color: map-get( $bingeBlue, '50' );
+
+    &--focused {
+      color: $white;
+      font-weight: 600;
+    }
+  }
+}

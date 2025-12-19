@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+Array [
+  <div
+    className="SubscriberForm"
+  >
+    <div
+      className="SubscriberForm__container"
+    />
+  </div>,
+  <div
+    className="Loader"
+  >
+    <div
+      className="Loader__content"
+    >
+      <div
+        className="Image"
+      >
+        <picture>
+          <img
+            alt=""
+            className="Image--loading"
+            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+          />
+        </picture>
+      </div>
+    </div>
+  </div>,
+]
+`;

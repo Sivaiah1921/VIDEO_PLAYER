@@ -1,0 +1,349 @@
+@import './button';
+@import './link';
+
+@mixin pointer( $color: map-get( $neutral, '600' )){
+  content: '';
+  width:0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 9px 7px;
+  border-color: transparent transparent $color;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+}
+
+@mixin overlayColorSettings( $color: rgba(255, 255, 255, .97) ){
+  background-color: $color;
+}
+
+$headerTransitionTime: 500;
+
+@mixin typeaheadstyling(){
+  background-color: #f4f4f4;
+  border-style: solid;
+  border-color: #f4f4f4;
+  border-width: .5px;
+  border-radius: 5px;
+  color: #555;
+  font-size: 14px;
+  height: 40px;
+  outline-color: transparent;
+  outline-style: none;
+  padding: 10px 30px 10px 10px;
+  width: 100%;
+}
+
+@mixin desktopLinksEvents(){
+  &:hover, &:active, &:focus {
+    color: map-get( $neutral, '600' );
+  }
+}
+
+@mixin boxShadowForNormalVariant(){
+  box-shadow: 0 0 0 1px map-get( $neutral, '400' );
+  &:hover {
+    box-shadow: 0 0 0 2px map-get( $neutral, '400' );
+  }
+}
+@mixin boxShadowForSelectedVariant(){
+  box-shadow: 0 0 0 2px map-get( $neutral, '800' );
+  &:hover {
+    box-shadow: 0 0 0 3px map-get( $neutral, '800' );
+  }
+}
+@mixin boxShadowWithDynamicSize($size){
+  box-shadow: 0 0 0 $size $white;
+}
+
+@mixin BoxShadowRightBottom-80(){
+  box-shadow: 0 8px 10px 1px rgba(0,0,0,.04), 0 3px 14px 2px rgba(0,0,0,.03), 0 5px 5px -3px rgba(0,0,0,.05)
+}
+
+@mixin boxShadowTopRightBottom-80(){
+  box-shadow: 7px 8px 10px 1px rgba(0,0,0,.04), 7px 3px 14px 2px rgba(0,0,0,.03), 7px 5px 5px -3px rgba(0,0,0,.05);
+}
+
+// Button Text sizing
+@mixin buttonTextLarge {
+  font-size: map-get( $fontsizes, 'base' );
+}
+
+@mixin buttonTextMedium {
+  font-size: map-get( $fontsizes, 'p14' );
+}
+
+@mixin buttonTextSmall {
+  font-size: map-get( $fontsizes, 'p12' );
+}
+
+// clearfix
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+// ADA specific mixins
+// Only display content to screen readers
+// See: http://a11yproject.com/posts/how-to-hide-content
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+// Use in conjunction with .sr-only to only display content when it's focused.
+// Useful for "Skip to main content" links; see https://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+// Credit: HTML5 Boilerplate
+
+@mixin sr-only-focusable {
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+// Breakpoint viewport sizes and media queries.
+// Breakpoints are defined as a map of (name: minimum width), order from small to large:
+//
+//    (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px)
+//
+// The map defined in the `$grid-breakpoints` global variable is used as the `$breakpoints` argument by default.
+
+// Name of the next breakpoint, or null for the last breakpoint.
+//
+//    >> breakpoint-next(sm)
+//    md
+//    >> breakpoint-next(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    md
+//    >> breakpoint-next(sm, $breakpoint-names: (xs sm md lg xl))
+//    md
+@function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints)) {
+  $n: index($breakpoint-names, $name);
+  @return if($n < length($breakpoint-names), nth($breakpoint-names, $n + 1), null);
+}
+
+// Minimum breakpoint width. Null for the smallest (first) breakpoint.
+//
+//    >> breakpoint-min(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    576px
+@function breakpoint-min($name, $breakpoints: $grid-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+// Maximum breakpoint width. Null for the largest (last) breakpoint.
+// The maximum value is calculated as the minimum of the next one less 0.02px
+// to work around the limitations of `min-` and `max-` prefixes and viewports with fractional widths.
+// See https://www.w3.org/TR/mediaqueries-4/#mq-min-max
+// Uses 0.02px rather than 0.01px to work around a current rounding bug in Safari.
+// See https://bugs.webkit.org/show_bug.cgi?id=178261
+//
+//    >> breakpoint-max(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    767.98px
+@function breakpoint-max($name, $breakpoints: $grid-breakpoints) {
+  $next: breakpoint-next($name, $breakpoints);
+  @return if($next, breakpoint-min($next, $breakpoints) - .02px, null);
+}
+
+// Returns a blank string if smallest breakpoint, otherwise returns the name with a dash infront.
+// Useful for making responsive utilities.
+//
+//    >> breakpoint-infix(xs, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    ""  (Returns a blank string)
+//    >> breakpoint-infix(sm, (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px))
+//    "-sm"
+@function breakpoint-infix($name, $breakpoints: $grid-breakpoints) {
+  @return if(breakpoint-min($name, $breakpoints) == null, "", "-#{$name}");
+}
+
+// Media of at least the minimum breakpoint width. No query for the smallest breakpoint.
+// Makes the @content apply to the given breakpoint and wider.
+@mixin media-breakpoint-up($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  @if $min {
+    @media (min-width: $min) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Media of at most the maximum breakpoint width. No query for the largest breakpoint.
+// Makes the @content apply to the given breakpoint and narrower.
+@mixin media-breakpoint-down($name, $breakpoints: $grid-breakpoints) {
+  $max: breakpoint-max($name, $breakpoints);
+  @if $max {
+    @media (max-width: $max) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}
+
+// Media that spans multiple breakpoint widths.
+// Makes the @content apply between the min and max breakpoints
+@mixin media-breakpoint-between($lower, $upper, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($lower, $breakpoints);
+  $max: breakpoint-max($upper, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-breakpoint-up($lower, $breakpoints) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-breakpoint-down($upper, $breakpoints) {
+      @content;
+    }
+  }
+}
+
+// Media between the breakpoint's minimum and maximum widths.
+// No minimum for the smallest breakpoint, and no maximum for the largest one.
+// Makes the @content apply only to the given breakpoint, not viewports any wider or narrower.
+@mixin media-breakpoint-only($name, $breakpoints: $grid-breakpoints) {
+  $min: breakpoint-min($name, $breakpoints);
+  $max: breakpoint-max($name, $breakpoints);
+
+  @if $min != null and $max != null {
+    @media (min-width: $min) and (max-width: $max) {
+      @content;
+    }
+  } @else if $max == null {
+    @include media-breakpoint-up($name, $breakpoints) {
+      @content;
+    }
+  } @else if $min == null {
+    @include media-breakpoint-down($name, $breakpoints) {
+      @content;
+    }
+  }
+}
+
+@mixin debug($color: blue, $important: false) {
+  @if $important {
+    * {
+      background: rgba($color, .05) !important;
+    }
+  } @else {
+    * {
+      background: rgba($color, .05);
+    }
+  }
+}
+
+@mixin mapObject($prop, $map) {
+  /* VS code will mark errors here because of the ':' following #{$prop}, but this is necessary to map the variables correctly */
+  #{$prop}: {
+    @each $name,
+      $value in $map {
+      #{$name}: $value;
+    }
+  }
+}
+
+// this mixin is for adding animated underline to all links.
+
+@mixin linkAnimationHover(){
+  -webkit-animation: slideout 0.8s linear forwards;
+  animation: slideout 0.8s linear forwards;
+  @keyframes slideout {
+    0% {
+      background-position: 0% 100%, 100% 100%;
+      background-size: 0% 0.063rem, 100% 0.063rem;
+    }
+    50% {
+      background-position: 0% 100%, 100% 100%;
+      background-size: 0% 0.063rem, 0% 0.063rem;
+    }
+    100% {
+      background-position: 0% 100%, 100% 100%;
+      background-size: 100% 0.063rem, 0% 0.063rem;
+    }
+  }
+}
+
+@mixin linkAnimation() {
+  @include link();
+
+  color: $black;
+  cursor: pointer;
+  line-height: 1.7;
+  text-decoration: none;
+  background-image: linear-gradient($black, $black), linear-gradient($black, $black);
+  background-position: 0 100%, 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 0.063rem, 100% 0.063rem;
+  padding-bottom: 0.2125rem;
+  
+  &:hover {
+    @include linkAnimationHover()
+  }
+}
+
+@mixin textHighlightColor($color, $value: '200') {
+  span {
+    background: linear-gradient( to top, map-get( $color, $value ) 50%, transparent 50% );
+  }
+}
+
+// this mixin is for adding margin bottom classes in the component
+@mixin bottomSpacer() {
+  &__bottomSpacer--00 {
+    margin-bottom: 0.25rem;
+  }
+  &__bottomSpacer--01 {
+    margin-bottom: 0.5rem;
+  }
+  &__bottomSpacer--02 {
+    margin-bottom: 1rem;
+  }
+  &__bottomSpacer--03 {
+    margin-bottom: 1.5rem;
+  }
+  &__bottomSpacer--04 {
+    margin-bottom: 2rem;
+  }
+  &__bottomSpacer--05 {
+    margin-bottom: 3rem;
+  }
+  &__bottomSpacer--06 {
+    margin-bottom: 5rem;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 4rem;
+    }
+  }
+  &__bottomSpacer--07 {
+    margin-bottom: 7.5rem;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 6rem;
+    }
+  }
+  &__bottomSpacer--08 {
+    margin-bottom: 10.5rem;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 8.5rem;
+    }
+  }
+}

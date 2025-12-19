@@ -1,0 +1,528 @@
+@import '../../../styles/src/variables';
+
+.PlaybackInfo--Empty {
+  background: linear-gradient( 146.32deg, #020005 58.81%, #220046 100% );
+
+  p {
+    align-items: center;
+    color: white;
+    display: flex;
+    font-size: 2rem;
+    height: 90vh;
+    justify-content: center;
+  }
+}
+
+.PlaybackInfo {
+  &__bold_suggestion {
+    background-color: transparent;
+    color: $white;
+    font-weight: 600;
+  }
+
+  &__loader {
+    .Image {
+      border: none;
+      height: 10rem;
+      left: 35rem;
+      outline: none;
+      position: absolute;
+      top: 14rem;
+      width: 10rem;
+      z-index: 100000;
+    }
+  }
+
+  &__seasonsLoader {
+    .Image {
+      border: none;
+      height: 12rem;
+      left: 33rem;
+      outline: none;
+      position: absolute;
+      top: 22rem;
+      width: 10rem;
+      z-index: 100000;
+    }
+  }
+
+  background-color: map-get( $bingeBlue, '125' );
+  height: 100vh;
+  position: relative;
+  width: 100%;
+
+  &__Banner {
+    position: absolute;
+    width: 100%;
+
+    .BannerComponent__backgroundImg {
+      position: unset;
+    }
+
+    .BannerComponent__trailor-banner {
+      transform: translate( 32%, 0% );
+    }
+
+    .page_player {
+      position: unset;
+      width: 54rem;
+
+      .Loader .Image img {
+        left: 8rem;
+        position: relative;
+        top: 10rem;
+      }
+    }
+  }
+
+  &__scrollContainer {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  &__scrollContainerWithOutSeasons {
+    height: 100vh;
+  }
+
+  &__header {
+    position: relative;
+    transform: translateY( 3.75rem );
+
+    &--withSynopsis {
+      transform: translateY( 0 );
+    }
+
+    &--withLive {
+      transform: translateY( 4.458rem );
+    }
+
+    &__goBack {
+      margin-bottom: 2.79rem;
+      margin-left: 2rem;
+
+      .Button {
+        align-items: center;
+        background: transparent;
+        display: flex;
+        flex-wrap: nowrap;
+        height: unset;
+        padding: 0;
+        width: unset;
+
+        &::after {
+          content: unset;
+        }
+
+        &__icon {
+          margin-right: 0.75rem;
+        }
+      }
+
+      span {
+        position: relative;
+        top: 0.15rem;
+      }
+
+      svg {
+        display: block;
+        margin-left: auto;
+        margin-right: 5.625rem;
+      }
+    }
+  }
+
+  &__synopsis {
+    margin-left: 2rem;
+  }
+
+  &__liveSynopsis {
+    height: 18.35rem;
+    margin-left: 3.95rem;
+
+    .Button--focused {
+      background-color: map-get( $pink, '100' );
+      z-index: -1;
+    }
+
+    .Button::after {
+      background-color: map-get( $pink, '100' );
+      border: 0.1875rem solid $white;
+      z-index: -1;
+    }
+
+    .Button--icon {
+      color: $white !important;
+    }
+
+    .Button--secondary {
+      svg path {
+        fill: $white !important;
+      }
+    }
+
+    .live-pi-description {
+      height: auto;
+      margin-top: 1.25rem;
+      width: 38.91rem;
+    }
+
+    .live-pi-distroInfo {
+      align-items: center;
+      display: flex;
+      margin-bottom: -1rem;
+      margin-top: 2rem;
+      width: 20rem;
+
+      .Text {
+        margin-right: 0.5rem;
+        text-align: left;
+      }
+
+      .Image {
+        bottom: 0.2rem;
+        height: 1.065rem;
+        position: relative;
+        width: 3.75rem;
+      }
+    }
+  }
+
+  &__title {
+    padding-top: 0.5rem;
+    position: relative;
+  }
+
+  &__description {
+    position: relative;
+    top: 1rem;
+  }
+
+  &__languageList {
+    position: relative;
+    top: 1.3125rem;
+
+    .LanguageList__item {
+      color: #fff;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    // margin-bottom: 0.6rem;
+    margin-top: 0.625rem;
+    padding: 1.375rem 0;
+    position: relative;
+    z-index: 1;
+
+    span {
+      line-height: 1.25rem;
+    }
+
+    .Button {
+      align-items: center;
+      background-color: unset;
+      display: flex;
+      margin-right: 1rem;
+      padding: 0 3.25rem;
+
+      &--secondary {
+        color: #f3cbe3;
+
+        svg {
+          path {
+            fill: #f3cbe3;
+          }
+        }
+      }
+
+      &--focused {
+        background-color: map-get( $pink, '100' );
+        color: $white;
+
+        svg {
+          path {
+            fill: $white;
+          }
+        }
+      }
+
+      &--focusedPrimeEntitledCta {
+        background-color: map-get( $bingeBlue, '50' );
+        color: $white;
+      }
+
+      &--play {
+        > svg {
+          height: 1.25rem;
+          margin-right: 0.85rem;
+          width: 1.25rem;
+        }
+      }
+
+      &--mybingelist {
+        svg {
+          height: 1.25rem;
+          margin-right: 0.85rem;
+          width: 1.25rem;
+        }
+      }
+    }
+  }
+
+  &__seriescontent {
+    display: flex;
+
+    .Button {
+      align-self: center;
+      margin-left: auto;
+
+      &--focused {
+        background-color: map-get( $pink, '100' );
+      }
+
+      &--viewAllEpisodes {
+        background: linear-gradient( 180deg, #020005 3.92%, rgba( 2, 0, 5, 0.8 ) 5.19%, rgba( 2, 0, 5, 0 ) 100% );
+        margin-bottom: 0.2rem;
+        margin-right: 5.6875rem;
+        padding: 0;
+        width: 12.9375rem;
+
+        &.Button--focused {
+          background-color: map-get( $pink, '100' );
+          background-image: none;
+        }
+      }
+    }
+  }
+
+  &__media {
+    display: flex;
+    overflow: hidden;
+    width: 66.25rem;
+  }
+
+  &__seasonContainer {
+    height: 100vh;
+    // margin-left: 2rem;
+
+    > div {
+      margin-left: 2rem;
+    }
+
+    .Synopsis__contentVisible {
+      margin-top: -15rem;
+      position: relative;
+      z-index: 100000;
+
+      .BannerComponent {
+        background-color: $black;
+      }
+    }
+
+    .Synopsis__contentNotVisible {
+      display: none;
+    }
+
+    .Synopsis {
+      margin-left: unset;
+
+      &__content {
+        text-align: center;
+
+        &--title {
+          position: relative;
+          top: 1rem;
+        }
+      }
+    }
+  }
+
+  &__seasonContainerwithOutSynapsis {
+    height: 100vh;
+    margin-top: -4rem;
+
+    > div {
+      margin-left: 2rem;
+    }
+
+    .Synopsis__contentVisible {
+      margin-top: -18rem;
+      position: relative;
+      z-index: 100000;
+
+      .BannerComponent {
+        background-color: $black;
+      }
+    }
+
+    .Synopsis__contentNotVisible {
+      display: none;
+    }
+
+    .Synopsis {
+      margin-left: unset;
+
+      &__content {
+        text-align: center;
+
+        &--title {
+          position: relative;
+          top: 2rem;
+        }
+      }
+    }
+  }
+
+  &__seasons {
+    padding-top: 0.1rem;
+    position: relative;
+
+    &--withSynopsis {
+      position: relative;
+      z-index: 10000000;
+    }
+
+    .MediaCard__playButton {
+      /* Commented due to UI/UX Portrait & Landscape changes */
+      // top: 2.5rem;
+      top: 4.5rem;
+    }
+  }
+
+  &__seasonsTab {
+    height: 14.25rem;
+    // margin-bottom: 6rem; // commented for future refrence bug TPSLS-983
+    padding-top: 0.2rem;
+  }
+
+  &__seasonsSynopsisBefore {
+    margin-top: 2rem;
+    position: relative;
+    top: 0.2rem;
+    // transform: translateY( -4.5rem ); // commented for future refrence bug TPSLS-983
+
+    p {
+      position: relative;
+      // top: 0.625rem;
+    }
+  }
+
+  &__seasonsSynopsisAfter2 {
+    position: relative;
+    z-index: 100000;
+
+    .MediaCarousel {
+      margin: 2rem 0 0 0;
+    }
+
+    p {
+      position: relative;
+      // top: 0.625rem;
+    }
+  }
+
+  &__notifications {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    width: 100%;
+
+    .Notifications svg {
+      padding-right: 1.5rem;
+      width: 3.875rem;
+    }
+  }
+
+  .MediaCardWrapper {
+    width: min-content;
+
+    .MediaCard {
+      margin-bottom: 1rem;
+    }
+
+    .MediaCard--title {
+      height: 2.813rem;
+
+      // .Text {
+      //   // padding-left: 0.3rem;
+      //   // width: 14.188rem;
+      // } // Commenting this to fix TPSLS-1130-ellipses fix
+    }
+  }
+
+  &__liveContent {
+    align-items: center;
+    background-color: map-get( $purple, '100' );
+    border-radius: 0.125rem;
+    display: flex;
+    flex-direction: row;
+    padding: 0.2rem;
+    width: max-content;
+
+    div {
+      background-color: #e56c6c;
+      border-radius: 0.33rem;
+      height: 0.66rem;
+      width: 0.66rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.5rem;
+      margin-left: 0.25rem;
+      margin-right: 0.25rem;
+      position: relative;
+      top: 0.1rem;
+    }
+  }
+
+  &__liveRails {
+    margin-left: 2rem;
+    margin-top: 3.915rem;
+  }
+
+  .LiveMediaCard {
+    border-radius: 0.7rem;
+  }
+
+  &__applebtn {
+    align-items: center;
+    background: linear-gradient( 270deg, #ffa800 0%, #fff389 45.31%, #ffa800 100% );
+    -webkit-background-clip: text;
+    border: 0.125rem solid #ffa800;
+    border-radius: 1.375rem;
+    color: #ffa800;
+    display: flex;
+    font-style: normal;
+    font-weight: 600;
+    justify-content: space-around;
+    line-height: 0.66rem;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    width: 18rem;
+
+    &.Button--focused {
+      background: $white;
+      -webkit-background-clip: text;
+      // background-color: transparent;
+      border: none;
+      -webkit-text-fill-color: $white;
+    }
+
+    &.Button::after {
+      background-color: #e10092;
+      border: 0.1875rem solid $white;
+      z-index: -1;
+    }
+  }
+
+  &__infiniteScroll {
+    height: 100vh !important;
+  }
+}
+
+html {
+  background-color: map-get( $bingeBlue, '125' );
+}

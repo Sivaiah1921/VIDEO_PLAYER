@@ -1,0 +1,184 @@
+@import '../../../styles/src/variables';
+
+.AlphanumericKeyboard {
+  $parent: &;
+
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  font-size: 2em;
+  justify-content: center;
+  padding: 0.2em;
+  width: fit-content;
+
+  &__clearBtn {
+    .Button {
+      padding-bottom: unset;
+    }
+  }
+
+  &__btnCapsArrow {
+    padding: unset;
+
+    .Button__icon--withIconRight {
+      margin-left: unset;
+    }
+
+    &:hover {
+      path {
+        fill: $white;
+      }
+    }
+  }
+
+  .Button {
+    background-color: unset;
+    margin-bottom: 5px;
+    margin-right: 1rem;
+
+    &--focused {
+      background-color: map-get( $bingeBlue, '125' );
+      border: 0;
+      color: $white;
+
+      svg path {
+        fill: $white;
+      }
+    }
+
+    svg {
+      height: 1.5rem;
+      margin-right: 0.75rem;
+      position: relative;
+      top: 0.25rem;
+      width: 1.5rem;
+    }
+  }
+
+  &__row {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-bottom: 2rem;
+    position: relative;
+    width: 32rem;
+
+    &.lastItem {
+      margin-bottom: 2.3125rem;
+    }
+
+    &.buttonRow {
+      justify-content: center;
+      margin-bottom: unset;
+
+      .Button {
+        align-items: center;
+        display: flex;
+
+        svg {
+          left: 0;
+          margin-right: 0.85rem;
+          position: relative;
+          top: 0;
+        }
+
+        span {
+          font-weight: 600;
+          line-height: 1.25rem;
+        }
+      }
+    }
+  }
+
+  &__title {
+    display: flex;
+  }
+
+  &__key {
+    background-color: transparent;
+    color: map-get( $bingeBlue, '50' );
+    font-size: map-get( $fontsizes, 'p24' );
+    font-style: normal;
+    font-weight: 400;
+    height: 1.9375em;
+    justify-content: center;
+    min-width: unset;
+    outline: 0;
+    padding: 0.1875rem;
+    width: 2.125em;
+
+    &.Button {
+      &::after {
+        border-radius: 50%;
+      }
+
+      &:nth-child(41) {
+        &::after {
+          border-radius: 1.375rem;
+          height: 3rem;
+          left: -3px;
+          width: 4rem;
+        }
+      }
+    }
+
+    &--withFocus {
+      background-color: map-get( $bingeBlue, '125' );
+      border: 0;
+      border-radius: 50%;
+      color: $white;
+    }
+  }
+
+  &__key-action {
+    background-color: transparent;
+    border: 0;
+    border-radius: 10em;
+    height: 5em;
+    outline: 0;
+    padding: 1em;
+    width: 5em;
+  }
+
+  &__key-action:hover {
+    background-color: map-get( $bingeBlue, '125' );
+  }
+
+  &__deleteBtnFocus {
+    border: 0.187rem solid $white;
+    border-radius: unset;
+  }
+
+  &__deleteBtn,
+  &__spaceBtn,
+  &__clearBtn {
+    background-color: unset;
+
+    &.Button--focused {
+      background-color: map-get( $pink, '100' );
+    }
+
+    .Button__icon--withIconLeft {
+      margin-right: 0;
+    }
+
+    .Button__insideContentLabel {
+      font-weight: 600;
+      line-height: 1.25rem;
+    }
+  }
+
+  &__specialKeyboard {
+    #{ $parent }__key.Button:nth-child(34)::after {
+      border-radius: 1.375rem;
+      height: 3rem;
+      left: -3px;
+      width: 4rem;
+    }
+  }
+}
+
+.AlphanumericKeyboard__row .Button:focus {
+  outline: none !important;
+}

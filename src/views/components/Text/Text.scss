@@ -1,0 +1,502 @@
+@import '../../../styles/src/variables';
+@import '../../../styles/src/mixins';
+
+.Text {
+  font-family: map-get( $fontfamilies, 'VoltePlay' );
+  margin: 0;
+
+  strong,
+  b {
+    font-weight: map-get( $fontweights, 'bold' );
+  }
+
+  &--body-1 {
+    @include body-1;
+  }
+
+  &--body-2 {
+    @include body-2;
+  }
+
+  &--body-3 {
+    @include body-3;
+  }
+
+  &--body-4 {
+    @include body-4;
+  }
+
+  &--body-5 {
+    @include body-5;
+  }
+
+  &--title-1 {
+    @include title-1;
+  }
+
+  &--title-2 {
+    @include title-2;
+  }
+
+  &--title-3 {
+    @include title-3;
+  }
+
+  &--title-4 {
+    @include title-4;
+  }
+
+  &--subtitle-1 {
+    @include subtitle-1;
+  }
+
+  &--subtitle-2 {
+    @include subtitle-2;
+  }
+
+  &--subtitle-3 {
+    @include subtitle-3;
+  }
+
+  &--subtitle-4 {
+    @include subtitle-4;
+  }
+
+  &--header-1 {
+    @include header-1;
+  }
+
+  &--numberInput-2 {
+    @include numberInput-2;
+  }
+
+  &--header-2 {
+    @include header-2;
+  }
+
+  &--header-3 {
+    @include header-3;
+  }
+
+  &--header-4 {
+    @include header-4;
+  }
+
+  &--header-5 {
+    @include header-5;
+  }
+
+  &--header-6 {
+    @include header-6;
+  }
+
+  &--button {
+    @include button;
+  }
+
+  &--button-compact {
+    @include button-filter;
+  }
+
+  &--rail-title {
+    @include rail-title;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--white {
+    color: $white;
+  }
+
+  &--black {
+    color: $black;
+  }
+
+  &--red {
+    color: $red;
+  }
+
+  &--railTitle {
+    color: $railTitle;
+  }
+
+  &--railSubHeading {
+    color: $railSubHeading;
+  }
+
+  &--neutral-25 {
+    color: map-get( $neutral, '25' );
+  }
+
+  &--neutral-50 {
+    color: map-get( $neutral, '50' );
+  }
+
+  &--neutral-100 {
+    color: map-get( $neutral, '100' );
+  }
+
+  &--neutral-200 {
+    color: map-get( $neutral, '200' );
+  }
+
+  &--neutral-300 {
+    color: map-get( $neutral, '300' );
+  }
+
+  &--neutral-400 {
+    color: map-get( $neutral, '400' );
+  }
+
+  &--neutral-500 {
+    color: map-get( $neutral, '500' );
+  }
+
+  &--neutral-600 {
+    color: map-get( $neutral, '600' );
+  }
+
+  &--neutral-700 {
+    color: map-get( $neutral, '700' );
+  }
+
+  &--neutral-800 {
+    color: map-get( $neutral, '800' );
+  }
+
+  &--neutral-900 {
+    color: map-get( $neutral, '900' );
+  }
+
+  &--pink-100 {
+    color: map-get( $pink, '100' );
+  }
+
+  &--pink-75 {
+    color: map-get( $pink, '75' );
+  }
+
+  &--pink-50 {
+    color: map-get( $pink, '50' );
+  }
+
+  &--pink-25 {
+    color: map-get( $pink, '25' );
+  }
+
+  &--pink-10 {
+    color: map-get( $pink, '10' );
+  }
+
+  &--pink-5 {
+    color: map-get( $pink, '5' );
+  }
+
+  &--bingeBlue-100 {
+    color: map-get( $bingeBlue, '100' );
+  }
+
+  &--bingeBlue-75 {
+    color: map-get( $bingeBlue, '75' );
+  }
+
+  &--bingeBlue-50 {
+    color: map-get( $bingeBlue, '50' );
+  }
+
+  &--bingeBlue-25 {
+    color: map-get( $bingeBlue, '25' );
+  }
+
+  &--bingeBlue-10 {
+    color: map-get( $bingeBlue, '10' );
+  }
+
+  &--bingeBlue-5 {
+    color: map-get( $bingeBlue, '5' );
+  }
+
+  &--purple-100 {
+    color: map-get( $purple, '100' );
+  }
+
+  &--purple-75 {
+    color: map-get( $purple, '75' );
+  }
+
+  &--purple-50 {
+    color: map-get( $purple, '50' );
+  }
+
+  &--purple-25 {
+    color: map-get( $purple, '25' );
+  }
+
+  &--purple-10 {
+    color: map-get( $purple, '10' );
+  }
+
+  &--purple-5 {
+    color: map-get( $purple, '5' );
+  }
+
+  &--error-600 {
+    color: map-get( $error, '600' );
+  }
+
+  &--purple-40 {
+    color: map-get( $purple, '40' );
+  }
+
+  &--italic {
+    @include fontStyleItalic;
+  }
+
+  &--underline {
+    @include textDecorationUnderline;
+  }
+
+  &--line-through {
+    @include textDecorationLineThrough;
+  }
+
+  &--parental-subtitle-1 {
+    @include parental-subtitle-1;
+  }
+
+  &--parental-subtitle-2 {
+    @include parental-subtitle-2;
+  }
+
+  &--parental-subtitle-3 {
+    @include parental-subtitle-3;
+  }
+
+  &--bingeList-subtitle {
+    @include bingeList-subtitle;
+  }
+
+  &--autoPlay-title {
+    @include autoPlay-title;
+  }
+
+  &--autoPlay-subtitle {
+    @include autoPlay-subtitle;
+  }
+
+  &--languageTitle {
+    @include languageTitle;
+  }
+
+  &--termsOfUse-subtitle {
+    @include termsOfUse-subtitle;
+  }
+
+  &--planCard-subtitle {
+    @include planCard-subtitle;
+  }
+
+  &--seriesDetail-title {
+    @include seriesDetail-title;
+  }
+
+  &--seriesDetail-subtitle {
+    @include seriesDetail-subtitle;
+  }
+
+  &--numberInput {
+    @include numberInput;
+  }
+
+  &--age-limit {
+    @include age-limit;
+  }
+
+  &--pi-title {
+    @include pi-title;
+  }
+
+  &--pi-description {
+    @include pi-description;
+  }
+
+  &--inputText {
+    @include inputText;
+  }
+
+  &--buttonInputText {
+    @include buttonInputText;
+  }
+
+  &--rail-heading {
+    @include rail-heading;
+  }
+
+  &--rail-sub-heading {
+    @include rail-sub-heading;
+  }
+
+  &--seasionTabText-2 {
+    @include seasionTabText-2;
+  }
+
+  &--year-category {
+    @include year-category;
+  }
+
+  &--pi-media-carousel-heading {
+    @include pi-media-carousel-heading;
+  }
+
+  &--account-cards-text {
+    @include account-cards-text;
+  }
+
+  &--edit-profile-heading {
+    @include edit-profile-heading;
+  }
+
+  &--crown-subscription-text {
+    @include crown-subscription-text;
+  }
+
+  &--faq-heading {
+    @include faq-heading;
+  }
+
+  &--lang-text {
+    @include lang-text;
+  }
+
+  &--header-genere {
+    @include header-genere;
+  }
+
+  &--appleTv-header {
+    @include appleTv-header;
+  }
+
+  &--appleTv-content {
+    @include appleTv-content;
+  }
+
+  &--prime-modal-title {
+    @include prime-modal-title;
+  }
+
+  &--prime-modal-subTitle {
+    @include prime-modal-subTitle;
+  }
+
+  &--provider-modal-header {
+    @include provider-modal-header;
+  }
+
+  &--provider-modal-descrption-steps {
+    @include provider-modal-descrption-steps;
+  }
+
+  &--provider-modal-descrption-details {
+    @include provider-modal-descrption-details;
+  }
+
+  &--promo-text {
+    @include promo-text;
+  }
+
+  &--flexi-heading {
+    @include flexi-heading;
+  }
+
+  &--flexi-subHeading {
+    @include flexi-subHeading;
+  }
+
+  &--prime-header {
+    @include prime-header;
+  }
+
+  &--prime-qrCode-header {
+    @include prime-qrCode-header;
+  }
+
+  &--prime-qrCode-subHeader {
+    @include prime-qrCode-subHeader;
+  }
+
+  &--prime-existinguser-header {
+    @include prime-existinguser-header;
+  }
+
+  &--prime-existinguser-subHeader {
+    @include prime-existinguser-subHeader;
+  }
+
+  &--prime-lite-text {
+    @include prime-lite-text;
+  }
+
+  &--prime-benefits-text {
+    @include prime-benefits-text;
+  }
+
+  &--pi-distroText {
+    @include pi-distroText;
+  }
+
+  &--apple-header {
+    @include apple-header;
+  }
+
+  &--apple-modal-title {
+    @include prime-modal-title;
+  }
+
+  &--apple-modal-subTitle {
+    @include apple-modal-subTitle;
+  }
+
+  &--prime-banner-text {
+    @include prime-banner-text;
+  }
+
+  &--prime-divider {
+    @include prime-divider;
+  }
+
+  &--deviceManagementSubText {
+    @include deviceManagementSubText;
+  }
+
+  &--deviceManagementPrimaryText {
+    @include deviceManagementPrimaryText;
+  }
+
+  &--complimentary-apps-text {
+    @include complimentary-apps-text;
+  }
+
+  &--complimentary-apps-title {
+    @include complimentary-apps-title;
+  }
+
+  &--focus-color {
+    color: white !important;
+  }
+
+  &--prime-heroBanner-title {
+    @include prime-heroBanner-title;
+  }
+
+  @include bottomSpacer();
+}

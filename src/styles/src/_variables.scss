@@ -1,0 +1,92 @@
+@import './_colors.module';
+@import './_icon';
+@import './_typography-mixins';
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+$narrow-content-max: 580px;
+
+
+$resolutionMin1200: (min-width 1200px);
+$resolutionMax1199: (max-width 1199px);
+$resolutionMax1000:(max-width 1000px);
+$resolutionMin1000:(min-width 1000px);
+$resolutionMin1001:(min-width 1001px);
+$resolutionMin980: (min-width 980px);
+$resolutionMax979: (max-width 979px);
+$resolution979-768: (width 979px 768px);
+$resolution1199-768: (width 1199px 768px);
+$resolution360-320: (width 360px 320px);
+$resolutionMax767: (max-width 767px);
+$resolutionMin767: (min-width 767px);
+$resolutionMax320: (max-width 320px);
+
+$border-radius:               5px;
+
+// Components
+
+// Button
+$button-radius:               $border-radius;
+$button-padding-large:        0 24px;
+$button-padding-medium:       0 20px;
+$button-padding-small:        0 16px;
+
+//Modal
+$modal-shadow:                1px 3px 10px -3px rgba($black, 0.1), 0 0 20px 5px rgba($black, 0.1);
+$modal-overlay:               rgba($black, .40);
+// Modal/Dialog
+$backdrop-color:              rgba($black, 0.1);
+$backdrop-color-modal:        rgba(2, 0, 5, 0.75);
+$backdrop-color-activationPopUpModal: #0303031a;
+$background:                  linear-gradient(146.32deg, #020005 58.81%, #220046 100%);
+//Desktop leftNav section width
+$desktop-leftnav-basewidth:   188px;
+$desktop-leftnav-panelwidth:  222px;
+$episodeRailWelcome: 22.22rem;
+
+
+/** 
+ * Image/Video definitions 
+ */
+$image-ratios: (
+  'base': 100%,
+  'v-5-4': 125%,
+  'v-16-9': 178%,
+  'h-5-4': 80%,
+  'h-16-9': 56%
+);
+
+/** 
+ * Animations and motion definitions 
+ */ 
+$motions: (
+  'anim-time-base': 0.25s
+);
+
+/**
+ * List Mixin
+ */
+@mixin list(){
+  font-family: map-get( $fontfamilies , 'VoltePlay' );
+  font-size: map-get( $fontsizes, 'base' );
+  font-weight: map-get( $fontweights, 'normal' );
+  line-height: map-get( $lineheights, 'em2' );
+  letter-spacing: map-get( $letterspacing, 'p_25' );
+}
+
+@mixin focus-previously-rmn(){
+  width: 30rem;
+}
+
+@mixin not-focus-previously-rmn(){
+  width: 25rem;
+}

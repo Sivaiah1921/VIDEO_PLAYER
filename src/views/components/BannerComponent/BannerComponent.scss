@@ -1,0 +1,101 @@
+@import '../../../styles/src/variables';
+
+.BannerComponent {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+
+  &__bbg .Image img {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+  }
+
+  &__backgroundImg {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    .Image {
+      height: 34.3125rem;
+      margin-left: 30.2rem;
+      margin-right: 0;
+      width: 60.9375rem;
+    }
+  }
+
+  &__backgroundImgPI {
+    left: 0;
+    top: 0;
+    width: 100%;
+
+    .Image {
+      height: 34.3125rem;
+      margin-left: 20.2rem;
+      margin-right: 0;
+      width: 60.9375rem;
+    }
+  }
+
+  &__synopsisGradient {
+    height: 30rem;
+
+    .Image img {
+      height: 24.333rem;
+      width: 43.333rem;
+    }
+  }
+
+  &__catalogPartner {
+    position: unset;
+
+    .Image img {
+      width: 46rem;
+    }
+  }
+
+  &__trailor-banner {
+    transform: translate( 28%, 0% );
+
+    .page_player {
+      height: 27rem;
+      position: unset;
+      width: 54rem;
+
+      .Loader .Image img {
+        left: 7rem;
+        position: relative;
+        top: 12rem;
+      }
+    }
+  }
+
+  &__LinearGradient1 {
+    background: linear-gradient( to right, #020005 42%, rgba( 2, 0, 5, 0 ) 100% );
+    height: 34.3125rem;
+    left: 20.125rem; //px is require here
+    position: absolute;
+    top: 0;
+    width: 23.1875rem;
+  }
+
+  &__LinearGradient2 {
+    background: linear-gradient( 180deg, rgba( 2, 0, 5, 0.0001 ) 50%, map-get( $bingeBlue, '125' ) 100% );
+    height: 100%;
+    position: absolute;
+    width: 100%;
+  }
+
+  &__gradientSynopsis1 {
+    background: linear-gradient( 90deg, #020005 0%, rgba( 2, 0, 5, 0 ) 100% );
+    height: 34.3125rem;
+    left: 274px; //px is require here
+    position: absolute;
+    top: 0;
+    width: 23.1875rem;
+  }
+}

@@ -1,0 +1,180 @@
+@import '../../../styles/src/variables';
+
+.ContactUsPage {
+  height: 100vh;
+  position: relative;
+  z-index: 2;
+
+  &__rootSection {
+    display: flex;
+  }
+
+  &__leftSection {
+    width: 55%;
+  }
+
+  &__rightSection {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+
+    p {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      text-align: center;
+    }
+  }
+
+  &__qrCode {
+    margin-bottom: 1.25rem;
+  }
+
+  &__title {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2rem;
+    margin-left: 5.625rem;
+    padding: 0;
+
+    p.Text {
+      line-height: 1;
+    }
+
+    svg {
+      margin-right: 1.417rem;
+    }
+  }
+
+  &__infoText {
+    left: 9rem;
+    position: relative;
+
+    p {
+      line-height: 120%;
+    }
+  }
+
+  &__email {
+    margin-top: 1rem;
+  }
+
+  &__email,
+  &__telephone {
+    display: flex;
+    justify-content: flex-start;
+
+    .Text:nth-child(1) {
+      margin-right: 0.5rem;
+    }
+  }
+
+  &__helpSection {
+    margin-left: 9rem;
+    position: relative;
+
+    p {
+      line-height: 120%;
+    }
+
+    &--text {
+      color: map-get( $purple, '25' );
+      margin: 1.25rem 0;
+
+      p > span {
+        color: $white;
+      }
+
+      p {
+        line-height: 2rem;
+      }
+    }
+
+    &--textTop {
+      p > u {
+        color: white;
+      }
+    }
+
+    &--textBottom {
+      margin-top: 2rem;
+    }
+
+    &--button {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 17.5rem;
+
+      .Button--focused {
+        background-color: #e10092;
+      }
+
+      .Button--focused::after {
+        border: none;
+      }
+    }
+
+    &--buttonTerms {
+      margin-top: 0.5rem;
+    }
+
+    &--buttonFAQ,
+    &--buttonTerms {
+      align-items: center;
+      background-color: transparent;
+      border: 0.1875rem solid #fff;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    margin-bottom: 3.0625rem;
+    padding-top: 2.334rem;
+    position: relative;
+
+    .Button {
+      align-items: center;
+      background: unset;
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      margin-left: 4rem;
+      padding: 0;
+      width: unset;
+      &::after { content: unset; }
+
+      &__icon {
+        margin-right: 0.75rem;
+      }
+
+      &--focused {
+        color: $white;
+
+        path {
+          fill: $white;
+        }
+      }
+    }
+
+    svg {
+      display: block;
+      margin-left: auto;
+      margin-right: 5.625rem;
+    }
+  }
+
+  &__background {
+    background: linear-gradient( 146.32deg, #020005 0%, #220046 100% );
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+  }
+}

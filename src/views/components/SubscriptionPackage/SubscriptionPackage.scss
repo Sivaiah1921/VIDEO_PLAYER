@@ -1,0 +1,214 @@
+@import '../../../styles/src/variables';
+
+.SubscriptionPackage {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 3.115rem;
+  padding-top: 2.4rem;
+  width: 73.5rem;
+
+  &__primeMarketingAssetInfo {
+    align-items: center;
+    background-color: map-get( $purple, '25' );
+    display: flex;
+    position: relative;
+    top: 1.5rem;
+    width: 35.791rem;
+    z-index: 9999;
+
+    .Image img {
+      height: 2.1667rem;
+      margin: 0.334rem 0.479rem 0.334rem 0.667rem;
+      width: 2.1667rem;
+    }
+
+    .Text {
+      font-weight: 600;
+      line-height: 120%;
+      text-align: center;
+    }
+  }
+
+  &__topSection {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: unset;
+    margin-left: 1.8rem;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+
+    .Button {
+      align-items: center;
+      background-color: transparent;
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      margin-left: 0;
+      padding: 0;
+      width: unset;
+
+      &::after {
+        content: unset;
+      }
+
+      &__icon {
+        margin-right: 0.75rem;
+        padding: 0;
+      }
+    }
+
+    svg {
+      display: block;
+      margin-left: auto;
+    }
+  }
+
+  &__header {
+    margin-bottom: 1.25rem;
+    position: relative;
+    z-index: 9;
+
+    &--title {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2rem;
+      width: 100%;
+
+      .Text {
+        font-size: 2.083rem;
+      }
+    }
+
+    &--sections {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    &--section1 {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+
+      .Image img {
+        height: 2rem;
+        margin-bottom: 0.5rem;
+        width: auto;
+      }
+    }
+
+    &--section2 {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+
+      .Image img {
+        height: 2rem;
+        margin-bottom: 0.5rem;
+        width: auto;
+      }
+    }
+
+    &--section3 {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+
+      .Image img {
+        height: 2rem;
+        margin-bottom: 0.5rem;
+        width: auto;
+      }
+    }
+
+    &--divider {
+      background: #efe8fb;
+      height: 4.625rem;
+      margin-left: 0.75rem;
+      margin-right: 0.75rem;
+      width: 1px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    overflow-x: scroll;
+    padding: 3rem;
+
+    .PackageCard {
+      justify-content: unset;
+      margin-right: 1.25rem;
+      width: unset;
+
+      &:last-child {
+        margin-right: 0;
+        padding-right: 3rem;
+      }
+
+      &__content {
+        height: 100%;
+        // padding-bottom: 0;
+        // pointer-events: none;
+        width: 35.625rem;
+
+        .Image img {
+          height: 3.7rem !important;
+          width: 3.7rem !important;
+        }
+      }
+
+      &__bottomSection--addOn {
+        .Image img {
+          height: 2.25rem !important;
+          width: 20.584rem !important;
+        }
+      }
+
+      &__flexiContent {
+        .Image img {
+          border-radius: 26px;
+          height: 100% !important;
+          width: 100% !important;
+        }
+      }
+
+      &__multiapps {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        grid-column-gap: unset;
+        height: unset;
+        margin-bottom: 0.25rem;
+      }
+    }
+
+    .AppMediaCard {
+      height: 3.75rem !important;
+      margin: unset;
+      margin-bottom: 0.72rem;
+      margin-right: 0.41rem !important;
+      pointer-events: none;
+      width: 3.75rem !important;
+
+      @media only screen and (width: 1280px) {
+        margin-right: 0.41rem !important;
+      }
+    }
+
+    .AppMediaCard:nth-child(8n) {
+      margin-right: 0 !important;
+    }
+  }
+
+  &__contentCardTwo {
+    justify-content: space-evenly;
+  }
+
+  &__contentCardOne {
+    justify-content: center;
+  }
+}

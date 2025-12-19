@@ -1,0 +1,126 @@
+@import '../../../styles/src/variables';
+
+.SelectDeviceCard {
+  align-items: center;
+  background-color: map-get( $bingeBlue, '125' );
+  background-image: none;
+  border-radius: 0.625rem;
+  display: flex;
+  flex-direction: row;
+  padding: 0.906rem 1.562rem;
+  position: relative;
+
+  p {
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    font-family: 'Volte Play', system-ui;
+    -webkit-line-clamp: 1;
+    line-height: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre;
+    width: 85%;
+  }
+
+  &__Icon {
+    height: 1.5rem;
+    margin-right: 0.875rem;
+    width: 1.5rem;
+  }
+
+  &__ArrowIcon {
+    margin-left: auto;
+    position: relative;
+  }
+
+  &::after {
+    border: 0.083rem solid map-get( $bingeBlue, '75' );
+    border-radius: 0.625rem;
+    bottom: 0;
+    content: '';
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: 50% 50%;
+    z-index: 99999;
+  }
+
+  &:hover::after {
+    border: 0.125rem solid $white;
+  }
+
+  &--withFocus {
+    border: 0.1875rem  solid $white;
+    transform: scale( 1.04 );
+
+    &::after {
+      border: 0;
+    }
+  }
+
+  &__topSection {
+    align-items: center;
+    display: flex;
+    width: 100%;
+
+    .Image img {
+      height: 1.5rem;
+      margin-right: 0.875rem;
+      width: 1.5rem;
+    }
+
+    .Text--body-2 {
+      display: inline-block;
+      font-weight: 600;
+      line-height: 1.625rem;
+      margin-right: 0.667rem;
+    }
+
+    .Text--deviceManagementSubText {
+      color: map-get( $purple, '40' );
+      width: 5.6rem;
+    }
+
+    .Checkbox .Checkbox__normalCheckBox {
+      background-color: map-get( $bingeBlue, '75' );
+    }
+  }
+
+  &__moddleSection {
+    margin-bottom: 0.667rem;
+
+    .Text {
+      color: map-get( $purple, '40' );
+    }
+
+    .Text--deviceManagementSubText {
+      width: 22.5rem;
+    }
+
+    &--span {
+      font-weight: 600;
+    }
+  }
+
+  &__primaryDeviceSection {
+    .Text {
+      color: map-get( $purple, '40' );
+      width: 22rem;
+    }
+  }
+
+  &__withPrimaryDevice {
+    height: 7.291rem !important;
+  }
+
+  &__withCurrentDevice {
+    .SelectDeviceCard__topSection .Text--body-2 {
+      width: 13.458rem !important;
+    }
+
+    .SelectDeviceCard__topSection .Text--deviceManagementSubText {
+      text-overflow: unset !important;
+    }
+  }
+}

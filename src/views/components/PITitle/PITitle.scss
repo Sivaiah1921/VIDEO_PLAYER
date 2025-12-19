@@ -1,0 +1,227 @@
+
+@import '../../../styles/src/variables';
+
+.piTitleCard {
+  display: flex;
+  letter-spacing: 1.5px;
+  // width: 70rem;
+  // white-space: nowrap;
+  // overflow: hidden;
+  // text-overflow: ellipsis;
+
+  &__leftPanel {
+    align-items: flex-start;
+    display: flex;
+    margin-right: 1rem;
+    position: relative;
+    top: 0.2rem;
+
+    @media only screen and (min-width: 1920px) {
+      &--live {
+        left: 0.5833rem;
+        position: relative;
+      }
+    }
+
+    @media only screen and (min-width: 1920px) {
+      margin-right: 2rem;
+    }
+
+    .Image {
+      overflow: hidden;
+
+      @media only screen and (min-width: 1920px) {
+        align-self: flex-start;
+        margin-top: 0.68rem;
+        transform: scale( 1.5 );
+      }
+
+      img {
+        border-radius: 100%;
+        display: block;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &__rightPanel {
+    margin-right: 1rem;
+
+    &__rightTopPanel {
+      min-width: 34.56rem;
+      width: auto;
+
+      &__homePageTopPanel {
+        .Text {
+          -webkit-line-clamp: 1 !important;
+        }
+      }
+
+      .Text {
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        font-size: 2.083rem;
+        letter-spacing: 0.4px;
+        -webkit-line-clamp: 2;
+        line-height: 2.5rem;
+        overflow: hidden;
+        text-align: left;
+      }
+
+      span {
+        font-size: 1.25rem;
+        letter-spacing: 0.48px;
+      }
+    }
+
+    &__rightTopPanelLive {
+      width: unset;
+    }
+
+    &__expiry {
+      span {
+        color: #e56c6c;
+      }
+    }
+
+    &__rightBottomPanel {
+      align-items: center;
+      display: flex;
+      height: 2.2rem;
+      justify-content: space-between;
+      width: max-content;
+
+      .Text {
+        line-height: 1.25rem;
+      }
+
+      p {
+        margin-right: 0.2rem;
+
+        .Text {
+          font-size: 1.25rem;
+          font-weight: 500;
+        }
+      }
+
+      &__ageLimit {
+        align-items: center;
+        display: flex;
+        font-weight: 500;
+        // .ageLimitDot {
+        //   color: $white;
+        //   content: '';
+        //   display: inline-block;
+        //   font-size: 1.2rem;
+        //   margin-right: 0.2rem;
+
+        //   &::before {
+        //     content: '•';
+        //   }
+        // }
+
+        p {
+          border: 0.0625rem solid $white;
+          border-radius: 0.1875rem;
+          // bottom: 0.3125rem;
+          line-height: 1.5rem !important;
+          padding: 0.1875rem 0.375rem;
+        }
+      }
+
+      &__time {
+        margin-left: 0.2rem;
+
+        p::before {
+          content: '|';
+          margin-right: 0.2rem;
+        }
+
+        p::after {
+          content: '';
+          margin-right: 0.2rem;
+        }
+      }
+
+      &__no-age-with-category {
+        p::after {
+          content: '' !important;
+        }
+      }
+
+      &__categories {
+        p::before {
+          content: '|';
+        }
+
+        &--nobar {
+          p::before {
+            content: '' !important;
+          }
+        }
+
+        span {
+          position: relative;
+          top: 0.05rem;
+        }
+
+        span:first-child {
+          margin-left: 0.35rem;
+        }
+
+        span:last-child {
+          margin-right: 0.75rem;
+        }
+      }
+    }
+
+    &__description {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+      letter-spacing: normal;
+      margin-top: 0.2rem;
+      width: 30rem;
+
+      .PlaybackInfo__liveContent {
+        align-items: center;
+        gap: 0.5rem;
+        height: 2rem;
+        justify-content: center;
+        padding: 6px 8px;
+
+        p {
+          align-items: center;
+          display: flex;
+          font-size: 1.25rem;
+          height: 2rem;
+          line-height: 1.5rem;
+        }
+
+        span {
+          font-size: 1.25rem;
+          font-weight: 500;
+        }
+      }
+    }
+
+    &__noContents {
+      visibility: hidden;
+    }
+
+    &__crown {
+      svg {
+        margin-right: 0.5rem;
+        position: unset !important;
+      }
+    }
+
+    &--live {
+      margin-left: 1.16rem;
+    }
+  }
+
+  &__rightMostPanel {
+    margin-right: 0.75rem;
+  }
+}

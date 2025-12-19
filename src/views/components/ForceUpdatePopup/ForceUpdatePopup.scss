@@ -1,0 +1,39 @@
+@import '../../../styles/src/variables';
+
+.ForceUpdatePopup {
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2.083rem;
+
+    .Text--title-3 {
+      line-height: 1.9375rem;
+    }
+
+    .Text--body-3 {
+      padding-top: 0.938rem;
+    }
+  }
+
+  &__button {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+    .Button {
+      border-radius: 1.375rem;
+      height: 2.833rem;
+      justify-content: center;
+      margin-top: 2.5rem;
+      outline: 0;
+      padding: 0.333rem;
+    }
+
+    &--btn1 {
+      .Button {
+        margin-right: 2rem;
+      }
+    }
+  }
+}

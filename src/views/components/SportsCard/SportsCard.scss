@@ -1,0 +1,87 @@
+@import '../../../styles/src/variables';
+
+.SportsCard {
+  flex-direction: column;
+  //   height: 8.33rem;
+  position: relative;
+  transition: transform ease-out;
+  //   width: 8.33rem;
+
+  &__Text {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+  }
+
+  &--withFocus {
+    border: 0.167rem solid $white;
+    border-radius: 0.8rem;
+    margin-left: 0.3rem;
+    margin-right: 0.1rem;
+    padding: 0.25rem;
+    transform: scale( 1.05 );
+  }
+
+  &__TournamentImage {
+    img {
+      border-radius: 0.5rem;
+      height: 8.45rem;
+      width: 15rem;
+    }
+  }
+
+  &__SportsImage {
+    img {
+      border-radius: 0.5rem;
+      height: 8.33rem;
+      width: 8.33rem;
+    }
+  }
+
+  .Link {
+    background-image: unset;
+
+    //   .Text {
+    //     bottom: 2.4rem;
+    //     color: #8e81a1;
+    //     font-size: 1.026rem;
+    //     font-weight: 500;
+    //     line-height: 0rem;
+    //     position: absolute;
+    //   }
+  }
+
+  &__CardGradient {
+    align-items: flex-end;
+    background: linear-gradient( rgba( 2, 0, 5, 0 ) 19.32%, rgb( 34, 0, 70 ) 75.57% );
+    border-bottom-left-radius: .45rem;
+    border-bottom-right-radius: .45rem;
+    bottom: 0;
+    display: flex;
+    height: 6rem;
+    padding: .3125rem;
+    position: absolute;
+    width: 15rem;
+  }
+
+  &__CardTitle {
+    bottom: 0;
+    left: 0.2rem;
+    margin: 0 0 0.3rem 0.3rem;
+    position: absolute;
+
+    span {
+      -webkit-box-orient: vertical;
+      display: -webkit-box;
+      font-family: map-get( $fontfamilies, 'VoltePlay' );
+      font-size: 1.2rem;
+      font-weight: 500;
+      letter-spacing: 0.49px;
+      -webkit-line-clamp: 2;
+      line-height: 1.2rem;
+      margin-bottom: 0.1rem;
+      overflow: hidden;
+      text-align: left;
+    }
+  }
+}

@@ -1,0 +1,141 @@
+@import '../../../styles/src/variables';
+
+.ApplePopup {
+  &__layout {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 1rem;
+  }
+
+  &__back {
+    .Button {
+      background-color: transparent;
+      color: $white;
+      font-size: 1.0625rem;
+      font-weight: map-get( $fontweights, '500' );
+      height: 2.5rem;
+      line-height: 1.0625rem;
+      padding: 0;
+      width: 7.188rem;
+
+      svg {
+        height: 1rem;
+        margin: 0 0.5rem 0 0;
+        padding: 0;
+        position: relative;
+        top: 2px;
+        width: 1.25rem;
+      }
+
+      span {
+        color: #d7c6f4;
+        font-size: 1.0625rem;
+        font-weight: 500;
+        line-height: 1.0625rem;
+      }
+
+      &::after {
+        border: none;
+      }
+    }
+  }
+
+  &__header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+  }
+
+  &__content1 {
+    margin-bottom: 1.25rem;
+    width: 37.583rem;
+  }
+
+  &__content2 {
+    margin-bottom: 1.25rem;
+  }
+
+  &__contentNote {
+    display: flex;
+    margin: 1rem 0;
+    margin-left: 3rem;
+
+    .Text {
+      font-size: 1rem;
+    }
+  }
+
+  &__contentNoteDetails {
+    margin-left: 0.5rem;
+  }
+
+  &__QRCode {
+    background-color: $white;
+    border-radius: 0.5rem;
+    // margin-bottom: 1.875rem;
+    padding: 0.75rem;
+  }
+
+  &__status {
+    background: rgba( 2, 0, 5, 0.75 );
+    background: var( --branding-colours-binge-blue-100, #220046 );
+    border: 2px solid #564372;
+    border-radius: 10px;
+    height: 7.75rem;
+    width: 37.583rem;
+  }
+
+  &__statusHeader {
+    color: $white;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 1.25rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5rem;
+    margin-left: 0.833rem;
+    margin-top: 0.833rem;
+  }
+
+  &__statusBody {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.2rem; /* 28.8px */
+    margin-left: 0.833rem;
+    margin-top: 0.666rem;
+  }
+
+  &__divider {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__linkButton {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+
+    .Button {
+      background-color: transparent;
+      border: 0.1875rem solid $white;
+      justify-content: center;
+      line-height: 0;
+      padding: 0;
+      width: 21.416rem;
+    }
+
+    .Button--focused {
+      background-color: map-get( $pink, '100' );
+    }
+
+    .Button--focused::after {
+      border: none;
+    }
+  }
+}
+
+.ApplePopupModal {
+  padding: 1rem;
+}

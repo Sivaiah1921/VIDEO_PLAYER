@@ -1,0 +1,15 @@
+@import '../../../styles/src/variables';
+
+.SearchGenre {
+  &__filterButtons {
+    padding-right: 18rem;
+  }
+
+  .SearchFilters {
+    &__button {
+      &--genre {
+        color: white;
+      }
+    }
+  }
+}

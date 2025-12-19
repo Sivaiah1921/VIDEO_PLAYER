@@ -1,0 +1,125 @@
+@import '../../../styles/src/variables';
+
+body.modal-blocked {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
+
+.Modal {
+  background: linear-gradient( 314.52deg, map-get( $bingeBlue, '125' ) 0%, map-get( $bingeBlue, '100' ) 100% );
+  border: 0.0625rem solid map-get( $bingeBlue, '75' );
+  border-radius: 0.75rem;
+  box-shadow: 0 0.25rem 0.25rem rgba( 0, 0, 0, 0.3 );
+  color: $white;
+  margin: auto;
+  z-index: 9999;
+
+  &::backdrop,
+  & + :global(.backdrop) {
+    background-color: $backdrop-color-modal;
+  }
+
+  & + :global(.backdrop) {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+  }
+
+  &--modalVideo {
+    bottom: 50%;
+    max-height: 36.81rem;
+    max-width: 60rem;
+    padding: 3rem;
+    position: fixed;
+    top: 50%;
+
+    video {
+      object-fit: fill;
+    }
+  }
+
+  &__close {
+    background-color: transparent;
+    border: none;
+    color: $black;
+    cursor: pointer;
+    height: 3rem;
+    margin: 0.375rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 3rem;
+    z-index: 1;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:focus-visible {
+      outline: auto;
+    }
+  }
+
+  &[open] {
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+  }
+}
+
+dialog.Modal {
+  &--right {
+    margin-right: 0;
+    margin-top: 0;
+    max-width: 30.1875rem;
+    right: 0;
+  }
+
+  &--left {
+    left: 0;
+    margin-left: 0;
+    margin-top: 0;
+    max-width: 30.1875rem;
+  }
+
+  button[aria-hidden='true'] {
+    background: transparent;
+    border: 0;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate( -50%, -50% );
+    z-index: -9999999999;
+  }
+}
+
+.backdrop {
+  background: $backdrop-color-modal;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+dialog::backdrop {
+  background: $backdrop-color-modal;
+}
+
+.NotificationsPopUpModal_wrapper {
+  background: $backdrop-color-modal;
+  height: 100%;
+  left: 0;
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100000;
+}
+
+.FancodeDeeplinkPopupModal {
+  width: 41rem;
+}

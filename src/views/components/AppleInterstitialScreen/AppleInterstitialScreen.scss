@@ -1,0 +1,196 @@
+@import '../../../styles/src/variables';
+
+.AppleInterstitialPage {
+  background: linear-gradient( 90deg, #020005 0%, #220046 100% );
+  height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.AppleInterstitialScreen {
+  margin: 0 6.875rem;
+  margin-bottom: 2.416rem;
+  padding-top: 5.08rem;
+  width: 66.35rem;
+
+  &__header {
+    align-items: center;
+    display: flex;
+    left: 0;
+    position: absolute;
+    top: 2.25rem;
+    width: 80rem;
+    z-index: 2;
+
+    .Button {
+      align-items: center;
+      background: transparent;
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      margin-left: 2.75rem;
+      width: unset;
+      &::after { content: unset; }
+
+      &__icon {
+        margin-right: 0.75rem;
+      }
+    }
+
+    svg {
+      display: block;
+      margin-left: auto;
+      margin-right: 4.625rem;
+    }
+  }
+
+  &__appleTopSection {
+    height: 6.208rem;
+
+    .Image {
+      height: 3.75rem;
+      margin-left: 27.5rem;
+      width: 11.25rem;
+    }
+
+    .Text {
+      text-align: center;
+    }
+  }
+
+  &__appleHeaderSection {
+    margin: 1.25rem;
+
+    .Image {
+      height: 3.75rem;
+      margin-left: 27.5rem;
+      width: 11.25rem;
+    }
+
+    .Text {
+      text-align: center;
+    }
+  }
+
+  &__topSection {
+    display: flex;
+    height: 7.084rem;
+    margin-bottom: 1rem;
+
+    .Image {
+      background-color: $darkGrayishBlue;
+      border-radius: 0.333rem;
+      height: auto;
+      margin-right: 0.833rem;
+      width: 12.584rem;
+    }
+
+    .Image:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__bodySection {
+    background:
+      linear-gradient( 99.86deg,
+      #564372 0%,
+      #220046 39.49%,
+      #030106 100% );
+    border: 2px solid rgba( 142, 129, 161, 1 );
+    border-radius: 0.5rem;
+  }
+
+  &__appleMiddleSection {
+    display: flex;
+    margin: 0 2.5rem;
+  }
+
+  &__appleMiddleLeftSection {
+    display: flex;
+    flex-direction: column;
+    margin: 1.833rem 0;
+    width: 35rem;
+  }
+
+  &__leftContentHeader {
+    .Text {
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 1.5rem;
+      width: 4.166rem;
+    }
+  }
+
+  &__leftContentBody {
+    .Text {
+      color: map-get( $purple, '25' );
+      font-size: 1.25rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.5rem;
+    }
+  }
+
+  &__leftContentNote {
+    width: 29rem;
+
+    .Text {
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 1.2rem;
+    }
+  }
+
+  &__steps {
+    align-items: flex-start;
+    display: flex;
+    margin-bottom: 0.667rem;
+    width: 32rem;
+  }
+
+  &__appleDivider {
+    background: linear-gradient( 180deg, rgba( 215, 198, 244, 0 ) 0%, #d7c6f4 49.48%, rgba( 215, 198, 244, 0 ) 100% );
+    width: 3px;
+  }
+
+  &__appleMiddleRightSection {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+
+    &--QrCode {
+      align-items: center;
+      background-color: $white;
+      border-radius: 0.46rem;
+      display: flex;
+      height: 13.334rem;
+      padding-left: 1.4rem;
+      width: 13.334rem;
+
+      @media only screen and (width: 1280px) {
+        padding-left: 1rem;
+      }
+    }
+
+    &--Qrtext {
+      text-align-last: center;
+
+      .Text {
+        font-size: 1.25rem;
+        font-weight: 500;
+        line-height: 1.5rem;
+      }
+    }
+
+    &--QrSection {
+      padding-top: 0.769rem;
+    }
+  }
+
+  &__hiddenButton {
+    opacity: 0;
+  }
+}

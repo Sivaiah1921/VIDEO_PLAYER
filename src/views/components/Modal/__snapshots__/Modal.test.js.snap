@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal />tests snapshot tests renders correctly modal 1`] = `
+<div
+  aria-modal="true"
+  className="Modal__wrapper"
+  role="dialog"
+>
+  <dialog
+    className="Modal"
+  >
+    <form
+      method="dialog"
+    >
+      <h1>
+        Sample Modal
+      </h1>
+    </form>
+  </dialog>
+</div>
+`;

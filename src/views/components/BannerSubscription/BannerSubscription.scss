@@ -1,0 +1,56 @@
+@import '../../../styles/src/variables';
+
+.BannerContainer {
+  background: linear-gradient( 155deg, #220046, #a22736 );
+  border: 0.188rem solid map-get( $bingeBlue, '75' );
+  border-radius: 0.375rem;
+  display: flex;
+  height: 5.265rem;
+  margin-bottom: 1.5rem;
+  width: 27.833rem;
+
+  &--withFocus {
+    border: 0.1875rem solid $white;
+  }
+
+  &__leftSection {
+    display: flex;
+    margin: 1.27rem 0;
+    margin-left: 0.667rem;
+
+    .Image {
+      height: 2.708rem;
+      width: 2.708rem;
+    }
+  }
+
+  &__rightSection {
+    margin: 0.6875rem 0;
+    margin-left: 0.875rem;
+
+    .Image {
+      height: 0.833rem;
+      width: 10.8333rem;
+    }
+  }
+
+  &__textSection {
+    margin-bottom: 0.5rem;
+    margin-top: 4px;
+
+    .Text {
+      line-height: 110.00000000000001%;
+      margin-top: -.2rem;
+      text-align: left;
+    }
+  }
+
+  &__ImageSection {
+    height: 5.625rem;
+
+    .Image {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

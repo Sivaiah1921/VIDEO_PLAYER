@@ -1,0 +1,124 @@
+@import '../../../styles/src/variables';
+
+.PreviousUsedLogin {
+  &__loader {
+    .Image {
+      border: none;
+      height: 10rem;
+      outline: none;
+      position: absolute;
+      right: 36rem;
+      top: 13rem;
+      width: 10rem;
+      z-index: 100000;
+    }
+  }
+
+  &__button {
+    align-items: center;
+    background-color: map-get( $bingeBlue, '125' );
+    background-image: none;
+    border: 0.1875rem solid map-get( $bingeBlue, '75' );
+    border-radius: 0.625rem;
+    display: flex;
+    flex-direction: row;
+    height: 3.99875rem;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    padding: 0.562rem 1.562rem;
+    width: 29.08rem !important;
+
+    @include not-focus-previously-rmn;
+
+    > svg {
+      height: 1.5rem;
+      margin-right: 0;
+      width: 1.5rem;
+    }
+
+    > .Text {
+      width: 48%;
+
+      > span {
+        bottom: 0.25rem;
+        position: relative;
+      }
+    }
+
+    &--withFocus {
+      border: 0.1875rem solid $white;
+      transform: scale( 1.04 );
+    }
+  }
+
+  &__buttonQRLogin {
+    align-items: center;
+    background-color: map-get( $bingeBlue, '125' );
+    background-image: none;
+    border: 0.1875rem solid map-get( $bingeBlue, '75' );
+    border-radius: 0.625rem;
+    display: flex;
+    flex-direction: row;
+    height: 3.541rem;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+    padding: 0.562rem 1.562rem;
+
+    @include not-focus-previously-rmn;
+
+    > svg {
+      height: 1.5rem;
+      margin-right: 0;
+      width: 1.5rem;
+    }
+
+    > .Text {
+      width: 48%;
+
+      > span {
+        bottom: 0.25rem;
+        position: relative;
+      }
+    }
+
+    &--withFocus {
+      border: 0.1875rem solid $white;
+      transform: scale( 1.02 );
+    }
+  }
+
+  &__premiumUser {
+    align-items: center;
+    display: flex;
+    left: 5.25rem;
+    position: relative;
+
+    .Text {
+      font-size: 0.875rem;
+      line-height: 1rem;
+    }
+  }
+
+  &__premiumUserQRLogin {
+    align-items: center;
+    display: flex;
+    left: 4.25rem;
+    position: relative;
+
+    .Text {
+      font-size: 0.875rem;
+      line-height: 1rem;
+    }
+  }
+
+  &__icon {
+    height: 2rem;
+    position: relative;
+    width: 2rem;
+  }
+
+  &__forwardIcon {
+    left: 0.5rem;
+    position: relative;
+  }
+}

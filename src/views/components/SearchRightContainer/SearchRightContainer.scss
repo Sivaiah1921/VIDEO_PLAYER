@@ -1,0 +1,156 @@
+@import '../../../styles/src/variables';
+
+.SearchRightContainer {
+  &__filterContentShow {
+    margin-top: 12rem;
+
+    .Search__containerRight {
+      left: 2.5rem;
+    }
+  }
+
+  &__filterContentHidden {
+    margin-top: 28rem;
+    transform: translateY( -2.25rem );
+
+    .Search__containerRight {
+      left: 2.5rem;
+    }
+  }
+
+  &__noGenreFilterRail {
+    margin-top: 21rem;
+  }
+
+  &__commonLoader {
+    .Image {
+      border: none;
+      height: 10rem;
+      outline: none;
+      position: absolute;
+      width: 10rem;
+      z-index: 100000;
+    }
+  }
+
+  &__loader {
+    .Image {
+      left: 35rem;
+      top: 10rem;
+    }
+  }
+
+  &__withLeftloader {
+    .Image {
+      left: 16rem;
+      top: 9rem;
+    }
+  }
+
+  &__bottomFilter {
+    .Image {
+      left: 44rem !important;
+      top: 28rem !important;
+      transform: translateY( -3.5rem );
+    }
+  }
+
+  &__bottom {
+    .Image {
+      left: 15rem;
+      top: 23rem;
+    }
+  }
+
+  &__bottomTrending {
+    .Image {
+      left: 15rem;
+      top: 26rem;
+    }
+  }
+
+  .Search {
+    &__scrollContainer {
+      height: 100vh;
+      margin-top: 0.7rem;
+      overflow-y: auto;
+    }
+
+    &__containerRight {
+      position: relative;
+
+      .MediaCarousel {
+        width: 100vw;
+
+        &__heading {
+          margin-left: 0.5rem;
+        }
+      }
+
+      .MediaCarousel__Rail {
+        padding: 1rem .5rem;
+        width: 74.125rem;
+
+        > div {
+          padding-right: 1rem;
+        }
+
+        @media only screen and (min-width: 1920px) {
+          width: 73.875rem;
+        }
+      }
+
+      .MediaCarousel__GENRE--LANDSCAPE {
+        margin-left: 0;
+      }
+    }
+
+    &__mediaCard {
+      display: flex;
+      flex-wrap: wrap;
+      height: 100vh;
+      overflow: auto;
+      padding-bottom: 13rem;
+      width: 74rem;
+
+      @media only screen and (max-width: 1280px) {
+        padding-bottom: 21rem;
+      }
+
+      &--itemWrapped {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100vh;
+        overflow: auto;
+        padding-bottom: 40rem;
+      }
+
+      &--itemWidth {
+        width: 44.375rem;
+      }
+
+      &--itemWithNoRes {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100vh;
+        overflow: auto;
+        padding-bottom: 29rem;
+      }
+    }
+  }
+}
+
+/** Added below styles to avoid flickering during the horizontal scroll **/
+.MediaCard {
+  &--provider--image {
+    .emptyImageCell {
+      height: 1.278rem;
+    }
+  }
+
+  &--provider--NewHeightimage {
+    .emptyImageCell {
+      height: 1.5rem;
+    }
+  }
+}

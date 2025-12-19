@@ -1,0 +1,176 @@
+@import '../../../styles/src/variables';
+
+@mixin title {
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 120%;
+}
+
+@mixin buttonText {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.BingeListPage {
+  background: $background;
+  position: relative;
+
+  &__Header {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  &__topHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 2.334rem;
+
+    .Button {
+      align-items: center;
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      width: unset;
+      &::after { content: unset; }
+
+      &--focused {
+        color: $white;
+
+        path {
+          fill: $white;
+        }
+      }
+    }
+
+    .Button--icon {
+      @media only screen and (min-width: 1920px) {
+        padding-left: 0.45rem;
+      }
+
+      padding: 0;
+    }
+
+    svg {
+      height: 1.125rem;
+      width: 5rem;
+
+      @media only screen and (min-width: 1920px) {
+        margin-right: 0.75rem;
+      }
+    }
+  }
+
+  &__TopBanner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 3.34rem;
+  }
+
+  &__Container {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    padding-left: 0.5rem;
+
+    svg {
+      height: 2rem;
+      width: 2rem;
+    }
+  }
+
+  &__title p {
+    color: $white;
+    margin-left: 1.25rem;
+
+    @include title;
+  }
+
+  &__buttonDone,
+  &__buttonRemove {
+    margin-right: 1rem;
+    padding: 0 2.25rem;
+
+    &.Button--focused {
+      background-color: map-get( $pink, '100' );
+    }
+
+    @include buttonText;
+  }
+
+  &__buttonEdit {
+    padding: 0 2.25rem;
+
+    &.Button--focused {
+      background-color: map-get( $pink, '100' );
+    }
+
+    @include buttonText;
+  }
+
+  &__scrollContainer {
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  &__notification {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+
+    .Notifications svg {
+      padding-right: 1.5rem;
+      width: 3.875rem;
+    }
+  }
+
+  &__listingBingeList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 0.4rem;
+    margin-top: 1.73rem;
+
+    &--mediaCardEditable {
+      div.MediaCard--provider {
+        position: absolute;
+        right: 2rem;
+        top: -1rem;
+      }
+    }
+
+    > div.MediaCardWrapper {
+      margin-bottom: 1.45rem;
+      margin-right: 2.25rem;
+
+      .MediaCard--withFocus {
+        margin-bottom: unset;
+      }
+
+      div.MediaCard--provider {
+        margin-top: 1rem;
+      }
+
+      > div.MediaCard {
+        // height: 11.25rem;
+        // width: 20rem;
+        height: 8.75rem;
+        width: 15.4rem;
+
+        .Image {
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+
+    > div:nth-child(4n) {
+      margin-right: 0;
+    }
+  }
+}

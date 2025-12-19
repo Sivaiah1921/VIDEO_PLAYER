@@ -1,0 +1,90 @@
+@import '../../../styles/src/variables';
+
+.FancodeDeeplinkPopup {
+  &__content {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 2.083rem;
+  }
+
+  &__topGoBack {
+    left: 2.083rem;
+    position: absolute;
+    top: 3.083rem;
+
+    .Button {
+      align-items: unset;
+      background: inherit;
+      bottom: 0.91rem;
+      color: $white;
+      display: flex;
+      font-size: 1rem;
+      height: 0.1875rem;
+      outline: none;
+      padding: 0;
+      width: auto;
+    }
+
+    .Button--secondary::after {
+      border: none;
+    }
+
+    svg {
+      height: 1rem !important;
+      margin: 0 0.5rem 0 0;
+      padding: 0;
+      position: relative;
+      top: 2px;
+      width: 1rem !important;
+    }
+
+    span {
+      top: 0;
+    }
+  }
+
+  &__textContent {
+    margin-bottom: 1.25rem;
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 1.25rem;
+    }
+  }
+
+  &__provider {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.25rem;
+    margin-top: 1rem;
+
+    .Image {
+      height: 5rem;
+      width: 5rem;
+    }
+  }
+
+  &__button {
+    .Button {
+      align-items: center;
+      border-radius: 0.41rem;
+      display: flex;
+      justify-content: center;
+      min-width: 11.4rem;
+      padding: 0;
+    }
+
+    .Button--focused::after {
+      border-radius: 0.41rem;
+    }
+
+    span {
+      font-weight: 600;
+      line-height: 1.25rem;
+      position: absolute;
+      top: 0.6rem;
+    }
+  }
+}

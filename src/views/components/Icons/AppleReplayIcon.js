@@ -1,0 +1,34 @@
+import * as React from 'react';
+
+function AppleReplayIcon( props ){
+  return (
+    <svg width='80'
+      height='120'
+      viewBox='0 0 48 48'
+      fill='none'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <path d='M21 24v-6l5 3 5 3-5 3-5 3v-6Z'
+        fill='white'
+        stroke='white'
+        strokeWidth='3'
+        // stroke-linejoin='round'
+      />
+      <path
+        d='M11.272 36.728A17.943 17.943 0 0 0 24 42c9.941 0 18-8.059 18-18S33.941 6 24 6c-4.97 0-9.47 2.015-12.728 5.272C9.614 12.93 6 17 6 17'
+        stroke='white'
+        strokeWidth='4'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      />
+      <path d='M2 12v10h10'
+        fill='white'
+        strokeWidth='20'
+        stroke-linecap='round'
+        stroke-linejoin='round'
+      />
+    </svg>
+  )
+}
+
+export default AppleReplayIcon;

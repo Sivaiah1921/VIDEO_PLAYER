@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/v1/client/tataplay/tv", 
+      "destination": "/"  
+    },
+    {
+      "source": "/tests/**", 
+      "destination": "/tests/lcov-report/"  
+    }
+  ]
+}

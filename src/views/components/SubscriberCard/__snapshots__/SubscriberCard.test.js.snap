@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div
+  className="SubscriberCard"
+  role="button"
+  tabIndex="0"
+>
+  <div
+    className="SubscriberCard__container"
+  />
+  <svg
+    className="SubscriberCard__icon"
+    fill="none"
+    style={
+      Object {
+        "height": "1.5625rem",
+        "width": "1.5rem",
+      }
+    }
+    viewBox="0 0 24 25"
+  >
+    <path
+      clipRule="evenodd"
+      d="m16 12.5-5.573 6.874A1.176 1.176 0 1 1 8.6 17.893l4.373-5.393L8.6 7.107a1.176 1.176 0 1 1 1.827-1.48L16 12.5Z"
+      fill="#F3CBE3"
+      fillRule="evenodd"
+    />
+  </svg>
+</div>
+`;

@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AccordionGroup />tests snapshot tests renders Section correctly with proper props 1`] = `
+<div
+  className="AccordionGroup AccordionGroup__bottomSpacer--01"
+>
+  <div
+    className="AccordionSection"
+  >
+    <button
+      className="AccordionSection__title"
+      onClick={[Function]}
+    >
+      <div>
+        Sample Title 1
+      </div>
+      <div
+        className="AccordionSection__icon"
+      >
+        +
+      </div>
+    </button>
+  </div>
+  <div
+    className="AccordionSection"
+  >
+    <button
+      className="AccordionSection__title"
+      onClick={[Function]}
+    >
+      <div>
+        Sample Title 2
+      </div>
+      <div
+        className="AccordionSection__icon"
+      >
+        +
+      </div>
+    </button>
+  </div>
+  <div
+    className="AccordionSection"
+  >
+    <button
+      className="AccordionSection__title"
+      onClick={[Function]}
+    >
+      <div>
+        Sample Title 3
+      </div>
+      <div
+        className="AccordionSection__icon"
+      >
+        +
+      </div>
+    </button>
+  </div>
+  <div
+    className="AccordionSection"
+  >
+    <button
+      className="AccordionSection__title"
+      onClick={[Function]}
+    >
+      <div>
+        Sample Title 4
+      </div>
+      <div
+        className="AccordionSection__icon"
+      >
+        +
+      </div>
+    </button>
+  </div>
+</div>
+`;

@@ -1,0 +1,62 @@
+@import '../../../styles/src/variables';
+
+.LanguageListRail {
+  // width: 74.125rem;
+  width: 100vw;
+
+  &__title {
+    align-items: center;
+    display: flex;
+    margin-right: 49.5rem;
+    margin-top: 0.1rem;
+    white-space: nowrap;
+    width: 10rem;
+
+    .Text {
+      margin-left: 0.5rem;
+    }
+
+    .Button {
+      margin-right: 4.75rem;
+    }
+  }
+
+  &__clearFilter {
+    margin-left: 60rem;
+    position: relative;
+    transform: translateY( 1rem );
+  }
+
+  &__recentSearch {
+    &--buttons {
+      display: flex;
+      margin-left: 0.5rem;
+      margin-right: 2rem;
+      margin-top: 1rem;
+      overflow-x: scroll;
+
+      .Button {
+        margin-right: .5rem;
+        white-space: nowrap;
+      }
+    }
+
+    &--buttonsWithNoKeyBoard {
+      display: flex;
+      margin-bottom: 0.8rem;
+      margin-left: 0.5rem;
+      margin-right: 7rem;
+      margin-top: 1rem;
+      overflow-x: scroll;
+
+      .Button {
+        margin-right: .5rem;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__clearSearch {
+    display: flex;
+  }
+}

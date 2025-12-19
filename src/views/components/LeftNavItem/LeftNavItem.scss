@@ -1,0 +1,164 @@
+@import '../../../styles/src/variables';
+
+.LeftNavItem {
+  display: inline-flex;
+  min-width: 1.625rem;
+  padding-bottom: 1.5rem;
+  width: 100%;
+
+  &__selectedItem {
+    img {
+      // filter: brightness( 0 ) saturate( 100% ) invert( 92% ) sepia( 5% ) saturate( 1974% ) hue-rotate( 284deg ) brightness( 95% ) contrast( 97% ); // commented for new Design
+    }
+
+    .Text {
+      color: map-get( $pink, '40' );
+      font-size: 1.666rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 2rem;
+
+      &--header-6 {
+        color: map-get( $pink, '40' ) !important;
+      }
+    }
+
+    .header-66 {
+      img {
+        filter: unset !important;
+      }
+    }
+  }
+
+  &__activeLogin {
+    svg {
+      height: 1.8rem;
+      margin-right: 0;
+      position: relative;
+      right: 2px;
+      top: 0.25rem;
+      width: 1.8rem;
+
+      // path {
+      //   fill: $white;
+      // }
+    }
+
+    p {
+      left: 0.625rem;
+      position: relative;
+    }
+  }
+
+  &__activeLogin + div > div > p {
+    left: 0.5rem !important;
+    position: relative !important;
+  }
+
+  &__inactiveLogin {
+    svg {
+      height: 1.8rem;
+      margin-right: 0;
+      position: relative;
+      right: 2px;
+      top: 0.25rem;
+      width: 1.8rem;
+    }
+  }
+
+  &__inactiveLogin + div > div > p {
+    left: 0.5rem !important;
+    position: relative !important;
+    top: 0 !important;
+  }
+
+  &__FocussableObj {
+    height: 0.0625rem;
+    position: absolute;
+    width: 0.0625rem;
+  }
+
+  .Link {
+    background: none;
+    color: map-get( $bingeBlue, '50' );
+    height: 2rem;
+
+    .activeImageClass {
+      img {
+        filter: brightness( 0 ) invert( 1 );
+        height: 1.5rem;
+        position: relative;
+        // top: -0.5rem;
+        width: 1.5rem;
+      }
+    }
+
+    > div.Image {
+      align-items: baseline;
+      // align-items: center;
+      display: flex;
+      height: 100%;
+
+      img {
+        display: unset;
+        height: 1.5rem;
+        width: 1.5rem;
+      }
+    }
+
+    &__icon {
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+
+    .Text {
+      left: 1.375rem;
+      letter-spacing: 0;
+      margin-right: 1rem;
+      position: relative;
+      white-space: nowrap;
+
+      &--header-6 {
+        color: $white;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+    }
+  }
+
+  &__leftNavAnimation {
+    align-items: flex-end;
+    animation: leftNavForwards 0.3s cubic-bezier( 0.4, 0, 0.2, 1 ) forwards;
+    display: flex;
+    overflow: hidden;
+
+    @keyframes leftNavForwards {
+      0% {
+        width: 0%;
+      }
+
+      100% {
+        padding-right: 8rem;
+        width: 100%;
+      }
+    }
+  }
+
+  &__leftNavAnimationReverse {
+    animation: leftNavBackwards 0.3s cubic-bezier( 0.4, 0, 0.2, 1 ) backwards;
+    display: none;
+    overflow: hidden;
+    width: 0;
+
+    @keyframes leftNavBackwards {
+      0% {
+        width: 100%;
+      }
+
+      100% {
+        width: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@import '../../../styles/src/mixins';
+@import '../../../styles/src/variables';
+
+.Link {
+  @include linkStyle();
+
+  &__icon {
+    margin-right: 0;
+
+    &--withIcon {
+      margin-right: .5rem;
+    }
+
+    &--withIconRight {
+      margin-left: .5rem;
+    }
+  }
+}

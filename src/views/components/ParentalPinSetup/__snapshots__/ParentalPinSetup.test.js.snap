@@ -1,0 +1,213 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<form
+  className="ParentalPinSetup"
+  id="ParentalPinSetupID"
+>
+  <div
+    className="ParentalPinSetup__icon"
+  >
+    <svg
+      fill="none"
+      style={
+        Object {
+          "height": "3.125rem",
+          "width": "2.1875rem",
+        }
+      }
+      viewBox="0 0 35 50"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        clipRule="evenodd"
+        d="M28.438 16.667v-4.762C28.438 5.333 23.538 0 17.5 0 11.463 0 6.562 5.333 6.562 11.905v4.762H0V50h35V16.667h-6.563zm-17.5-4.762c0-3.953 2.93-7.143 6.562-7.143 3.631 0 6.563 3.19 6.563 7.143v4.762H10.938v-4.762zm-6.563 9.523v23.81h26.25v-23.81H4.375z"
+        fill="#fff"
+        fillRule="evenodd"
+      />
+    </svg>
+  </div>
+  <div
+    className="ParentalPinSetup__title"
+  >
+    <p
+      className="Text Text--title-2 Text--left Text--white"
+    >
+      Enter PIN
+    </p>
+  </div>
+  <div
+    className="ParentalPinSetup__subtitle"
+  >
+    <p
+      className="Text Text--subtitle-4 Text--left Text--white"
+    >
+      Enter the 4 Digit Parental PIN
+    </p>
+  </div>
+  <div
+    className="ParentalPinSetup__inputCotainer"
+  >
+    <div>
+      <div
+        className="InputField"
+      >
+        <div
+          className="InputField__label"
+        >
+          <label
+            className="InputField__label--text"
+          />
+        </div>
+        <div
+          className="InputField__content InputField__content--active"
+        >
+          <div
+            className="InputField__formControls"
+          >
+            <input
+              autoComplete="on"
+              autoCorrect="on"
+              className="InputField__input InputField__input--active"
+              maxLength={1}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onPaste={[Function]}
+              spellCheck={true}
+              tabIndex={0}
+              type="text"
+              value=""
+            />
+          </div>
+          <div />
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        className="InputField"
+      >
+        <div
+          className="InputField__label"
+        >
+          <label
+            className="InputField__label--text"
+          />
+        </div>
+        <div
+          className="InputField__content InputField__content--active"
+        >
+          <div
+            className="InputField__formControls"
+          >
+            <input
+              autoComplete="on"
+              autoCorrect="on"
+              className="InputField__input InputField__input--active"
+              maxLength={1}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onPaste={[Function]}
+              spellCheck={true}
+              tabIndex={1}
+              type="text"
+              value=""
+            />
+          </div>
+          <div />
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        className="InputField"
+      >
+        <div
+          className="InputField__label"
+        >
+          <label
+            className="InputField__label--text"
+          />
+        </div>
+        <div
+          className="InputField__content InputField__content--active"
+        >
+          <div
+            className="InputField__formControls"
+          >
+            <input
+              autoComplete="on"
+              autoCorrect="on"
+              className="InputField__input InputField__input--active"
+              maxLength={1}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onPaste={[Function]}
+              spellCheck={true}
+              tabIndex={2}
+              type="text"
+              value=""
+            />
+          </div>
+          <div />
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        className="InputField"
+      >
+        <div
+          className="InputField__label"
+        >
+          <label
+            className="InputField__label--text"
+          />
+        </div>
+        <div
+          className="InputField__content InputField__content--active"
+        >
+          <div
+            className="InputField__formControls"
+          >
+            <input
+              autoComplete="on"
+              autoCorrect="on"
+              className="InputField__input InputField__input--active"
+              maxLength={1}
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              onPaste={[Function]}
+              spellCheck={true}
+              tabIndex={3}
+              type="text"
+              value=""
+            />
+          </div>
+          <div />
+        </div>
+      </div>
+    </div>
+  </div>
+  <p
+    className="Text Text--subtitle-4 Text--center Text--white"
+  >
+    Forgot PIN? You can change your Parental PIN from tataplaybinge.com or Tata Play Binge Mobile App
+  </p>
+  <div
+    className="ParentalPinSetup__proceedButton"
+  >
+    <button
+      className="Button ParentalPinSetup__proceedButton--text Button--primary Button--large"
+      onClick={[Function]}
+      style={null}
+    >
+      Proceed
+    </button>
+  </div>
+</form>
+`;

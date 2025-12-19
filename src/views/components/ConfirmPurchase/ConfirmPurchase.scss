@@ -1,0 +1,230 @@
+@import '../../../styles/src/variables';
+
+.ConfirmPurchase {
+  margin-left: 4rem;
+  padding-top: 2.334rem;
+  width: 73.5rem;
+
+  &__topSection {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: unset;
+    margin-bottom: 2rem;
+    position: relative;
+    width: 100%;
+    z-index: 3;
+
+    .Button {
+      align-items: center;
+      display: flex;
+      flex-wrap: nowrap;
+      height: unset;
+      margin-left: 5.625rem;
+      width: unset;
+      &::after { content: unset; }
+
+      &__icon {
+        margin-right: 0.75rem;
+      }
+    }
+
+    svg {
+      display: block;
+    }
+  }
+
+  &__content {
+    display: flex;
+    position: relative;
+    z-index: 9;
+  }
+
+  &__header {
+    margin-bottom: 3.3rem;
+    position: relative;
+    z-index: 9;
+
+    svg {
+      left: 100%;
+      position: relative;
+      transform: translateX( -50% );
+      z-index: 9;
+    }
+  }
+
+  &__PrimeLitefdoVerbiage {
+    align-items: center;
+    background: map-get( $purple, '25' );
+    border-radius: 0.4167rem;
+    display: flex;
+    height: 3.5rem;
+    margin-left: 0.1rem;
+    width: 37.7rem;
+
+    .AppMediaCard {
+      border-radius: 5px;
+      height: 2.5rem !important;
+      margin: 0.5rem !important;
+      width: 2.5rem !important;
+
+      &__content {
+        border: none;
+
+        img {
+          border-radius: 5px;
+          height: 2.5rem !important;
+          object-fit: fill !important;
+          width: 2.5rem !important;
+        }
+      }
+    }
+
+    &--info {
+      display: flex;
+      flex-direction: column;
+      font-size: 1rem;
+      font-weight: 500;
+      height: 2.5rem;
+      max-width: 37.625rem;
+      width: 33.8334rem;
+
+      .prime-line {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+
+  &__leftSection {
+    grid-column: 1;
+
+    &--smalLVerbiage {
+      margin-top: 0.3rem;
+    }
+
+    &--tpBalance {
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .UpgradeMyPlan {
+      &__left {
+        &--apps {
+          margin-bottom: 1rem;
+        }
+      }
+
+      .PackageCard {
+        &__content {
+          height: fit-content;
+          pointer-events: none;
+          width: 37.625rem;
+
+          .Image img {
+            height: 3.75rem;
+            width: 3.75rem;
+          }
+        }
+
+        &__multiapps {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          grid-column-gap: unset;
+          height: unset;
+          margin-bottom: 0;
+        }
+      }
+
+      .AppMediaCard {
+        height: 3.75rem;
+        margin: unset;
+        margin-bottom: 0.72rem;
+        margin-right: 0.7rem !important;
+        width: 3.75rem;
+
+        @media only screen and (width: 1280px) {
+          margin-right: 0.69rem !important;
+        }
+      }
+
+      .AppMediaCard:nth-child(8n) {
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  &__rightSection {
+    margin-left: 3.8rem;
+    position: relative;
+    top: 2.55rem;
+
+    .PlanCard {
+      border: none;
+      pointer-events: none;
+    }
+
+    &--divider {
+      background-color: map-get( $pink, '25' );
+      height: 2px;
+      position: relative;
+      top: 1rem;
+    }
+
+    &--lastPay {
+      border-bottom: 0.0625rem solid map-get( $bingeBlue, '75' );
+      display: flex;
+      height: 3rem;
+      justify-content: space-between;
+      padding: 0 1rem;
+      position: relative;
+      top: 1.5rem;
+    }
+
+    &--payableAmount {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5.125rem;
+      position: relative;
+      top: 3rem;
+    }
+
+    &--button {
+      align-items: center;
+      display: flex;
+      gap: 0.75rem;
+      justify-content: center;
+      padding: 0.417rem 0;
+      width: 17.08rem;
+    }
+
+    &--continueToPay {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+
+    &--insuffientbalance {
+      color: #e56c6c;
+      margin-bottom: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    &--footerMsg {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 2.5rem;
+    }
+  }
+}
+
+.NotificationsPopUpModal {
+  height: max-content;
+}
+
+.NotificationsPopUp__button .Button:focus {
+  border: none;
+}
